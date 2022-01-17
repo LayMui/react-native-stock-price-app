@@ -1,4 +1,3 @@
-import browser from "webdriverio/build/commands/browser";
 
 /**
 * main page object containing all methods, selectors and functionality

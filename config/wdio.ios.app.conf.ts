@@ -13,9 +13,6 @@ config.specs = ['./tests/features/*.feature']
 // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
 config.capabilities = [
   {
-    user: process.env.BROWSERSTACK_USERNAME || 'xxx',
-    key: process.env.BROWSERSTACK_ACCESS_KEY || 'xxx',
-    
     // The defaults you need to have in your config
     browserName: '',
     platformName: 'iOS',
@@ -24,7 +21,7 @@ config.capabilities = [
     // This is `appium:` for all Appium Capabilities which can be found here
     // http://appium.io/docs/en/writing-running-appium/caps/
     'appium:deviceName': 'iPhone 12',
-    'appium:platformVersion': '14.5',
+    'appium:platformVersion': '15.2',
     'appium:orientation': 'PORTRAIT',
     'appium:automationName': 'XCUITest',
     // The path to the app

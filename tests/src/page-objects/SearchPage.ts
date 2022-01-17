@@ -1,6 +1,4 @@
 import { by, Target } from '@serenity-js/webdriverio'
-import { isObjectBindingPattern } from 'typescript'
-
 
 /**
  * This is called a "Lean Page Object".
