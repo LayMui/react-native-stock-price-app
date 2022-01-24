@@ -27,15 +27,19 @@ class SearchPage extends Page {
    */
 
   async searchForCompany(company) {
-    ;(await $('~stockTickerSymbolSearchInput').waitForDisplayed()) &&
-      (await $('~stockTickerSymbolSearchInput').setValue(company))
+    ;(await this.stocktickersymbolsearchinput.waitForDisplayed()) &&
+      (await this.stocktickersymbolsearchinput.setValue(company))
   }
 
   async tapSearchBtn() {
-    ;(await $('~stockTickerSymbolSearchBtn').waitForDisplayed()) &&
-      (await $('~stockTickerSymbolSearchBtn').touchAction('tap'))
+    ;(await this.stocktickersymbolsearchbtn.waitForDisplayed()) &&
+      (await this.stocktickersymbolsearchbtn.touchAction('tap'))
   }
 
+  async founded() {
+    ;(await $('~stockTickerSymbolSearchInput').isDisplayed())
+    
+  }
   /**
    * overwrite specifc options to adapt it to page object
    */

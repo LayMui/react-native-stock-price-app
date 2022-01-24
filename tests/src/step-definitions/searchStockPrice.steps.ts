@@ -20,6 +20,6 @@ When(
 Then(
   '{pronoun} is able to see the stock price displayed',
   async (actor: Actor) => {
-    
+    await SearchPage.founded()
   }
 )

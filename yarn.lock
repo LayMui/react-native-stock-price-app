@@ -9497,11 +9497,6 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-wdio-appium-service@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.npmjs.org/wdio-appium-service/-/wdio-appium-service-0.2.3.tgz"
-  integrity sha1-mIxcVFsGuhhOYkX0muhCAHH6QAk=
-
 wdio-chromedriver-service@^7.2.0:
   version "7.2.2"
   resolved "https://registry.npmjs.org/wdio-chromedriver-service/-/wdio-chromedriver-service-7.2.2.tgz"
