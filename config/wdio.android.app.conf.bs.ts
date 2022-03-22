@@ -1,10 +1,13 @@
 import { join } from 'path'
-import { config } from './wdio.conf.bs'
+import { config } from './wdio.conf'
 
 // ============
 // Specs
 // ============
 config.specs = ['./tests/features/*.feature']
+
+config.user = process.env.BROWSERSTACK_USERNAME
+config.key = process.env.BROWSERSTACK_ACCESS_KEY
 
 // ============
 // Capabilities
