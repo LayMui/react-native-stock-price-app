@@ -113,8 +113,6 @@ jobs:
       - image: circleci/android:api-25-alpha
     environment:
       JVM_OPTS: -Xmx3200m
-    context: 
-      - BROWSERSTACK_CREDENTIALS
            
     steps:
       - checkout
@@ -161,6 +159,8 @@ workflows:
    jobs:
       - node
       - android-build-and-test:
+          context: 
+            - BROWSERSTACK_CREDENTIALS
           requires:
             - node
       - macos-build-and-test:
