@@ -26,10 +26,10 @@ jobs:
           paths:
             - node_modules
 
-      - run:
-          name: ios tests
-          command: |
-            yarn run test
+      # - run:
+      #     name: ios tests
+      #     command: |
+            # yarn run test
      
       - persist_to_workspace:
           root: ~/react-native-stock-price-app
@@ -163,9 +163,9 @@ workflows:
             - BROWSERSTACK_CREDENTIALS
           requires:
             - node
-      # - macos-build-and-test:
-      #     requires:
-      #       - node
+      - macos-build-and-test:
+          requires:
+            - node
 
     
             
