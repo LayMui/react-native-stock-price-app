@@ -11,6 +11,8 @@ import {
 
 import { Actors } from '../tests/src'
 
+import cucumberJson from 'wdio-cucumberjs-json-reporter'
+
 export const config: WebdriverIOConfig = {
   // =========================
   // Serenity/JS Configuration
@@ -170,16 +172,21 @@ export const config: WebdriverIOConfig = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: ['spec'],
+  reporters: [ 'spec',
+    [
+      'cucumberjs-json',
+      {
+        jsonFolder: 'reporter/json/',
+        language: 'en',
+      },
+    ],
+  ],
 
   //
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: [
-      './tests/src/**/*.ts',
-   
-    ],
+    require: ['./tests/src/**/*.ts'],
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -356,5 +363,4 @@ export const config: WebdriverIOConfig = {
    */
   //onReload: function(oldSessionId, newSessionId) {
   //}
-
 }

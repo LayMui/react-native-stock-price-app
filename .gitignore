@@ -73,3 +73,6 @@ web-build/
 # @end expo-cli
 target/
 .env
+reporter/json
+reporter/cucumber_report.html
+reporter/cucumber_report.html.json
