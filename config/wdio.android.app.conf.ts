@@ -26,7 +26,7 @@ config.capabilities = [
     'appium:orientation': 'PORTRAIT',
     'appium:automationName': 'UiAutomator2',
     // The path to the app
-    'appium:app': join(process.cwd(), './tests/apps/stockprice_new.apk'),
+    'appium:app': join(process.cwd(), './tests/apps/stockprice.apk'),
 
     'appium:appWaitActivity': 'com.app.stockprice.MainActivity',
     // Read the reset strategies very well, they differ per platform, see
