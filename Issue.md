@@ -15,3 +15,58 @@ work with the built-in WebdriverIO cucumber framework, but not with @serenity-js
 ```
 
 ```
+
+Error: ERROR IN CONFIG FILE:
+[#/jobs/android-build-and-test] 0 subschemas matched instead of one
+1. [#/jobs/android-build-and-test] only 1 subschema matches out of 2
+|   1. [#/jobs/android-build-and-test] extraneous key [context] is not permitted
+|   |   Permitted keys:
+|   |     - description
+|   |     - parallelism
+|   |     - macos
+|   |     - resource_class
+|   |     - docker
+|   |     - steps
+|   |     - working_directory
+|   |     - circleci_ip_ranges
+|   |     - machine
+|   |     - environment
+|   |     - executor
+|   |     - shell
+|   |     - parameters
+|   |   Passed keys:
+|   |     - working_directory
+|   |     - docker
+|   |     - environment
+|   |     - context
+|   |     - steps
+2. [#/jobs/android-build-and-test] expected type: String, found: Mapping
+|   Job may be a string reference to another job
+a845751yara.com@Tohs-MBP react-native-stock-price-app % circleci config validate
+
+Error: ERROR IN CONFIG FILE:
+[#/jobs/android-build-and-test] 0 subschemas matched instead of one
+1. [#/jobs/android-build-and-test] only 1 subschema matches out of 2
+|   1. [#/jobs/android-build-and-test] extraneous key [context] is not permitted
+|   |   Permitted keys:
+|   |     - description
+|   |     - parallelism
+|   |     - macos
+|   |     - resource_class
+|   |     - docker
+|   |     - steps
+|   |     - working_directory
+|   |     - circleci_ip_ranges
+|   |     - machine
+|   |     - environment
+|   |     - executor
+|   |     - shell
+|   |     - parameters
+|   |   Passed keys:
+|   |     - working_directory
+|   |     - docker
+|   |     - environment
+|   |     - context
+|   |     - steps
+2. [#/jobs/android-build-and-test] expected type: String, found: Mapping
+```

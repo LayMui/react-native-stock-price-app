@@ -113,6 +113,9 @@ jobs:
       - image: circleci/android:api-25-alpha
     environment:
       JVM_OPTS: -Xmx3200m
+    context: 
+      - BROWSERSTACK_CREDENTIALS
+           
     steps:
       - checkout
       - restore_cache:
@@ -155,7 +158,7 @@ jobs:
 
 workflows:
   node-android-ios:
-    jobs:
+   jobs:
       - node
       - android-build-and-test:
           requires:
@@ -163,4 +166,6 @@ workflows:
       - macos-build-and-test:
           requires:
             - node
+
+    
             
