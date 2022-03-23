@@ -15,4 +15,5 @@ work with the built-in WebdriverIO cucumber framework, but not with @serenity-js
 ```
 
 ```
-
+[!] Could not find action, lane or variable 'upload_to_browserstack_app_automate'. Check out the documentation for more details: https://docs.fastlane.tools/actions
+```

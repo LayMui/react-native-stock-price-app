@@ -28,24 +28,6 @@ platform :ios do
   end
 end
 
-platform :android do
-  desc "Uploads build to Browserstack's app automate and app live and runs all the tests on uploaded app."
-  lane :upload_test do
-    # Uploads app to BrowserStack app automate.
-    upload_to_browserstack_app_automate(
-      browserstack_username: ENV["BROWSERSTACK_USERNAME"],
-      browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
-      file_path: "react-native-stock-price-app/android/app/build/outputs/apk/app-debug.apk"
-    )
 
-    # Uploads app to BrowserStack app live.
-    upload_to_browserstack_app_live(
-      browserstack_username: ENV["BROWSERSTACK_USERNAME"],
-      browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
-      file_path: "react-native-stock-price-app/android/app/build/outputs/apk/app-debug.apk"
-    )
-    gradle(task: "test")
-  end
-end
 
 
