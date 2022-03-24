@@ -185,3 +185,23 @@ target 'reactnativestockpriceapp' do
 
 end
 ```
+
+
+xcodebuild clean archive -archivePath build/reactnativestockpriceapp.xcarchive -scheme reactnativestockpriceapp
+```
+note: Build preparation complete
+note: Building targets in dependency order
+error: No profiles for 'com.app.stockprice' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'com.app.stockprice'. Automatic signing is disabled and unable to generate a profile. To enable automatic signing, pass -allowProvisioningUpdates to xcodebuild. (in target 'reactnativestockpriceapp' from project 'reactnativestockpriceapp')
+** ARCHIVE FAILED **
+```
+
+
+xcodebuild clean archive -archivePath build/reactnativestockpriceapp.xcarchive -scheme reactnativestockpriceapp -allowProvisioningUpdates
+
+```
+note: Build preparation complete
+note: Building targets in dependency order
+error: Cannot create a iOS App Development provisioning profile for "com.app.stockprice". Personal development teams, including "Lay mui Toh", do not support the Push Notifications capability. (in target 'reactnativestockpriceapp' from project 'reactnativestockpriceapp')
+error: No profiles for 'com.app.stockprice' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'com.app.stockprice'. (in target 'reactnativestockpriceapp' from project 'reactnativestockpriceapp')
+** ARCHIVE FAILED **
+```
