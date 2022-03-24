@@ -17,3 +17,49 @@ work with the built-in WebdriverIO cucumber framework, but not with @serenity-js
 ```
 [!] Could not find action, lane or variable 'upload_to_browserstack_app_automate'. Check out the documentation for more details: https://docs.fastlane.tools/actions
 ```
+
+
+./gradlew androidDependencies
+
+```
++
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Received complete event for an unknown operation (id: 33688)
+
+* Try:
+Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Exception is:
+java.lang.IllegalStateException: Received complete event for an unknown operation (id: 33688)
+        at org.gradle.internal.logging.console.ProgressOperations.complete(ProgressOperations.java:53)
+        at org.gradle.internal.logging.console.WorkInProgressRenderer.renderNow(WorkInProgressRenderer.java:190)
+        at org.gradle.internal.logging.console.WorkInProgressRenderer.onOutput(WorkInProgressRenderer.java:71)
+        at org.gradle.internal.logging.console.BuildStatusRenderer.onOutput(BuildStatusRenderer.java:111)
+        at org.gradle.internal.logging.console.AbstractUserInputRenderer.onOutput(AbstractUserInputRenderer.java:56)
+        at org.gradle.internal.logging.console.ThrottlingOutputEventListener.renderNow(ThrottlingOutputEventListener.java:94)
+        at org.gradle.internal.logging.console.ThrottlingOutputEventListener.onOutput(ThrottlingOutputEventListener.java:84)
+        at org.gradle.internal.logging.sink.OutputEventRenderer.removeChain(OutputEventRenderer.java:120)
+        at org.gradle.internal.logging.sink.OutputEventRenderer.restore(OutputEventRenderer.java:104)
+        at org.gradle.internal.logging.services.DefaultLoggingManager$StartableLoggingRouter.stop(DefaultLoggingManager.java:298)
+        at org.gradle.internal.logging.services.DefaultLoggingManager.stop(DefaultLoggingManager.java:101)
+        at org.gradle.internal.logging.services.DefaultLoggingManager.stop(DefaultLoggingManager.java:38)
+        at org.gradle.launcher.cli.DefaultCommandLineActionFactory$WithLogging.execute(DefaultCommandLineActionFactory.java:242)
+        at org.gradle.launcher.Main.doAction(Main.java:35)
+        at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:50)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+        at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+        at org.gradle.launcher.GradleMain.main(GradleMain.java:31)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at org.gradle.wrapper.BootstrapMainStarter.start(BootstrapMainStarter.java:30)
+        at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:129)
+        at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:61)
+```

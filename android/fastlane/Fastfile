@@ -54,6 +54,7 @@ platform :android do
       browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
       file_path: "app/build/outputs/apk/app-debug.apk"
     )
+
     gradle(task: "test")
   end
 end

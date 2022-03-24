@@ -29,8 +29,8 @@ jobs:
       # - run:
       #     name: ios tests
       #     command: |
-            # yarn run test
-     
+      # yarn run test
+
       - persist_to_workspace:
           root: ~/react-native-stock-price-app
           paths:
@@ -78,11 +78,11 @@ jobs:
       - restore_cache:
           key: pods-v1-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
 
-      - run: 
+      - run:
           command: pod install
           working_directory: ios
 
-      - run: 
+      - run:
           command: bundle install
           working_directory: ios
 
@@ -103,40 +103,40 @@ jobs:
 
       - store_artifacts:
           path: output
-          
+
       - store_test_results:
           path: output/scan
-            
+
   android-build-and-test:
     working_directory: ~/react-native-stock-price-app/android
     docker:
       - image: circleci/android:api-25-alpha
     environment:
       JVM_OPTS: -Xmx3200m
-           
+
     steps:
       - checkout
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
-#      - run:
-#         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-#         command: sudo chmod +x ./gradlew
+      #      - run:
+      #         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+      #         command: sudo chmod +x ./gradlew
       - run:
           name: Download Dependencies
-          command: ./gradlew androidDependencies
+          command: cd android && ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
 
       # Generate apk
-      - run: ./gradlew assembleDebug
+      - run: cd android && ./gradlew assembleDebug
 
       # Upload app to BrowserStack and set app url in an environment variable.
       # Here replace browserstack_android_sample-debug.apk with name of your apk.
       - run:
-          name : App upload and Set app id in environment variable.
-          command : |
+          name: App upload and Set app id in environment variable.
+          command: |
             APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@react-native-stock-price-app/android/app/build/outputs/apk/debug/app-debug.apk")
             echo "APP_UPLOAD_RESPONSE :  " + $APP_UPLOAD_RESPONSE
             APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
@@ -152,20 +152,18 @@ jobs:
             fi
 
       # run tests!
-      - run: ./gradlew test
+      #- run: ./gradlew test
+      - run: yarn android.bs.app
 
 workflows:
   node-android-ios:
-   jobs:
+    jobs:
       - node
       - android-build-and-test:
-          context: 
+          context:
             - BROWSERSTACK_CREDENTIALS
           requires:
             - node
       - macos-build-and-test:
           requires:
             - node
-
-    
-            
