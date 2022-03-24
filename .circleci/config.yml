@@ -96,16 +96,33 @@ jobs:
           paths:
             - ios/Pods
 
+      # - run:
+      #     name: Fastlane
+      #     command: bundle exec fastlane $FASTLANE_LANE
+      #     working_directory: ios
+
+      # - store_artifacts:
+      #     path: output
+
+      # - store_test_results:
+      #     path: output/scan
+
       - run:
-          name: Fastlane
-          command: bundle exec fastlane $FASTLANE_LANE
-          working_directory: ios
-
-      - store_artifacts:
-          path: output
-
-      - store_test_results:
-          path: output/scan
+          name: App upload and Set app id in environment variable.
+          command: |
+            APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@react-native-stock-price-app/tests/apps/stockprice.ipa")
+            echo "APP_UPLOAD_RESPONSE :  " + $APP_UPLOAD_RESPONSE
+            APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
+            if [ $APP_ID != null ]; then
+              echo "Apk uploaded to BrowserStack with app id : ",$APP_ID;
+              echo "export BROWSERSTACK_APP_ID=$APP_ID" >> $BASH_ENV;
+              source $BASH_ENV;
+              echo "Setting value of BROWSERSTACK_APP_ID in environment variables to  ",$APP_ID;
+            else
+              UPLOAD_ERROR_MESSAGE=$(echo $APP_UPLOAD_RESPONSE | jq -r ".error")
+              echo "App upload failed, reason : ",$UPLOAD_ERROR_MESSAGE
+              exit 1;
+            fi
 
   android-build-and-test:
     working_directory: ~/react-native-stock-price-app/android

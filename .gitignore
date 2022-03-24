@@ -76,3 +76,4 @@ target/
 reporter/json
 reporter/cucumber_report.html
 reporter/cucumber_report.html.json
+fastlane/test_output
