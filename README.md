@@ -205,3 +205,7 @@ error: Cannot create a iOS App Development provisioning profile for "com.app.sto
 error: No profiles for 'com.app.stockprice' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'com.app.stockprice'. (in target 'reactnativestockpriceapp' from project 'reactnativestockpriceapp')
 ** ARCHIVE FAILED **
 ```
+
+Add a fastlane plugin
+
+bundle exec fastlane new_plugin

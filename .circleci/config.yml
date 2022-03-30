@@ -16,6 +16,8 @@ jobs:
 
       - run: yarn install
 
+      - run: npm install -g appium
+
       - save_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
           paths:
