@@ -63,3 +63,27 @@ java.lang.IllegalStateException: Received complete event for an unknown operatio
         at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:129)
         at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:61)
 ```
+
+
+Hidekeyboard on iOS real device issue:
+```
+for app with pid 12827
+    t =   126.77s                 Find: Descendants matching type Button
+    t =   126.77s                 Find: Elements matching predicate '"Hide keyboard" IN identifiers'
+2022-04-01 17:27:30.021162+0800 WebDriverAgentRunner-Runner[12814:695823] Enqueue Failure: Failed to get matching snapshot: No matches found for Elements matching predicate '"Hide keyboard" IN identifiers' from input {(
+    Button, identifier: 'shift', label: 'shift',
+    Button, label: 'Next keyboard', value: 简体手写,
+    Button, identifier: 'Return', label: 'return',
+    Button, label: 'Clear text'
+)} /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/WebDriverAgentRunner/UITestingUITests.m 39 1
+    t =   126.78s         Synthesize event
+    t =   126.78s             Failed: Failed to compute hit point for (null): (null)
+2022-04-01 17:27:30.029268+0800 WebDriverAgentRunner-Runner[12814:695823] Enqueue Failure: Failed to synthesize event: Failed to compute hit point for (null): (null) /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/WebDriverAgentRunner/UITestingUITests.m 39 1
+    t =   127.80s Checking `Expect predicate `existsNoRetry == 0` for object Keyboard`
+    t =   127.80s     Checking existence of `Keyboard`
+    t =   127.80s         Requesting snapshot of accessibility hierarchy for app with pid 12827
+    t =   127.84s         Find: Descendants matching type Keyboard
+    t =   127.84s     Capturing element debug description
+    t =   128.86s Checking `Expect predicate `existsNoRetry == 0` for object Keyboard`
+    t =   128.86s     Checking existence of `Keyboard`
+    t =   128.87s         Requesting snapshot of accessibility hierarchy for app```
