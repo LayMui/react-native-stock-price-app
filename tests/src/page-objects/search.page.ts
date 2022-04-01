@@ -29,7 +29,14 @@ class SearchPage extends Page {
   async searchForCompany(company) {
     ;(await this.stocktickersymbolsearchinput.waitForDisplayed()) &&
       (await this.stocktickersymbolsearchinput.setValue(company))
+      
+     
   }
+
+  async tapForm() {
+      (await this.stocktickersymbolsearchinput.touchAction('tap'))
+  }
+
 
   async tapSearchBtn() {
     ;(await this.stocktickersymbolsearchbtn.waitForDisplayed()) &&

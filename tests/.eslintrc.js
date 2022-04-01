@@ -1,87 +1,56 @@
 module.exports = {
-
-   
     root: true,
-    ignorePatterns: [ '**/lib/**' ],
     parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module',
-        project: [
-            'tsconfig.eslint.json',
-        ],
-    },
-    plugins: [
-        '@typescript-eslint',
-        'import',
-        'simple-import-sort',
-        'unused-imports'
-    ],
+    plugins: ['@typescript-eslint', 'wdio'],
     extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:unicorn/recommended',
+        'plugin:wdio/recommended',
     ],
+    env: {
+        node: true,
+        es6: true,
+        jasmine: true,
+    },
+    globals: {
+        browser: true,
+        document: true,
+    },
+    parserOptions: {
+        ecmaVersion: 2017,
+        sourceType: 'module',
+    },
     rules: {
-        'simple-import-sort/imports': 'error',
-        'simple-import-sort/exports': 'error',
-        'sort-imports': 'off',
-        'import/order': 'off',
-        'unused-imports/no-unused-imports': 'error',
+        semi: ['error', 'always'],
+        indent: [2, 4],
 
-        'no-multiple-empty-lines': ['warn', {
-            'max': 1,
-        }],
-
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-
-        'indent': 'off',
-        '@typescript-eslint/indent': ['error', 4, {
-            'MemberExpression': 'off',
-            'SwitchCase': 1,
-        }],
-
-        'quotes': 'off',
-        '@typescript-eslint/quotes': ['error', 'single', {
-            'allowTemplateLiterals': true,
-            'avoidEscape': true,
-        }],
-
-        '@typescript-eslint/no-explicit-any': 'off', // todo: review
-
-        '@typescript-eslint/no-unused-vars': ['warn', {
-            'args': 'none',
-            'vars': 'all',
-            'varsIgnorePattern': '^.*_$',
-        }],
-
-        'unicorn/empty-brace-spaces': 'off',
-
-        'unicorn/filename-case': [ 'error', {
-            'cases': {
-                'kebabCase': true,      // packages
-                'pascalCase': true,     // classes
-                'camelCase': true,      // functions
-            }
-        }],
-
-        'unicorn/no-array-for-each': 'off',
-        'unicorn/no-array-reduce': 'off',
-        'unicorn/no-array-callback-reference': 'off',
-        'unicorn/no-static-only-class': 'off',
-
-        'unicorn/numeric-separators-style': 'off',
-
-        'unicorn/prefer-module': 'off',         // fixme disable when we can provide support for ESM
-        'unicorn/prefer-node-protocol': 'off',  // fixme requires Node 14.13 or newer, disable until we no longer have to support Node 12
-        'unicorn/prefer-spread': 'off',
-
-        'unicorn/prevent-abbreviations': [ 'error', {
-            'allowList': {
-                'conf': true,
-                'wdio': true,
-            }
-        }]
-    }
+        'no-multiple-empty-lines': [ 2, { 'max': 1, 'maxEOF': 1 } ],
+        'array-bracket-spacing': [ 'error', 'never' ],
+        'brace-style': [ 'error', '1tbs', { allowSingleLine: true } ],
+        camelcase: [ 'error', { properties: 'never' } ],
+        'comma-spacing': [ 'error', { before: false, after: true } ],
+        'no-lonely-if': 'error',
+        'no-else-return': 'error',
+        'no-tabs': 'error',
+        'no-trailing-spaces': [ 'error', {
+            skipBlankLines: false,
+            ignoreComments: false,
+        } ],
+        quotes: [ 'error', 'single', { avoidEscape: true } ],
+        'unicode-bom': [ 'error', 'never' ],
+        'object-curly-spacing': [ 'error', 'always' ],
+        'keyword-spacing': [ 'error' ],
+        'require-atomic-updates': 0,
+        'no-unexpected-multiline': 0,
+    },
+    overrides: [ {
+        files: [ '*.ts' ],
+        rules: {
+            // see https://stackoverflow.com/questions/55280555/typescript-eslint-eslint-plugin-error-route-is-defined-but-never-used-no-un
+            'no-unused-vars': 'off',
+            '@typescript-eslint/no-unused-vars': 'error',
+            'no-undef': 'off',
+            // allow overloads
+            'no-redeclare': 'off',
+        },
+    } ],
 };
