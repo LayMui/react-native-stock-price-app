@@ -16,7 +16,7 @@ jobs:
 
       - run: yarn install
 
-      - run: ls -lah /usr/local/lib/node_modules/appium
+      - run: ls -lah /usr/local/lib/node_modules
 
       - run: chmod 744 -R /usr/local/lib/node_modules
 
