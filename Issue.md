@@ -87,3 +87,11 @@ for app with pid 12827
     t =   128.86s Checking `Expect predicate `existsNoRetry == 0` for object Keyboard`
     t =   128.86s     Checking existence of `Keyboard`
     t =   128.87s         Requesting snapshot of accessibility hierarchy for app```
+
+    On lower end processor 2 GHz Quad-Core Intel Core i5
+```
+    Error: Failed to create session.
+[0-0] Unable to connect to "http://localhost:4723/", make sure browser driver is running on that address.
+```
+
+Need to use higher end processor 2.4GHz and above
