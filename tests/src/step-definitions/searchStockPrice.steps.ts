@@ -4,10 +4,6 @@ import { Given, Then, When } from '@cucumber/cucumber'
 import { Actor } from '@serenity-js/core'
 
 import SearchPage from '../page-objects/search.page'
-import keys from 'webdriverio/build/commands/browser/keys'
-// import keys from 'webdriverio/build/commands/browser/keys'
-// import { Enter } from '@serenity-js/webdriverio'
-
 
 Given('{actor} is at the stock price app', (actor: Actor) => {})
 
