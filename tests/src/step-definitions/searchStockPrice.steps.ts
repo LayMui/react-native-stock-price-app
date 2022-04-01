@@ -13,7 +13,7 @@ When(
   { timeout: 80000 },
   async (actor: Actor, company: string) => {
     await SearchPage.searchForCompany(company)
-     await browser.isKeyboardShown() && await browser.hideDeviceKeyboard()
+    // await browser.isKeyboardShown() && await driver.hideDeviceKeyboard()
     await SearchPage.tapSearchBtn()
   
    

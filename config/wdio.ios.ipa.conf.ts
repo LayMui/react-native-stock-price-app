@@ -31,8 +31,8 @@ config.capabilities = [
     // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
     'appium:noReset': false,
     'appium:newCommandTimeout': 240,
-    xcodeOrgId: process.env.TEAMID,
-    xcodeSigningId: 'iPhone Developer',
+    // 'xcodeOrgId': process.env.TEAMID,
+    // 'xcodeSigningId': 'iPhone Developer',
   },
 ]
 

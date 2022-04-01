@@ -8,8 +8,6 @@
     "postinstall": "serenity-bdd update",
     "clean": "rimraf target && rm -fr reporter/*.html && rm -fr reporter/json rm -fr reporter/*json",
     "test": "failsafe clean test:execute test:report",
-    "test:ios": "wdio config/wdio.ios.app.conf.ts",
-    "test:android": "wdio config/wdio.android.app.conf.ts",
     "test:report": "serenity-bdd run --features ./tests/features",
     "ios.app": "wdio config/wdio.ios.app.conf.ts",
     "ios.ipa": "wdio config/wdio.ios.ipa.conf.ts",
