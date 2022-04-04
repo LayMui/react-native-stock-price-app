@@ -3,7 +3,7 @@ jobs:
   node:
     working_directory: ~/react-native-stock-price-app
     docker:
-      - image: cimg/node:16.14.2
+      - image: cimg/openjdk:8.0-node
 
     steps:
       - checkout
@@ -16,7 +16,7 @@ jobs:
 
       - run: yarn install
 
-      - run: npm install -g appium
+      # - run: npm install -g appium
 
       - save_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
@@ -30,8 +30,7 @@ jobs:
 
       # - run:
       #     name: ios tests
-      #     command: |
-      # yarn run test
+      #     command: yarn run test
 
       - persist_to_workspace:
           root: ~/react-native-stock-price-app
