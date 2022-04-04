@@ -135,6 +135,7 @@ export const config: WebdriverIOConfig = {
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
   baseUrl: 'http://localhost',
+
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,

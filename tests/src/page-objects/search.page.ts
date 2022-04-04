@@ -22,6 +22,10 @@ class SearchPage extends Page {
     return $(SELECTORS.STOCKTICKERSYMBOLSEARCHBTN)
   }
 
+  get keyboardReturn() {
+    return $('-ios predicate string:label == "stockNameText"')
+  }
+
   /**
    * a method to encapsule automation code to interact with the page
    */
@@ -33,8 +37,8 @@ class SearchPage extends Page {
      
   }
 
-  async tapForm() {
-      (await this.stocktickersymbolsearchinput.touchAction('tap'))
+  async tapReturnToCloseKeyboard() {
+      await this.keyboardReturn.touchAction('tap')
   }
 
 

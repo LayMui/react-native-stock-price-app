@@ -13,7 +13,7 @@ When(
   async (actor: Actor, company: string) => {
     await SearchPage.searchForCompany(company)
     await driver.isKeyboardShown() &&
-    await driver.hideKeyboard()
+    await SearchPage.tapReturnToCloseKeyboard()
   
   
     await SearchPage.tapSearchBtn()

@@ -6,6 +6,8 @@ import config from './wdio.conf.appium'
 // ============
 config.specs = ['./tests/features/*.feature']
 
+
+
 // ============
 // Capabilities
 // ============
@@ -31,8 +33,6 @@ config.capabilities = [
     // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
     'appium:noReset': false,
     'appium:newCommandTimeout': 240,
-    // 'xcodeOrgId': process.env.TEAMID,
-    // 'xcodeSigningId': 'iPhone Developer',
   },
 ]
 
