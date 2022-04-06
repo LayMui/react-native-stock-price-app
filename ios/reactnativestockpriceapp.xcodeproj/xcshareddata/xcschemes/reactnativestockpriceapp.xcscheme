@@ -83,6 +83,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "reactnativestockpriceapp"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

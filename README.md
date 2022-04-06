@@ -69,7 +69,8 @@ $ yarn add mocha --dev
 ```
 $ yarn add @babel/preset-env --dev
 ```
-
+Add .env file with the content
+API_KEY=<your-api-key at https://site.financialmodelingprep.com/developer/docs>
 ### Appium Server
 
 WebdriverIO acts as our Appium client, but we need to also run Appium Server, which will act as a bridge to translate the actions in our tests to the necessary logic in either UIAutomator2 or XCUITest behind the scenes. You can install it globally from `npm`:
