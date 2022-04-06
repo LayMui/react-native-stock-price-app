@@ -210,3 +210,6 @@ error: No profiles for 'com.app.stockprice' were found: Xcode couldn't find any 
 Add a fastlane plugin
 
 bundle exec fastlane new_plugin
+
+
+Appium inspector on android apk
