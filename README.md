@@ -213,3 +213,6 @@ bundle exec fastlane new_plugin
 
 
 Appium inspector on android apk
+
+<img width="1067" alt="Screenshot 2022-04-06 at 7 36 10 PM" src="https://user-images.githubusercontent.com/11436517/161967288-fc88d7a7-9883-403b-8bbf-37b5a26a3996.png">
+
