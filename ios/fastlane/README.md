@@ -33,19 +33,6 @@ Uploads build to Browserstack's app automate and app live and runs all the tests
 
 ----
 
-
-## Android
-
-### android upload_test
-
-```sh
-[bundle exec] fastlane android upload_test
-```
-
-Uploads build to Browserstack's app automate and app live and runs all the tests on uploaded app.
-
-----
-
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
 
 More information about _fastlane_ can be found on [fastlane.tools](https://fastlane.tools).
