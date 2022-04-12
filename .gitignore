@@ -77,3 +77,10 @@ reporter/json
 reporter/cucumber_report.html
 reporter/cucumber_report.html.json
 fastlane/test_output
+
+ios/vendor
+ios/vendor/bundle
+ios/fastlane/test_output
+*zip
+*.cer
+ios/*lock

@@ -15,21 +15,34 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios test
+### ios beta
 
 ```sh
-[bundle exec] fastlane ios test
+[bundle exec] fastlane ios beta
 ```
 
-Runs all the tests
+Description of what the lane does
 
-### ios adhoc
+### ios custom_lane
 
 ```sh
-[bundle exec] fastlane ios adhoc
+[bundle exec] fastlane ios custom_lane
 ```
 
-Ad-hoc build
+
+
+----
+
+
+## Android
+
+### android upload_test
+
+```sh
+[bundle exec] fastlane android upload_test
+```
+
+Uploads build to Browserstack's app automate and app live and runs all the tests on uploaded app.
 
 ----
 
