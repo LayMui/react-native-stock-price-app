@@ -15,37 +15,48 @@
 
 default_platform(:ios)
 
-# platform :ios do
-#   desc "Description of what the lane does"
-#   lane :custom_lane do
-#     # add actions here: https://docs.fastlane.tools/actions
-#   # increment_version_number
-#   # commit_version_bump
-#   # push_to_git_remote
-#   # # Building and signing
-#   # match
-#   # gym
-#   end
-# end
-
-
 platform :ios do
   before_all do
     setup_circle_ci
   end
+  desc "Description of what the lane does"
 
-  desc "Runs all the tests"
-  lane :test do
-    scan
+  lane :beta do
+    match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
+    app_identifier: "com.app.laymui.stockprice")
+    build_app(scheme: "reactnativestockprice")
   end
 
-  desc "Ad-hoc build"
-  lane :adhoc do
-    match(type: "adhoc")
-    gym(export_method: "ad-hoc")
+  lane :custom_lane do
+    # scan
+  
+    match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
+      app_identifier: "com.app.laymui.stockprice")
+    gym
+    # crashlytics
+    # add actions here: https://docs.fastlane.tools/actions
+    # to generate ipa if you're not uploading to App Store or TestFlight:
+    # cd ios && fastlane gym init 
   end
 end
 
 
+platform :android do
+  desc "Uploads build to Browserstack's app automate and app live and runs all the tests on uploaded app."
+  lane :upload_test do
+    # Uploads app to BrowserStack app automate.
+    upload_to_browserstack_app_automate(
+      browserstack_username: ENV["BROWSERSTACK_USERNAME"],
+      browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
+      file_path: "react-native-stock-price-app/android/app/build/outputs/apk/app-debug.apk"
+    )
 
-
+    # Uploads app to BrowserStack app live.
+    upload_to_browserstack_app_live(
+      browserstack_username: ENV["BROWSERSTACK_USERNAME"],
+      browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
+      file_path: "react-native-stock-price-app/android/app/build/outputs/apk/app-debug.apk"
+    )
+    gradle(task: "test")
+  end
+end
