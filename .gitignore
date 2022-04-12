@@ -84,3 +84,4 @@ ios/fastlane/test_output
 *zip
 *.cer
 ios/*lock
+tests/apps
