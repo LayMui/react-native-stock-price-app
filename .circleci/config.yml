@@ -43,7 +43,7 @@ jobs:
           path: reporter
 
   macos-build-and-test:
-    working_directory: ~/react-native-stock-price-app
+    working_directory: ~/react-native-stock-price-app/ios
     macos:
       xcode: 13.2.1
     # environment:
@@ -55,7 +55,7 @@ jobs:
       - ruby/install-deps
       - run:
           name: fastlane
-          command: cd ios && bundle exec fastlane beta
+          command: bundle exec fastlane beta
 
       # - store_artifacts:
       #     path: output
@@ -90,12 +90,12 @@ jobs:
       - checkout
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
-      #      - run:
-      #         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-      #         command: sudo chmod +x ./gradlew
-      # - run:
-      #     name: Download Dependencies
-      #     command: cd android && ./gradlew androidDependencies
+      - run:
+          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+          command: sudo chmod +x ./gradlew
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
