@@ -52,11 +52,10 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
-      - ruby/install-deps
+     # - ruby/install-deps
       - run:
           name: fastlane
-          command: bundle exec fastlane beta
-
+          command:  fastlane beta
       - store_artifacts:
           path: ios/stockprice.ipa
           destination: ipa
