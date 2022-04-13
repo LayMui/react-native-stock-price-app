@@ -43,7 +43,7 @@ jobs:
           path: reporter
 
   macos-build-and-test:
-    working_directory: ~/react-native-stock-price-app/ios
+    working_directory: ~/react-native-stock-price-app
     macos:
       xcode: 13.2.1
     # environment:
@@ -55,7 +55,7 @@ jobs:
       - ruby/install-deps
       - run:
           name: fastlane
-          command: bundle exec fastlane beta
+          command: cd ios && bundle exec fastlane beta
 
       # - store_artifacts:
       #     path: output
