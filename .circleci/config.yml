@@ -43,7 +43,7 @@ jobs:
           path: reporter
 
   macos-build-and-test:
-    working_directory: ~/react-native-stock-price-app
+    working_directory: ~/react-native-stock-price-app/ios
     macos:
       xcode: 13.2.1
     # environment:
@@ -55,12 +55,11 @@ jobs:
       - ruby/install-deps
       - run:
           name: fastlane
-          command: cd ios && bundle exec fastlane beta
+          command: bundle exec fastlane beta
 
-      # - store_artifacts:
-      #     path: output
-      # - store_test_results:
-      #     path: output/scan
+      - store_artifacts:
+          path: ios/stockprice.ipa
+          destination: ipa
 
       - run:
           name: App upload and Set app id in environment variable.
