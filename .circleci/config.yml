@@ -104,6 +104,8 @@ jobs:
     #  - run: cd android && ./gradlew assembleDebug
       - run: yarn 
 
+      - run: brew install android-platform-tools
+
       - run: yarn android
 
       # Upload app to BrowserStack and set app url in an environment variable.
