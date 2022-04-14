@@ -23,6 +23,8 @@ platform :ios do
 
   lane :testandbuild do
   #  scan
+    get_certificates           # invokes cert
+    get_provisioning_profile   # invokes sigh
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
     app_identifier: "com.app.laymui.stockprice")
    # build_app(scheme: "reactnativestockprice")
@@ -35,14 +37,14 @@ platform :ios do
     upload_to_browserstack_app_automate(
       browserstack_username: ENV["BROWSERSTACK_USERNAME"],
       browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
-      file_path: "react-native-stock-price-app/ios/stockprice.ipa"
+      file_path: "react-native-stock-price-app/ios/output/stockprice.ipa"
     )
 
     # Uploads app to BrowserStack app live.
     upload_to_browserstack_app_live(
       browserstack_username: ENV["BROWSERSTACK_USERNAME"],
       browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
-      file_path: "react-native-stock-price-app/ios/stockprice.ipa"
+      file_path: "react-native-stock-price-app/ios/output/stockprice.ipa"
     )
     yarn ios:ipa
 
