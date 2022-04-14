@@ -102,6 +102,8 @@ jobs:
 
       # Generate apk
     #  - run: cd android && ./gradlew assembleDebug
+      - run: npm install -g react-native-cli
+
       - run: yarn android
 
       # Upload app to BrowserStack and set app url in an environment variable.
