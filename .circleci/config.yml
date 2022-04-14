@@ -93,6 +93,7 @@ jobs:
           name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
           command: cd android; sudo chmod +x ./gradlew
 
+      - run: npm install --global yarn
       - run: 
           name: install Dependencies
           command: yarn
