@@ -53,6 +53,7 @@ jobs:
     steps:
       - checkout
       - run: cd ios;bundle install
+      - run: security find-identity -v -p
       - run: cd ios; bundle exec fastlane testandbuild
       - store_artifacts:
           path: ios/output
