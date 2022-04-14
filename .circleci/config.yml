@@ -131,11 +131,11 @@ workflows:
   node-android-ios:
     jobs:
       - node
-      - android-build-and-test:
-          context:
-            - BROWSERSTACK_CREDENTIALS
-          requires:
-            - node
+      # - android-build-and-test:
+      #     context:
+      #       - BROWSERSTACK_CREDENTIALS
+      #     requires:
+      #       - node
       - macos-build-and-test:
           requires:
             - node
