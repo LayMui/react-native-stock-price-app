@@ -54,7 +54,7 @@ jobs:
       - checkout
       # - ruby/install-deps
      
-      - run: bundle install
+      - run: cd ios;bundle install
       - run: cd ios; bundle exec fastlane testandbuild
       - store_artifacts:
           path: output
