@@ -79,7 +79,7 @@ jobs:
             fi
 
   android-build-and-test:
-    working_directory: ~/react-native-stock-price-app/android
+    working_directory: ~/react-native-stock-price-app
     docker:
       - image: cimg/openjdk:8.0-node
     # environment:
@@ -91,17 +91,17 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
       - run:
           name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-          command: sudo chmod +x ./gradlew
+          command: cd android; sudo chmod +x ./gradlew
       - run:
           name: Download Dependencies
-          command:  ./gradlew androidDependencies
+          command: cd android; ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
 
       # Generate apk
-      - run:  ./gradlew assembleDebug
+      - run:  cd android; ./gradlew assembleDebug
    
       # Upload app to BrowserStack and set app url in an environment variable.
       # Here replace browserstack_android_sample-debug.apk with name of your apk.
