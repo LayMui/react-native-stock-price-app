@@ -64,7 +64,7 @@ jobs:
       - run:
           name: App upload and Set app id in environment variable.
           command: |
-            APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@react-native-stock-price-app/tests/apps/stockprice.ipa")
+            APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@react-native-stock-price-app/tests/apps/output/stockprice.ipa")
             echo "APP_UPLOAD_RESPONSE :  " + $APP_UPLOAD_RESPONSE
             APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
             if [ $APP_ID != null ]; then
@@ -131,12 +131,12 @@ workflows:
   node-android-ios:
     jobs:
       - node
-      - android-build-and-test:
-          context:
-            - BROWSERSTACK_CREDENTIALS
-          requires:
-            - node
-      - macos-build-and-test:
-          requires:
-            - node
+      # - android-build-and-test:
+      #     context:
+      #       - BROWSERSTACK_CREDENTIALS
+      #     requires:
+      #       - node
+      # - macos-build-and-test:
+      #     requires:
+      #       - node
 
