@@ -21,11 +21,12 @@ platform :ios do
   end
   desc "Description of what the lane does"
 
-  lane :beta do
+  lane :testandbuild do
+  #  scan
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
     app_identifier: "com.app.laymui.stockprice")
    # build_app(scheme: "reactnativestockprice")
-    gym
+    gym(output_directory: "output")
   end
 
   desc "Uploads build to Browserstack's app automate and app live and runs all the tests on uploaded app."

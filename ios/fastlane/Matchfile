@@ -1,4 +1,4 @@
-git_url("https://github.com/LayMui/reactnativestockpriceapp_ios_certification.git")
+git_url("git@github.com:LayMui/reactnativestockpriceapp_ios_certification.git")
 
 storage_mode("git")
 

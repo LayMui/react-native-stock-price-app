@@ -53,16 +53,13 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - run: 
-          name: install fastlane
-          command: gem install fastlane
-      - run:
-          name: fastlane
-          command:  cd ios && fastlane beta
+      - run: bundle install
+      - run: bundle exec fastlane testandbuild
       - store_artifacts:
-          path: ios/stockprice.ipa
+          path: output
           destination: ipa
-
+    
+    
       - run:
           name: App upload and Set app id in environment variable.
           command: |
