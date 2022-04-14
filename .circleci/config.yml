@@ -43,7 +43,7 @@ jobs:
           path: reporter
 
   macos-build-and-test:
-    working_directory: ~/react-native-stock-price-app/ios
+    working_directory: ~/react-native-stock-price-app
     macos:
       xcode: 13.2.1
     # environment:
@@ -53,11 +53,9 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - restore_cache:
-          key: gemfile-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
-
+     
       - run: bundle install
-      - run: bundle exec fastlane testandbuild
+      - run: cd ios; bundle exec fastlane testandbuild
       - store_artifacts:
           path: output
           destination: ipa
