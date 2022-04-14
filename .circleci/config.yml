@@ -52,15 +52,15 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
-      # - ruby/install-deps
-     
       - run: cd ios;bundle install
       - run: cd ios; bundle exec fastlane testandbuild
       - store_artifacts:
-          path: output
+          path: ios/output
           destination: ipa
     
-    
+      - store_artifacts:
+          path: ios/output
+      
       - run:
           name: App upload and Set app id in environment variable.
           command: |
@@ -87,18 +87,18 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
-      - run:
-          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-          command: sudo chmod +x ./gradlew
-      - run:
-          name: Download Dependencies
-          command: ./gradlew androidDependencies
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
+      # - restore_cache:
+      #     key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
+      # - run:
+      #     name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+      #     command: sudo chmod +x ./gradlew
+      # - run:
+      #     name: Download Dependencies
+      #     command: ./gradlew androidDependencies
+      # - save_cache:
+      #     paths:
+      #       - ~/.gradle
+      #     key: jars-{{ checksum "build.gradle" }}-{{ checksum  "react-native-stock-price-app/android/build.gradle" }}
 
       # Generate apk
     #  - run: cd android && ./gradlew assembleDebug
