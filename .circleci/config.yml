@@ -82,7 +82,7 @@ jobs:
 
   android-build-and-test:
     working_directory: ~/react-native-stock-price-app
-    app-dir: android
+   
     docker:
       - image: cimg/android:2022.03
     environment:
@@ -135,12 +135,12 @@ workflows:
   node-android-ios:
     jobs:
       - node
-      - android-build-and-test:
-          context:
-            - BROWSERSTACK_CREDENTIALS
-          requires:
-            - node
-      # - macos-build-and-test:
+      # - android-build-and-test:
+      #     context:
+      #       - BROWSERSTACK_CREDENTIALS
       #     requires:
       #       - node
+      - macos-build-and-test:
+          requires:
+            - node
 
