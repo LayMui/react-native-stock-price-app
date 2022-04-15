@@ -23,10 +23,18 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Runs all the tests
 
-### android beta
+### android beta_release
 
 ```sh
-[bundle exec] fastlane android beta
+[bundle exec] fastlane android beta_release
+```
+
+
+
+### android beta_debug
+
+```sh
+[bundle exec] fastlane android beta_debug
 ```
 
 

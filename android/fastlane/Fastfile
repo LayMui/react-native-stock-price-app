@@ -21,12 +21,22 @@ platform :android do
     gradle(task: "test")
   end
 
-  lane :beta do
+  lane :beta_release do
     # Adjust the `build_type` and `flavor` params as needed to build the right APK for your setup
     gradle(
       task: 'assemble',
-      flavor: '',
       build_type: 'Release'
+    )
+  
+    # ...
+  end
+
+
+  lane :beta_debug do
+    # Adjust the `build_type` and `flavor` params as needed to build the right APK for your setup
+    gradle(
+      task: 'assemble',
+      build_type: 'Debug'
     )
   
     # ...

@@ -12,13 +12,6 @@ When(
   { timeout: 80000 },
   async (actor: Actor, company: string) => {
     await SearchPage.searchForCompany(company)
-    await driver.isKeyboardShown() &&
-    await SearchPage.tapReturnToCloseKeyboard()
-  
-  
-    await SearchPage.tapSearchBtn()
-  
-   
   }
 )
 

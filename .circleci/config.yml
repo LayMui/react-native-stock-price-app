@@ -49,22 +49,23 @@ jobs:
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: adhoc
+      PLATFORM: ios
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
-      - run: cd ios;bundle install
-      - run: cd ios; bundle exec fastlane $FASTLANE_LANE
+      - run: cd $PLATFORM;bundle install
+      - run: cd $PLATFORM; bundle exec fastlane $FASTLANE_LANE
       - store_artifacts:
           path: ios/output
           destination: ipa
     
       - store_artifacts:
-          path: ios/output
-      
+          path: $PLATFORM/$FL_OUTPUT_DIR
+
       - run:
           name: App upload and Set app id in environment variable.
           command: |
-            APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@react-native-stock-price-app/tests/apps/output/stockprice.ipa")
+            APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@react-native-stock-price-app/tests/apps/ios/output/stockprice.ipa")
             echo "APP_UPLOAD_RESPONSE :  " + $APP_UPLOAD_RESPONSE
             APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
             if [ $APP_ID != null ]; then
@@ -78,56 +79,7 @@ jobs:
               exit 1;
             fi
 
-  android-build-and-test:
-    working_directory: ~/react-native-stock-price-app
-   
-    docker:
-      - image: cimg/android:2022.03
-    environment:
-      JVM_OPTS: -Xmx3200m
 
-    steps:
-      - checkout
-          
-      - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
-      - run:
-          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-          command: cd android; sudo chmod +x ./gradlew
-
-      - run:
-          name: Download Dependencies
-          command: cd android; ./gradlew androidDependencies
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "android/build.gradle" }}-{{ checksum  "android/build.gradle" }}
-
-      # Generate apk
-      - run:  cd android; ./gradlew assembleDebug
-   
-      # Upload app to BrowserStack and set app url in an environment variable.
-      # Here replace browserstack_android_sample-debug.apk with name of your apk.
-      - run:
-          name: App upload and Set app id in environment variable.
-          command: |
-            APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@react-native-stock-price-app/android/app/build/outputs/apk/debug/app-debug.apk")
-            echo "APP_UPLOAD_RESPONSE :  " + $APP_UPLOAD_RESPONSE
-            APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
-            if [ $APP_ID != null ]; then
-              echo "Apk uploaded to BrowserStack with app id : ",$APP_ID;
-              echo "export BROWSERSTACK_APP_ID=$APP_ID" >> $BASH_ENV;
-              source $BASH_ENV;
-              echo "Setting value of BROWSERSTACK_APP_ID in environment variables to  ",$APP_ID;
-            else
-              UPLOAD_ERROR_MESSAGE=$(echo $APP_UPLOAD_RESPONSE | jq -r ".error")
-              echo "App upload failed, reason : ",$UPLOAD_ERROR_MESSAGE
-              exit 1;
-            fi
-
-      # run tests!
-      #- run: ./gradlew test
-      - run: yarn android.bs.app
 
 workflows:
   node-android-ios:

@@ -33,6 +33,11 @@ class SearchPage extends Page {
   async searchForCompany(company) {
     ;(await this.stocktickersymbolsearchinput.waitForDisplayed()) &&
       (await this.stocktickersymbolsearchinput.setValue(company))
+
+      await driver.isKeyboardShown() &&
+      await this.keyboardReturn.touchAction('tap')
+      ;(await this.stocktickersymbolsearchbtn.waitForDisplayed()) &&
+      (await this.stocktickersymbolsearchbtn.touchAction('tap'))
       
      
   }
