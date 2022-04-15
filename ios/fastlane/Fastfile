@@ -29,6 +29,12 @@ platform :ios do
     gym(output_directory: "output")
   end
 
+  desc "Ad-hoc build"
+  lane :adhoc do
+    match(type: "adhoc")
+    gym(export_method: "ad-hoc")
+  end
+
   desc "Uploads build to Browserstack's app automate and app live and runs all the tests on uploaded app."
    lane :upload_test do
     # Uploads app to BrowserStack app automate.

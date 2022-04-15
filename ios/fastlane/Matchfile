@@ -4,6 +4,7 @@ storage_mode("git")
 
 type("adhoc") # The default type, can be: appstore, adhoc, enterprise or development
 
+#app_identifier(["CW9P2MP746.com.app.laymui.stockprice"])
 app_identifier(["com.app.laymui.stockprice"])
 username("tohlaymui35@gmail.com") # Your Apple Developer Portal username
 

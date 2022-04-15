@@ -23,6 +23,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Description of what the lane does
 
+### ios adhoc
+
+```sh
+[bundle exec] fastlane ios adhoc
+```
+
+Ad-hoc build
+
 ### ios upload_test
 
 ```sh

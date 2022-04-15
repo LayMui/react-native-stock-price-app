@@ -1,18 +1,20 @@
 version: 2.1
 
-
 orbs:
-  ruby: circleci/ruby@1.2.0
+  macos: circleci/macos@2
   
 jobs:
   node:
     working_directory: ~/react-native-stock-price-app
+    
     docker:
       - image: cimg/openjdk:8.0-node
 
     steps:
+      - macos/switch-ruby:
+          version: "2.6"
       - checkout
-
+        
       - restore_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
 
@@ -46,14 +48,14 @@ jobs:
     working_directory: ~/react-native-stock-price-app
     macos:
       xcode: 13.2.1
-    # environment:
-    #   FL_OUTPUT_DIR: output
-    #   FASTLANE_LANE: beta
+    environment:
+      FL_OUTPUT_DIR: output
+      FASTLANE_LANE: adhoc
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
       - run: cd ios;bundle install
-      - run: cd ios; bundle exec fastlane testandbuild
+      - run: cd ios; bundle exec fastlane $FASTLANE_LANE
       - store_artifacts:
           path: ios/output
           destination: ipa
@@ -80,6 +82,7 @@ jobs:
 
   android-build-and-test:
     working_directory: ~/react-native-stock-price-app
+    app-dir: android
     docker:
       - image: cimg/android:2022.03
     environment:
@@ -87,16 +90,13 @@ jobs:
 
     steps:
       - checkout
+          
       - restore_cache:
-          key: jars-{{ checksum "android/build.gradle" }}-{{ checksum  "android/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
       - run:
           name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
           command: cd android; sudo chmod +x ./gradlew
 
-      - run: npm install --global yarn
-      - run: 
-          name: install Dependencies
-          command: yarn
       - run:
           name: Download Dependencies
           command: cd android; ./gradlew androidDependencies
