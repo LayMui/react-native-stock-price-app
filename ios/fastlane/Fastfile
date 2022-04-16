@@ -13,6 +13,10 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+xcversion(version: "13.3") # Selects Xcode 13.3
+xcode_select "/Applications/Xcode13.app
+sudo xcode-select -s /Applications/Xcode13.app
+
 default_platform(:ios)
 
 platform :ios do
