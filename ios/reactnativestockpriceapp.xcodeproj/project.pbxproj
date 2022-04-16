@@ -159,7 +159,7 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = CW9P2MP746;
 						LastSwiftMigration = 1120;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -304,8 +304,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = reactnativestockpriceapp/stockprice.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution: LayMui Toh (CW9P2MP746)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: LayMui Toh (CW9P2MP746)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CW9P2MP746;
 				ENABLE_BITCODE = NO;
@@ -323,7 +324,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.laymui.stockprice;
 				PRODUCT_NAME = stockprice;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.app.laymui.stockprice";
 				SWIFT_OBJC_BRIDGING_HEADER = "reactnativestockpriceapp/reactnativestockpriceapp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -339,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = reactnativestockpriceapp/stockprice.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: LayMui Toh (CW9P2MP746)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CW9P2MP746;

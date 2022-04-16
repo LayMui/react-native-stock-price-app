@@ -12,11 +12,7 @@
 
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
-
-xcversion(version: "13.3") # Selects Xcode 13.3
-xcode_select "/Applications/Xcode13.app
-sudo xcode-select -s /Applications/Xcode13.app
-
+ 
 default_platform(:ios)
 
 platform :ios do
@@ -30,7 +26,7 @@ platform :ios do
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
     app_identifier: "com.app.laymui.stockprice")
    # build_app(scheme: "reactnativestockprice")
-    gym(output_directory: "output")
+    gym(output_directory: "output", sdk: "13.3")
   end
 
   desc "Ad-hoc build"
