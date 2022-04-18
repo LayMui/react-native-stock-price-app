@@ -79,25 +79,57 @@ jobs:
               exit 1;
             fi
 
+
   android-build-and-test:
-    working_directory: ~/react-native-stock-price-app
-    macos:
-      xcode: 13.2.1
+    working_directory: ~/react-native-stock-price-app/android
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: beta_release
-      PLATFORM: android
-    shell: /bin/bash --login -o pipefail
+    docker:
+      - image: circleci/android:api-29-node
+     
     steps:
-      - checkout
+      - checkout:
+          path: ~/react-native-stock-price-app
+
+      - attach_workspace:
+          at: ~/react-native-stock-price-app
+
+      - restore_cache:
+          key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
+
+      - run: bundle install
+
+      - save_cache:
+          key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
+          paths:
+            - vendor/bundle
+
       - run: cd $PLATFORM;bundle install
       - run: cd $PLATFORM; bundle exec fastlane $FASTLANE_LANE
+
       - store_artifacts:
-          path: $PLATFORM/output
-          destination: apk
+          path: $PLATFORM/app/build/outputs/apk/release/app-release.apk
+
+  # android-build-and-test:
+  #   working_directory: ~/react-native-stock-price-app
+  #   macos:
+  #     xcode: 13.2.1
+  #   environment:
+  #     FL_OUTPUT_DIR: output
+  #     FASTLANE_LANE: beta_release
+  #     PLATFORM: android
+  #   shell: /bin/bash --login -o pipefail
+  #   steps:
+  #     - checkout
+  #     - run: cd $PLATFORM;bundle install
+  #     - run: cd $PLATFORM; bundle exec fastlane $FASTLANE_LANE
+  #     - store_artifacts:
+  #         path: $PLATFORM/output
+  #         destination: apk
     
-      - store_artifacts:
-          path: $PLATFORM/$FL_OUTPUT_DIR
+  #     - store_artifacts:
+  #         path: $PLATFORM/$FL_OUTPUT_DIR
 
       - run:
           name: App upload and Set app id in environment variable.

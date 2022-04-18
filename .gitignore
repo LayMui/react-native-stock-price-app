@@ -85,3 +85,4 @@ ios/fastlane/test_output
 *.cer
 ios/*lock
 tests/apps
+android/app/my-release-key.keystore

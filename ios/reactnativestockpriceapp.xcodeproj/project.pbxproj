@@ -354,7 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.laymui.stockprice;
 				PRODUCT_NAME = stockprice;
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.app.laymui.stockprice";
+				PROVISIONING_PROFILE_SPECIFIER = "com.app.laymui.stockprice AdHoc";
 				SWIFT_OBJC_BRIDGING_HEADER = "reactnativestockpriceapp/reactnativestockpriceapp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
