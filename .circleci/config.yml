@@ -70,12 +70,6 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
           paths:
             - node_modules
-
-      # - restore_cache:
-      #     key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
-
-      # - restore_cache:
-      #     key: pods-v1-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
       
       - run: 
           command: pod install
