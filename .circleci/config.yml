@@ -71,11 +71,11 @@ jobs:
           paths:
             - node_modules
 
-      - restore_cache:
-          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
+      # - restore_cache:
+      #     key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
 
-      - restore_cache:
-          key: pods-v1-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
+      # - restore_cache:
+      #     key: pods-v1-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
       
       - run: 
           command: pod install
@@ -101,11 +101,11 @@ jobs:
           working_directory: ios
       
       - store_artifacts:
-          path: $PLATFORM/output
+          path: $PLATFORM/$FL_OUTPUT_DIR
           destination: ipa
     
       - store_artifacts:
-          path: $PLATFORM/$FL_OUTPUT_DIR
+          path: $PLATFORM/$FL_OUTPUT_DIR/
 
       - run:
           name: App upload and Set app id in environment variable.
