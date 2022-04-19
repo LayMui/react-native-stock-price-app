@@ -98,7 +98,7 @@ jobs:
           working_directory: ios
       
       - store_artifacts:
-          path: $PLATFORM/stockprice.ipa
+          path: ios/stockprice.ipa
           # destination: ipa
   
 
