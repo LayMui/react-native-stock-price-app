@@ -70,7 +70,10 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
           paths:
             - node_modules
-      
+
+      - run: 
+          command: ln -s $(which node) /usr/local/bin/node 
+           
       - run: 
           command: pod install
           working_directory: ios
