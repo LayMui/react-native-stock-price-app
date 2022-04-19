@@ -5,17 +5,22 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000501">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000315">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: setup_circle_ci" time="0.124269">
+      <testcase classname="fastlane.lanes" name="1: setup_circle_ci" time="0.189469">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: delete_keychain" time="0.022708">
+      <testcase classname="fastlane.lanes" name="2: match" time="10.142728">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: gym" time="444.203648">
         
       </testcase>
     

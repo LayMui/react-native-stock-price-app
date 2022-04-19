@@ -98,11 +98,9 @@ jobs:
           working_directory: ios
       
       - store_artifacts:
-          path: $PLATFORM/$FL_OUTPUT_DIR
-          destination: ipa
-    
-      - store_artifacts:
-          path: $PLATFORM/$FL_OUTPUT_DIR/
+          path: $PLATFORM/stockprice.ipa
+          # destination: ipa
+  
 
       - run:
           name: App upload and Set app id in environment variable.
