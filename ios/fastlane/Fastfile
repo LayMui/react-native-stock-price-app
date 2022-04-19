@@ -39,11 +39,12 @@ platform :ios do
   end
   desc "Description of what the lane does"
 
+
   lane :testandbuild do
   #  scan
   cert
   sigh(force: true)
-  ensure_temp_keychain 'fastlane_tmp_keychain'
+  #ensure_temp_keychain 'fastlane_tmp_keychain'
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
     app_identifier: "com.app.laymui.stockprice")
    # build_app(scheme: "reactnativestockprice")
