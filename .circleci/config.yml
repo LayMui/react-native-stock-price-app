@@ -149,6 +149,7 @@ jobs:
           command: bundle exec fastlane $FASTLANE_LANE
 
       - store_artifacts:
+          path: $PLATFORM/app/build/outputs/apk/release/app-release.apk
 
       - run:
           name: App upload and Set app id in environment variable.
