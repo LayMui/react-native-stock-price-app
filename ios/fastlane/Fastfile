@@ -26,7 +26,7 @@ def ensure_temp_keychain(name)
   create_keychain(
     name: fastlane_keychain,
     default_keychain: true,
-    password: 'Sybase123',
+    password: 'Sy13@se138',
     unlock: true,
     timeout: false
   )
@@ -43,7 +43,7 @@ platform :ios do
   #  scan
   cert
   sigh(force: true)
-  ensure_temp_keychain 'fastlane_tmp_keychain'
+  ensure_temp_keychain 'login.keychain'
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
     app_identifier: "com.app.laymui.stockprice")
    # build_app(scheme: "reactnativestockprice")
