@@ -91,7 +91,12 @@ jobs:
           key: pods-v1-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
           paths:
             - ios/Pods
-
+            
+      - run:
+          name: Fastlane spaceauth
+          command: bundle exec fastlane spaceauth -u "tohlaymui35@gmail.com"
+          working_directory: ios
+          
       - run:
           name: Fastlane
           command: bundle exec fastlane $FASTLANE_LANE
