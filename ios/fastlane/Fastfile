@@ -48,7 +48,7 @@ platform :ios do
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
     app_identifier: "com.app.laymui.stockprice")
    # build_app(scheme: "reactnativestockprice")
-    gym(output_directory: "output", sdk: "15.4")
+    gym(output_directory: "output")
   end
 
   desc "Ad-hoc build"
