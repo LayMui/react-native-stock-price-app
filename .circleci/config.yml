@@ -92,10 +92,10 @@ jobs:
           paths:
             - ios/Pods
             
-      # - run:
-      #     name: Fastlane spaceauth
-      #     command: bundle exec fastlane spaceauth -u "tohlaymui35@gmail.com"
-      #     working_directory: ios
+      - run:
+          name: Fastlane spaceauth
+          command: bundle exec fastlane spaceauth -u "tohlaymui35@gmail.com"
+          working_directory: ios
 
       - run:
           name: Fastlane
