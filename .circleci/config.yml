@@ -104,7 +104,7 @@ jobs:
       
       - store_artifacts:
           path: ios/output/stockprice.ipa
-          destination: ipa
+         
   
 
       - run:
