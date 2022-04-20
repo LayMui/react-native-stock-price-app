@@ -43,7 +43,7 @@ platform :ios do
   lane :testandbuild do
   #  scan
   #cert
-  sigh(force: true)
+  # sigh(force: true)
   #ensure_temp_keychain 'fastlane_tmp_keychain'
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
     app_identifier: "com.app.laymui.stockprice")
