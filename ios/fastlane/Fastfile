@@ -42,7 +42,7 @@ platform :ios do
 
   lane :testandbuild do
   #  scan
-  cert
+  #cert
   sigh(force: true)
   #ensure_temp_keychain 'fastlane_tmp_keychain'
     match(type: "adhoc", readonly: is_ci, force_for_new_devices: true,
