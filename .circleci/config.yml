@@ -131,8 +131,7 @@ jobs:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: beta_release
     docker:
-    #  - image: circleci/android:api-29-node
-      - image: circleci/android:api-27-node8-alpha
+      - image: circleci/android:api-29-node
      
     steps:
       - checkout:
@@ -175,6 +174,13 @@ jobs:
               exit 1;
             fi
 
+      - run:
+          name: Run the metro server
+          command: yarn ios
+          
+      - run:
+          name: Run the test
+          command: yarn ios.ipa
 
 workflows:
   node-android-ios:
