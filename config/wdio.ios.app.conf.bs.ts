@@ -17,7 +17,7 @@ config.key = process.env.BROWSERSTACK_ACCESS_KEY
 config.capabilities = [
   {
     platformName: 'iOS',
-    platformVersion: '15.2',
+    platformVersion: '15.4',
     deviceName: 'iPhone 13',
     app: 'bs://5ee775fbe778ecd2e00d27dbd7f02cbf3c190e5c',
   },

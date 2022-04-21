@@ -15,8 +15,8 @@
     "ios.app": "wdio config/wdio.ios.app.conf.ts",
     "ios.ipa": "wdio config/wdio.ios.ipa.conf.ts",
     "android.app": "wdio config/wdio.android.app.conf.ts",
-    "android.bs.app": "wdio config/wdio.android.app.conf.bs.ts",
-   
+    "android.bs.apk": "wdio config/wdio.android.app.conf.bs.ts",
+    "ios.bs.ipa": "wdio config/wdio.android.app.conf.bs.ts",
     "lint": "eslint --ext ts --config ./tests/eslintrc.js .",
     "lint:fix": "npm run lint -- --fix",
     "report:cucumber": "node reporter/index.js && open reporter/cucumber_report.html",

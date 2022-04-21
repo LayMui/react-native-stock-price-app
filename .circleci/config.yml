@@ -124,6 +124,14 @@ jobs:
               exit 1;
             fi
 
+      - run:
+          name: Run the metro server
+          command: yarn ios
+
+      - run:
+          name: Run the test
+          command: yarn ios.bs.ipa
+
 
   android-build-and-test:
     working_directory: ~/react-native-stock-price-app/android
@@ -176,11 +184,11 @@ jobs:
 
       - run:
           name: Run the metro server
-          command: yarn ios
+          command: yarn android
 
       - run:
           name: Run the test
-          command: yarn ios.ipa
+          command: yarn android.bs.apk
 
 workflows:
   node-android-ios:
