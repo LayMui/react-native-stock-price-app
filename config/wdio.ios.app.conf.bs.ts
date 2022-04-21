@@ -19,7 +19,7 @@ config.capabilities = [
     platformName: 'iOS',
     platformVersion: '15.4',
     deviceName: 'iPhone 13',
-    app: 'bs://5ee775fbe778ecd2e00d27dbd7f02cbf3c190e5c',
+    app: 'bs://a7fb5916197f45ed8a7a7427e8d578aab9989208',
   },
 ]
 
