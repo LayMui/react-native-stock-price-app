@@ -128,9 +128,9 @@ jobs:
           name: Run the metro server
           command: yarn ios
 
-      - run:
-          name: Run the test
-          command: yarn ios.bs.ipa
+      # - run:
+      #     name: Run the test
+      #     command: yarn ios.bs.ipa
 
 
   android-build-and-test:
@@ -160,6 +160,10 @@ jobs:
 
       - run:
           name: Fastlane
+          command: bundle update fastlane 
+
+      - run:
+          name: Fastlane
           command: bundle exec fastlane $FASTLANE_LANE
 
       - store_artifacts:
@@ -186,9 +190,9 @@ jobs:
           name: Run the metro server
           command: yarn android
 
-      - run:
-          name: Run the test
-          command: yarn android.bs.apk
+      # - run:
+      #     name: Run the test
+      #     command: yarn android.bs.apk
 
 workflows:
   node-android-ios:
