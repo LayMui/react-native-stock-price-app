@@ -208,9 +208,9 @@ workflows:
             - BROWSERSTACK_CREDENTIALS
           requires:
             - node
-      - ios-build-and-test:
-          context:
-            - BROWSERSTACK_CREDENTIALS
-          requires:
-            - node
+      # - ios-build-and-test:
+      #     context:
+      #       - BROWSERSTACK_CREDENTIALS
+      #     requires:
+      #       - node
 
