@@ -179,7 +179,8 @@ jobs:
           command: |
             APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@/Users/distiller/react-native-stock-price-app/tests/apps/stockprice.apk")
             echo "APP_UPLOAD_RESPONSE :  ${APP_UPLOAD_RESPONSE}" 
-            APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
+            APP_ID=$(echo ${APP_UPLOAD_RESPONSE} | jq -r ".app_url")
+            echo "APP_IDL ${APP_ID}"
             if [ $APP_ID != null ]; then
               echo "Apk uploaded to BrowserStack with app id : ",$APP_ID;
               echo "export BROWSERSTACK_APP_ID=$APP_ID" >> $BASH_ENV;
@@ -208,9 +209,9 @@ workflows:
             - BROWSERSTACK_CREDENTIALS
           requires:
             - node
-      # - ios-build-and-test:
-      #     context:
-      #       - BROWSERSTACK_CREDENTIALS
-      #     requires:
-      #       - node
+      - ios-build-and-test:
+          context:
+            - BROWSERSTACK_CREDENTIALS
+          requires:
+            - node
 
