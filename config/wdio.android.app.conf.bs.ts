@@ -8,6 +8,7 @@ config.specs = ['./tests/features/*.feature']
 
 config.user = process.env.BROWSERSTACK_USERNAME
 config.key = process.env.BROWSERSTACK_ACCESS_KEY
+config.app_id_android = process.env.BROWSERSTACK_APP_ID_ANDROID
 
 // ============
 // Capabilities
@@ -19,7 +20,7 @@ config.capabilities = [
     platformName: 'android',
     platformVersion: '9.0',
     deviceName: 'Google Pixel 3',
-    app: 'bs://5ee775fbe778ecd2e00d27dbd7f02cbf3c190e5c',
+    app: app_id_android
   },
 ]
 

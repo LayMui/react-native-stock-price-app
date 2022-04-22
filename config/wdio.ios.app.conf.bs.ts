@@ -8,6 +8,7 @@ config.specs = ['./tests/features/*.feature']
 
 config.user = process.env.BROWSERSTACK_USERNAME
 config.key = process.env.BROWSERSTACK_ACCESS_KEY
+config.app_id = process.env.BROWSERSTACK_APP_ID_IOS
 
 // ============
 // Capabilities
@@ -19,7 +20,7 @@ config.capabilities = [
     platformName: 'iOS',
     platformVersion: '15.4',
     deviceName: 'iPhone 13',
-    app: 'bs://a7fb5916197f45ed8a7a7427e8d578aab9989208',
+    app: app_id,
   },
 ]
 
