@@ -139,9 +139,8 @@ jobs:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: beta_release
     docker:
-     # - image: circleci/android:api-29-node
-      - image: circleci/android
-
+      - image: circleci/android:api-29-node
+     
     steps:
       - checkout:
           path: ~/react-native-stock-price-app
