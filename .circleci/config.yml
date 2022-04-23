@@ -112,7 +112,6 @@ jobs:
           command: |
             APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@/Users/distiller/react-native-stock-price-app/ios/output/stockprice.ipa")
             echo "APP_UPLOAD_RESPONSE :  ${APP_UPLOAD_RESPONSE}" 
-            sleep 200
             APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
             if [ $APP_ID != null ]; then
               echo "Apk uploaded to BrowserStack with app id : ",$APP_ID;
@@ -140,8 +139,9 @@ jobs:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: beta_release
     docker:
-      - image: circleci/android:api-29-node
-     
+     # - image: circleci/android:api-29-node
+      - image: circleci/android:2022.04
+      
     steps:
       - checkout:
           path: ~/react-native-stock-price-app
@@ -180,6 +180,7 @@ jobs:
           command: |
             APP_UPLOAD_RESPONSE=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@/Users/distiller/react-native-stock-price-app/tests/apps/stockprice.apk")
             echo "APP_UPLOAD_RESPONSE :  ${APP_UPLOAD_RESPONSE}" 
+            sleep 100
             APP_ID=$(echo ${APP_UPLOAD_RESPONSE} | jq -r ".app_url")
             echo "APP_ID:  ${APP_ID}"
             if [ $APP_ID != null ]; then
