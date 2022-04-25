@@ -25,7 +25,7 @@ config.capabilities = [
     'appium:orientation': 'PORTRAIT',
     'appium:automationName': 'XCUITest',
     // The path to the app
-    'appium:app': join(process.cwd(), './tests/apps/stockprice.app'),
+    'appium:app': join(process.cwd(), './tests/apps/stockprice.app.zip'),
     // Read the reset strategies very well, they differ per platform, see
     // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
     'appium:noReset': false,

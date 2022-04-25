@@ -11,6 +11,7 @@ When(
   '{pronoun} want to search for company {string}',
   { timeout: 80000 },
   async (actor: Actor, company: string) => {
+    actor.attemptsTo()
     await SearchPage.searchForCompany(company)
   }
 )
@@ -18,6 +19,6 @@ When(
 Then(
   '{pronoun} is able to see the stock price displayed',
   async (actor: Actor) => {
-    await SearchPage.founded()
+ //   await SearchPage.founded()
   }
 )
