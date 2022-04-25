@@ -7,7 +7,7 @@
     "eject": "expo eject",
     "postinstall": "serenity-bdd update",
     "clean": "rimraf target && rm -fr reporter/*.html && rm -fr reporter/json rm -fr reporter/*json",
-    "test": "failsafe clean test:report",
+    "test:ios": "failsafe clean ios.app test:report",
     "test:report": "serenity-bdd run --features ./tests/features",
     "cleanup":"rm -fr node_modules && yarn cache clean --forformsce && watchman watch-del-all",
     "update:app": "scripts/ios.sh",
@@ -21,7 +21,7 @@
     "lint": "eslint --ext ts --config ./tests/eslintrc.js .",
     "lint:fix": "npm run lint -- --fix",
     "report:cucumber": "node reporter/index.js && open reporter/cucumber_report.html",
-    "report": "open tests/target/site/serenity/index.html"
+    "report": "open target/site/serenity/index.html"
   },
   "dependencies": {
     "expo": "~42.0.1",
