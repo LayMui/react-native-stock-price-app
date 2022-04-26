@@ -9,6 +9,9 @@ import {
   WebdriverIOConfig,
 } from '@serenity-js/webdriverio'
 
+import { configure, StreamReporter } from '@serenity-js/core';
+import fs = require('fs');
+
 import { Actors } from '../tests/src'
 
 import cucumberJson from 'wdio-cucumberjs-json-reporter'
@@ -33,11 +36,12 @@ export const config: WebdriverIOConfig = {
     // Configure reporting services
     // see: https://serenity-js.org/handbook/reporting/
     crew: [
-      //  ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
-      // Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
+       ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
+     //  Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
       // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
       ConsoleReporter.forDarkTerminals(),
       new SerenityBDDReporter(),
+      new StreamReporter(fs.createWriteStream('./events.ndjson'))
     ],
   },
   //
