@@ -221,3 +221,6 @@ To run the test on iOS Simulator
 ```
 yarn test:ios
 ```
+
+Empty serenityjs report
+<img width="1424" alt="Screenshot 2022-04-25 at 4 58 12 PM" src="https://user-images.githubusercontent.com/11436517/165056133-121b708d-6071-48d4-82be-faf9ac9901ae.png">
