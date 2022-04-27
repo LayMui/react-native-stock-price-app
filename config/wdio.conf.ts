@@ -4,10 +4,13 @@ import { ConsoleReporter } from '@serenity-js/console-reporter'
 import { ArtifactArchiver } from '@serenity-js/core'
 import { SerenityBDDReporter } from '@serenity-js/serenity-bdd'
 import {
-  Photographer,
-  TakePhotosOfInteractions,
+
   WebdriverIOConfig,
 } from '@serenity-js/webdriverio'
+
+import {
+  Photographer, TakePhotosOfInteractions 
+} from '@serenity-js/web'
 
 import { configure, StreamReporter } from '@serenity-js/core';
 import fs = require('fs');
@@ -37,7 +40,7 @@ export const config: WebdriverIOConfig = {
     // see: https://serenity-js.org/handbook/reporting/
     crew: [
        ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
-     //  Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
+       Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
       // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
       ConsoleReporter.forDarkTerminals(),
       new SerenityBDDReporter(),
