@@ -11,8 +11,7 @@ When(
   '{pronoun} want to search for company {string}',
   { timeout: 80000 },
   async (actor: Actor, company: string) => {
-    actor.attemptsTo()
-    await Search.forCompany(company)
+    return await actor.attemptsTo(Search.forCompany(company))
   }
 )
 
