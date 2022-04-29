@@ -2,8 +2,8 @@ import 'expect-webdriverio'
 
 import { Given, Then, When } from '@cucumber/cucumber'
 import { Actor } from '@serenity-js/core'
+import { Search } from '../tasks/Search'
 
-import SearchPage from '../page-objects/search.page'
 
 Given('{actor} is at the stock price app', (actor: Actor) => {})
 
@@ -12,7 +12,7 @@ When(
   { timeout: 80000 },
   async (actor: Actor, company: string) => {
     actor.attemptsTo()
-    await SearchPage.searchForCompany(company)
+    await Search.forCompany(company)
   }
 )
 

@@ -166,7 +166,7 @@ export const config: WebdriverIOConfig = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: 'cucumber',
+  //framework: 'cucumber',
   //
   // The number of times to retry the entire specfile when it fails as a whole
   // specFileRetries: 1,
@@ -180,21 +180,23 @@ export const config: WebdriverIOConfig = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: [ 'spec',
-    [
-      'cucumberjs-json',
-      {
-        jsonFolder: 'reporter/json/',
-        language: 'en',
-      },
-    ],
-  ],
+  // reporters: [ 'spec',
+  //   [
+  //     'cucumberjs-json',
+  //     {
+  //       jsonFolder: 'reporter/json/',
+  //       language: 'en',
+  //     },
+  //   ],
+  // ],
 
   //
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: ['./tests/src/**/*.ts'],
+    require: [
+      './tests/src/**/*.ts'
+    ],
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

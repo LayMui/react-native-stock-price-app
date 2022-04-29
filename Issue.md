@@ -95,3 +95,11 @@ for app with pid 12827
 ```
 
 Need to use higher end processor 2.4GHz and above
+
+
+
+serenityjs + webdriverio + cucumber not working 
+```
+
+ [ios.app] [0-0] error: unknown option '--no-backtrace'
+ ```

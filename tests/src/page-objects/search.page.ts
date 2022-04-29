@@ -11,7 +11,7 @@ const SELECTORS = {
    
 };
 
-class SearchPage extends Page {
+class SearchPageWDIO extends Page {
   /**
    * define selectors using getter methods
    */
@@ -64,4 +64,4 @@ class SearchPage extends Page {
   }
 }
 
-export default new SearchPage()
+export default new SearchPageWDIO()
