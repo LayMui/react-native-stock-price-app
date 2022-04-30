@@ -101,5 +101,72 @@ Need to use higher end processor 2.4GHz and above
 serenityjs + webdriverio + cucumber not working 
 ```
 
- [ios.app] [0-0] error: unknown option '--no-backtrace'
+ ios.app] > react-native-stock-price-app@1.0.0 ios.app
+[ios.app] > wdio config/wdio.ios.app.conf.ts
+[ios.app] 
+[ios.app] 
+[ios.app] Execution of 1 workers started at 2022-04-30T09:57:23.116Z
+[ios.app] 
+[ios.app] 2022-04-30T09:57:23.160Z INFO @wdio/cli:launcher: Run onPrepare hook
+[ios.app] 2022-04-30T09:57:24.635Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+[ios.app] 2022-04-30T09:57:24.638Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.ios.app.conf.ts
+[ios.app] [0-0] 2022-04-30T09:57:25.206Z INFO @wdio/local-runner: Run worker command: run
+[ios.app] [0-0] RUNNING in iOS - /tests/features/SearchStockPrice.feature
+[ios.app] [0-0] 2022-04-30T09:57:26.451Z INFO webdriver: Initiate new session using the WebDriver protocol
+[ios.app] [0-0] 2022-04-30T09:57:26.521Z INFO webdriver: [POST] http://localhost:4723/session
+[ios.app] [0-0] 2022-04-30T09:57:26.522Z INFO webdriver: DATA {
+[ios.app] [0-0]   capabilities: {
+[ios.app] [0-0]     alwaysMatch: {
+[ios.app] [0-0]       browserName: '',
+[ios.app] [0-0]       platformName: 'iOS',
+[ios.app] [0-0]       'appium:deviceName': 'iPhone 13',
+[ios.app] [0-0]       'appium:platformVersion': '15.4',
+[ios.app] [0-0]       'appium:orientation': 'PORTRAIT',
+[ios.app] [0-0]       'appium:automationName': 'XCUITest',
+[ios.app] [0-0]       'appium:app': '/Users/laymui/dev/taiger/react-native-stock-price-app/tests/apps/stockprice.app.zip',
+[ios.app] [0-0]       'appium:noReset': false,
+[ios.app] [0-0]       'appium:newCommandTimeout': 240
+[ios.app] [0-0]     },
+[ios.app] [0-0]     firstMatch: [ {} ]
+[ios.app] [0-0]   },
+[ios.app] [0-0]   desiredCapabilities: {
+[ios.app] [0-0]     browserName: '',
+[ios.app] [0-0]     platformName: 'iOS',
+[ios.app] [0-0]     'appium:deviceName': 'iPhone 13',
+[ios.app] [0-0]     'appium:platformVersion': '15.4',
+[ios.app] [0-0]     'appium:orientation': 'PORTRAIT',
+[ios.app] [0-0]     'appium:automationName': 'XCUITest',
+[ios.app] [0-0]     'appium:app': '/Users/laymui/dev/taiger/react-native-stock-price-app/tests/apps/stockprice.app.zip',
+[ios.app] [0-0]     'appium:noReset': false,
+[ios.app] [0-0]     'appium:newCommandTimeout': 240
+[ios.app] [0-0]   }
+[ios.app] [0-0] }
+[ios.app] [0-0] error: unknown option '--no-backtrace'
+[ios.app] [0-0] FAILED in iOS - /tests/features/SearchStockPrice.feature
+[ios.app] 2022-04-30T09:57:36.053Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+[ios.app] 2022-04-30T09:57:36.053Z INFO @wdio/cli:launcher: Run onComplete hook
+[ios.app] 
+[ios.app] Spec Files:    0 passed, 1 failed, 1 total (100% completed) in 00:00:12 
+[ios.app] 
+[ios.app] 2022-04-30T09:57:36.054Z INFO @wdio/local-runner: Shutting down spawned worker
+[ios.app] 2022-04-30T09:57:36.305Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+[ios.app] 2022-04-30T09:57:36.305Z INFO @wdio/local-runner: shutting down
+[failsafe] Script 'ios.app' exited with code 1
+[test:report] 
+[test:report] > react-native-stock-price-app@1.0.0 test:report
+[test:report] > serenity-bdd run --features ./tests/features
+[test:report] 
+[test:report] Spawning: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/bin/java -Dserenity.compress.filenames=true -DLOG_LEVEL=warn -Dlogback.configurationFile=/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@serenity-js/serenity-bdd/resources/logback.config.xml -jar node_modules/@serenity-js/serenity-bdd/cache/serenity-cli-3.1.0.jar --features ./tests/features --destination target/site/serenity --source target/site/serenity --project react-native-stock-price-app
+[test:report] -------------------------------
+[test:report] SERENITY COMMAND LINE INTERFACE
+[test:report] -------------------------------
+[test:report] Loading test outcomes from target/site/serenity
+[test:report] Writing aggregated report to target/site/serenity
+[test:report] 
+[test:report] Report generation done
+[failsafe] Script 'test:report' exited with code 0
+error Command failed with exit code 1.                                            
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command
+
+
  ```
