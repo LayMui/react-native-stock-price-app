@@ -11,9 +11,9 @@
       "types": [
           "node",
           "webdriverio/async",
-          "@wdio/mocha-framework",
+       //   "@wdio/cucumber-framework",
           "expect-webdriverio",
-          "@wdio/sauce-service",
+        //  "@wdio/sauce-service",
       ]
   },
   "include": [

@@ -170,3 +170,21 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 
 
  ```
+
+ Use wdio.conf.ts from https://github.com/viper3400/serenity-js-cucumber-webdriverio-template/blob/feature-migration-3.x/wdio.conf.ts 
+```
+ [ios.app] [0-0]     'appium:noReset': false,
+[ios.app] [0-0]     'appium:newCommandTimeout': 240
+[ios.app] [0-0]   }
+[ios.app] [0-0] }
+[ios.app] [0-0] 2022-05-05T08:00:07.284Z ERROR @wdio/runner: TypeError: Cannot read property 'CUCUMBER_PUBLISH_ENABLED' of undefined
+[ios.app] [0-0]     at isPublishing (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@cucumber/cucumber/src/api/convert_configuration.ts:83:24)
+[ios.app] [0-0]     at makePublishConfig (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@cucumber/cucumber/src/api/convert_configuration.ts:67:19)
+[ios.app] [0-0]     at convertFormats (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@cucumber/cucumber/src/api/convert_configuration.ts:58:14)
+[ios.app] [0-0]     at convertConfiguration (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@cucumber/cucumber/src/api/convert_configuration.ts:35:14)
+[ios.app] [0-0]     at loadConfiguration (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@cucumber/cucumber/src/api/load_configuration.ts:38:46)
+[ios.app] [0-0]     at Cli.run (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@cucumber/cucumber/src/cli/index.ts:68:30)
+[ios.app] [0-0]     at processTicksAndRejections (node:internal/process/task_queues:94:5)
+[ios.app] [0-0]     at async Runner.run (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/runner/build/index.js:152:24)
+[ios.app] [0-0]  Error:  Cannot read property 'CUCUMBER_PUBLISH_ENABLED' of undefin
+```

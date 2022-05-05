@@ -1,23 +1,16 @@
 import isCI = require('is-ci')
 
-import { ConsoleReporter } from '@serenity-js/console-reporter'
-import { ArtifactArchiver } from '@serenity-js/core'
-import { SerenityBDDReporter } from '@serenity-js/serenity-bdd'
-import {
+import { ConsoleReporter } from '@serenity-js/console-reporter';
+import { ArtifactArchiver } from '@serenity-js/core';
+import { SerenityBDDReporter } from '@serenity-js/serenity-bdd';
+import { Photographer, TakePhotosOfInteractions } from '@serenity-js/web';
 
-  WebdriverIOConfig,
-} from '@serenity-js/webdriverio'
 
-import {
-  Photographer, TakePhotosOfInteractions 
-} from '@serenity-js/web'
+import { WebdriverIOConfig } from '@serenity-js/webdriverio';
 
-import { configure, StreamReporter } from '@serenity-js/core';
 import fs = require('fs');
 
 import { Actors } from '../tests/src'
-
-import cucumberJson from 'wdio-cucumberjs-json-reporter'
 
 export const config: WebdriverIOConfig = {
   // =========================
@@ -28,24 +21,23 @@ export const config: WebdriverIOConfig = {
   framework: '@serenity-js/webdriverio',
 
   serenity: {
-    // Use custom Actors class
-    // see: https://serenity-js.org/modules/core/class/src/stage/Cast.ts~Cast.html
-    actors: new Actors(),
+      // Use custom Actors class
+      // see: https://serenity-js.org/modules/core/class/src/stage/Cast.ts~Cast.html
+      actors: new Actors(),
 
-    // Use Cucumber.js test runner adapter
-    // see: https://serenity-js.org/modules/cucumber/
-    runner: 'cucumber',
+      // Use Cucumber.js test runner adapter
+      // see: https://serenity-js.org/modules/cucumber/
+      runner: 'cucumber',
 
-    // Configure reporting services
-    // see: https://serenity-js.org/handbook/reporting/
-    crew: [
-       ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
-       Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
-      // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
-      ConsoleReporter.forDarkTerminals(),
-      new SerenityBDDReporter(),
-      new StreamReporter(fs.createWriteStream('./events.ndjson'))
-    ],
+      // Configure reporting services
+      // see: https://serenity-js.org/handbook/reporting/
+      crew: [
+          ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
+          Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
+          // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
+          ConsoleReporter.forDarkTerminals(),
+          new SerenityBDDReporter(),
+      ]
   },
   //
   // ====================
@@ -190,6 +182,8 @@ export const config: WebdriverIOConfig = {
   //   ],
   // ],
 
+
+  
   //
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
@@ -197,30 +191,19 @@ export const config: WebdriverIOConfig = {
     require: [
       './tests/src/**/*.ts'
     ],
-    // <boolean> show full backtrace for errors
-    backtrace: false,
-    // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
-    requireModule: [],
-    // <boolean> invoke formatters without executing steps
-    dryRun: false,
-    // <boolean> abort the run on first failure
-    failFast: false,
-    // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
-    format: ['pretty'],
-    // <boolean> hide step definition snippets for pending steps
-    snippets: true,
-    // <boolean> hide source uris
-    source: true,
-    // <string[]> (name) specify the profile to use
-    profile: [],
-    // <boolean> fail if there are any undefined or pending steps
-    strict: false,
-    // <string> (expression) only execute the features or scenarios with tags matching the expression
-    tagExpression: '@test',
-    // <number> timeout for step definitions
-    timeout: 60000,
-    // <boolean> Enable this config to treat undefined definitions as warnings.
-    ignoreUndefinedDefinitions: false,
+
+   
+  // <string[]> (type[:path]) specify native Cucumber.js output format, if needed. Optionally supply PATH to redirect formatter output (repeatable)
+  format: [ ],
+  // <string> (name) specify the profile to use
+  profile: '',
+  // <boolean> fail if there are any undefined or pending steps
+  strict: false,
+  // <string[] | string> (expression) only execute the features or scenarios with tags matching the expression
+  tags: [],
+  // <number> timeout for step definitions
+  timeout: 60000,
+
   },
 
   //
