@@ -27,7 +27,7 @@ export const config: WebdriverIOConfig = {
 
       // Use Cucumber.js test runner adapter
       // see: https://serenity-js.org/modules/cucumber/
-      runner: 'cucumber',
+      //runner: 'cucumber',
 
       // Configure reporting services
       // see: https://serenity-js.org/handbook/reporting/

@@ -188,3 +188,12 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 [ios.app] [0-0]     at async Runner.run (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/runner/build/index.js:152:24)
 [ios.app] [0-0]  Error:  Cannot read property 'CUCUMBER_PUBLISH_ENABLED' of undefin
 ```
+
+
+Comment out  runner: 'cucumber' at wdio.conf.ts
+```
+ios.app] 2022-05-12T07:27:33.576Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.ios.app.conf.ts
+[ios.app] [0-0] 2022-05-12T07:27:33.912Z INFO @wdio/local-runner: Run worker command: run
+[ios.app] [0-0] 2022-05-12T07:27:34.668Z ERROR @wdio/local-runner: Failed launching test session: Error: Cannot find module 'mocha'
+[ios.app] [0-0] Require stack:
+```
