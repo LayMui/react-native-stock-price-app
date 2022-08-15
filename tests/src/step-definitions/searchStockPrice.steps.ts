@@ -6,11 +6,14 @@ import { Actor } from '@serenity-js/core'
 import { Search } from '../tasks/Search'
 
 import SearchPageWDIO  from '../page-objects/search.page'
+import { imagium } from '../support/imagium'
 
-//const buffer = await page.screenshot({ path: 'screenshot.png', fullPage: true });
 
 Given('{actor} is at the stock price app', (actor: Actor) => {
- 
+  
+  var ID = imagium.getUID()
+ var screenshot = driver.saveScreenshot('./home.png');
+ imagium.validateScreenshot(ID,  screenshot)
 })
 
 When(
@@ -20,6 +23,9 @@ When(
    // return await actor.attemptsTo(Search.forCompany(company))
    
    await SearchPageWDIO.searchForCompany(company)
+   var ID = imagium.getUID()
+ var screenshot = driver.saveScreenshot('./company.png');
+ imagium.validateScreenshot(ID,  screenshot)
   }
 )
 

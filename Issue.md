@@ -197,3 +197,386 @@ ios.app] 2022-05-12T07:27:33.576Z INFO @wdio/local-runner: Start worker 0-0 with
 [ios.app] [0-0] 2022-05-12T07:27:34.668Z ERROR @wdio/local-runner: Failed launching test session: Error: Cannot find module 'mocha'
 [ios.app] [0-0] Require stack:
 ```
+
+Issue with imagium integration on 2nd screenshot
+this code snippet
+  var ID = imagium.getUID()
+ var screenshot = driver.saveScreenshot('./company.png');
+ imagium.validateScreenshot(ID,  screenshot)
+  }
+
+```
+3-77311d99eaf3
+[0-0] Error: connect ECONNREFUSED 127.0.0.1:80
+[0-0]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+[0-0]   errno: -61,
+[0-0]   code: 'ECONNREFUSED',
+[0-0]   syscall: 'connect',
+[0-0]   address: '127.0.0.1',
+[0-0]   port: 80,
+[0-0]   config: {
+[0-0]     url: 'undefined/api/GetUID',
+[0-0]     method: 'post',
+[0-0]     data: '{"TestName":"Webdriverio Integration"}',
+[0-0]     headers: {
+[0-0]       Accept: 'application/json, text/plain, */*',
+[0-0]       'Content-Type': 'application/json',
+[0-0]       'User-Agent': 'axios/0.21.4',
+[0-0]       'Content-Length': 38
+[0-0]     },
+[0-0]     transformRequest: [ [Function: transformRequest] ],
+[0-0]     transformResponse: [ [Function: transformResponse] ],
+[0-0]     timeout: 0,
+[0-0]     adapter: [Function: httpAdapter],
+[0-0]     xsrfCookieName: 'XSRF-TOKEN',
+[0-0]     xsrfHeaderName: 'X-XSRF-TOKEN',
+[0-0]     maxContentLength: -1,
+[0-0]     maxBodyLength: -1,
+[0-0]     validateStatus: [Function: validateStatus],
+[0-0]     transitional: {
+[0-0]       silentJSONParsing: true,
+[0-0]       forcedJSONParsing: true,
+[0-0]       clarifyTimeoutError: false
+[0-0]     }
+[0-0]   },
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
+[0-0]     _events: [Object: null prototype] {
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
+[0-0]     },
+[0-0]     _eventsCount: 2,
+[0-0]     _maxListeners: undefined,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
+[0-0]       protocol: 'http:',
+[0-0]       path: 'undefined/api/GetUID',
+[0-0]       method: 'POST',
+[0-0]       headers: [Object],
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: null,
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: 'undefined/api/GetUID'
+[0-0]     },
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 38,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
+[0-0]       _events: [Object: null prototype],
+[0-0]       _eventsCount: 7,
+[0-0]       _maxListeners: undefined,
+[0-0]       outputData: [],
+[0-0]       outputSize: 0,
+[0-0]       writable: true,
+[0-0]       destroyed: false,
+[0-0]       _last: true,
+[0-0]       chunkedEncoding: false,
+[0-0]       shouldKeepAlive: false,
+[0-0]       maxRequestsOnConnectionReached: false,
+[0-0]       _defaultKeepAlive: true,
+[0-0]       useChunkedEncodingByDefault: true,
+[0-0]       sendDate: false,
+[0-0]       _removedConnection: false,
+[0-0]       _removedContLen: false,
+[0-0]       _removedTE: false,
+[0-0]       _contentLength: null,
+[0-0]       _hasBody: true,
+[0-0]       _trailer: '',
+[0-0]       finished: false,
+[0-0]       _headerSent: true,
+[0-0]       _closed: false,
+[0-0]       socket: [Socket],
+[0-0]       _header: 'POST undefined/api/GetUID HTTP/1.1\r\n' +
+[0-0]         'Accept: application/json, text/plain, */*\r\n' +
+[0-0]         'Content-Type: application/json\r\n' +
+[0-0]         'User-Agent: axios/0.21.4\r\n' +
+[0-0]         'Content-Length: 38\r\n' +
+[0-0]         'Host: localhost\r\n' +
+[0-0]         'Connection: close\r\n' +
+[0-0]         '\r\n',
+[0-0]       _keepAliveTimeout: 0,
+[0-0]       _onPendingData: [Function: nop],
+[0-0]       agent: [Agent],
+[0-0]       socketPath: undefined,
+[0-0]       method: 'POST',
+[0-0]       maxHeaderSize: undefined,
+[0-0]       insecureHTTPParser: undefined,
+[0-0]       path: 'undefined/api/GetUID',
+[0-0]       _ended: false,
+[0-0]       res: null,
+[0-0]       aborted: false,
+[0-0]       timeoutCb: null,
+[0-0]       upgradeOrConnect: false,
+[0-0]       parser: null,
+[0-0]       maxHeadersCount: null,
+[0-0]       reusedSocket: false,
+[0-0]       host: 'localhost',
+[0-0]       protocol: 'http:',
+[0-0]       _redirectable: [Circular *1],
+[0-0]       [Symbol(kCapture)]: false,
+[0-0]       [Symbol(kNeedDrain)]: false,
+[0-0]       [Symbol(corked)]: 0,
+[0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
+[0-0]     },
+[0-0]     _currentUrl: 'http:undefined/api/GetUID',
+[0-0]     [Symbol(kCapture)]: false
+[0-0]   },
+[0-0]   response: undefined,
+[0-0]   isAxiosError: true,
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
+[0-0] }
+[0-0] Error: connect ECONNREFUSED 127.0.0.1:80
+[0-0]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+[0-0]   errno: -61,
+[0-0]   code: 'ECONNREFUSED',
+[0-0]   syscall: 'connect',
+[0-0]   address: '127.0.0.1',
+[0-0]   port: 80,
+[0-0]   config: {
+[0-0]     url: 'undefined/api/Validate',
+[0-0]     method: 'post',
+[0-0]     data: '{"StepName":"Step 1","TestRunID":{},"ImageBase64":"[object Promise]"}',
+[0-0]     headers: {
+[0-0]       Accept: 'application/json, text/plain, */*',
+[0-0]       'Content-Type': 'application/json',
+[0-0]       'User-Agent': 'axios/0.21.4',
+[0-0]       'Content-Length': 69
+[0-0]     },
+[0-0]     transformRequest: [ [Function: transformRequest] ],
+[0-0]     transformResponse: [ [Function: transformResponse] ],
+[0-0]     timeout: 0,
+[0-0]     adapter: [Function: httpAdapter],
+[0-0]     xsrfCookieName: 'XSRF-TOKEN',
+[0-0]     xsrfHeaderName: 'X-XSRF-TOKEN',
+[0-0]     maxContentLength: -1,
+[0-0]     maxBodyLength: -1,
+[0-0]     validateStatus: [Function: validateStatus],
+[0-0]     transitional: {
+[0-0]       silentJSONParsing: true,
+[0-0]       forcedJSONParsing: true,
+[0-0]       clarifyTimeoutError: false
+[0-0]     }
+[0-0]   },
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
+[0-0]     _events: [Object: null prototype] {
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
+[0-0]     },
+[0-0]     _eventsCount: 2,
+[0-0]     _maxListeners: undefined,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
+[0-0]       protocol: 'http:',
+[0-0]       path: 'undefined/api/Validate',
+[0-0]       method: 'POST',
+[0-0]       headers: [Object],
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: null,
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: 'undefined/api/Validate'
+[0-0]     },
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 69,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
+[0-0]       _events: [Object: null prototype],
+[0-0]       _eventsCount: 7,
+[0-0]       _maxListeners: undefined,
+[0-0]       outputData: [],
+[0-0]       outputSize: 0,
+[0-0]       writable: true,
+[0-0]       destroyed: false,
+[0-0]       _last: true,
+[0-0]       chunkedEncoding: false,
+[0-0]       shouldKeepAlive: false,
+[0-0]       maxRequestsOnConnectionReached: false,
+[0-0]       _defaultKeepAlive: true,
+[0-0]       useChunkedEncodingByDefault: true,
+[0-0]       sendDate: false,
+[0-0]       _removedConnection: false,
+[0-0]       _removedContLen: false,
+[0-0]       _removedTE: false,
+[0-0]       _contentLength: null,
+[0-0]       _hasBody: true,
+[0-0]       _trailer: '',
+[0-0]       finished: false,
+[0-0]       _headerSent: true,
+[0-0]       _closed: false,
+[0-0]       socket: [Socket],
+[0-0]       _header: 'POST undefined/api/Validate HTTP/1.1\r\n' +
+[0-0]         'Accept: application/json, text/plain, */*\r\n' +
+[0-0]         'Content-Type: application/json\r\n' +
+[0-0]         'User-Agent: axios/0.21.4\r\n' +
+[0-0]         'Content-Length: 69\r\n' +
+[0-0]         'Host: localhost\r\n' +
+[0-0]         'Connection: close\r\n' +
+[0-0]         '\r\n',
+[0-0]       _keepAliveTimeout: 0,
+[0-0]       _onPendingData: [Function: nop],
+[0-0]       agent: [Agent],
+[0-0]       socketPath: undefined,
+[0-0]       method: 'POST',
+[0-0]       maxHeaderSize: undefined,
+[0-0]       insecureHTTPParser: undefined,
+[0-0]       path: 'undefined/api/Validate',
+[0-0]       _ended: false,
+[0-0]       res: null,
+[0-0]       aborted: false,
+[0-0]       timeoutCb: null,
+[0-0]       upgradeOrConnect: false,
+[0-0]       parser: null,
+[0-0]       maxHeadersCount: null,
+[0-0]       reusedSocket: false,
+[0-0]       host: 'localhost',
+[0-0]       protocol: 'http:',
+[0-0]       _redirectable: [Circular *1],
+[0-0]       [Symbol(kCapture)]: false,
+[0-0]       [Symbol(kNeedDrain)]: false,
+[0-0]       [Symbol(corked)]: 0,
+[0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
+[0-0]     },
+[0-0]     _currentUrl: 'http:undefined/api/Validate',
+[0-0]     [Symbol(kCapture)]: false
+[0-0]   },
+[0-0]   response: undefined,
+[0-0]   isAxiosError: true,
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
+[0-0] }
+[0-0] 2022-08-15T05:16:00.061Z WARN webdriver: Request failed with status 404 due to A session is either terminated or not started
+[0-0] 2022-08-15T05:16:00.061Z INFO webdriver: Retrying 1/3
+[0-0] 2022-08-15T05:16:00.061Z INFO webdriver: [GET] http://localhost:4723/session/002f3b8b-6fba-4f76-9343-77311d99eaf3/screenshot
+[0-0] 2022-08-15T05:16:00.123Z WARN webdriver: Request failed with status 404 due to A session is either terminated or not started
+[0-0] 2022-08-15T05:16:00.123Z INFO webdriver: Retrying 2/3
+[0-0] 2022-08-15T05:16:00.123Z INFO webdriver: [GET] http://localhost:4723/session/002f3b8b-6fba-4f76-9343-77311d99eaf3/screenshot
+[0-0] 2022-08-15T05:16:00.136Z WARN webdriver: Request failed with status 404 due to A session is either terminated or not started
+[0-0] 2022-08-15T05:16:00.137Z INFO webdriver: Retrying 3/3
+[0-0] 2022-08-15T05:16:00.137Z INFO webdriver: [GET] http://localhost:4723/session/002f3b8b-6fba-4f76-9343-77311d99eaf3/screenshot
+[0-0] 2022-08-15T05:16:00.196Z ERROR webdriver: Request failed with status 404 due to invalid session id: A session is either terminated or not started
+[0-0] /Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/utils.js:197
+[0-0]     return new CustomRequestError(body);
+[0-0]            ^
+[0-0] invalid session id: A session is either terminated or not started
+[0-0]     at getErrorFromResponseBody (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/utils.js:197:12)
+[0-0]     at NodeJSRequest._request (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/request/index.js:166:60)
+[0-0]     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[0-0]     at async Browser.wrapCommandFn (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/utils/build/shim.js:137:29)
+[0-0]     at async Browser.saveScreenshot (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriverio/build/commands/browser/saveScreenshot.js:36:26)
+[0-0]     at async Browser.wrapCommandFn (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/utils/build/shim.js:137:29) {
+[0-0]   [Symbol(originalCallSite)]: [
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {}
+[0-0]   ],
+[0-0]   [Symbol(mutatedCallSite)]: [
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {}
+[0-0]   ]
+[0-0] }
+[0-0] FAILED in iOS - /tests/features/SearchStockPrice.feature
+2022-08-15T05:16:00.251Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2022-08-15T05:16:00.253Z INFO @wdio/cli:launcher: Run onComplete hook
+
+Spec Files:      0 passed, 1 failed, 1 total (100% completed) in 00:00:20 
+
+2022-08-15T05:16:00.254Z INFO @wdio/local-runner: Shutting down spawned worker
+2022-08-15T05:16:00.507Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2022-08-15T05:16:00.508Z INFO @wdio/local-runner: shutting down
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
