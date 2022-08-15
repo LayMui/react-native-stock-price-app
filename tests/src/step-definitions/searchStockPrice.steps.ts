@@ -9,23 +9,26 @@ import SearchPageWDIO  from '../page-objects/search.page'
 import { imagium } from '../support/imagium'
 
 
-Given('{actor} is at the stock price app', (actor: Actor) => {
+Given('{actor} is at the stock price app', async function (actor: Actor)  {
   
-  var ID = imagium.getUID()
- var screenshot = driver.saveScreenshot('./home.png');
+  var ID = await imagium.getUID()
+   console.log('getUID: ' + ID)
+ let screenshot = driver.saveScreenshot('./home.png');
  imagium.validateScreenshot(ID,  screenshot)
+ this.ID = ID;
 })
 
 When(
   '{pronoun} want to search for company {string}',
   { timeout: 80000 },
-  async (actor: Actor, company: string) => {
+  async function (actor: Actor, company: string)  {
    // return await actor.attemptsTo(Search.forCompany(company))
    
    await SearchPageWDIO.searchForCompany(company)
-   var ID = imagium.getUID()
- var screenshot = driver.saveScreenshot('./company.png');
- imagium.validateScreenshot(ID,  screenshot)
+   
+  let screenshot = driver.saveScreenshot('./company.png');
+ console.log('use the same ID: ' + this.ID)
+ imagium.validateScreenshot(this.ID,  screenshot)
   }
 )
 

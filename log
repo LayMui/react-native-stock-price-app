@@ -1,0 +1,652 @@
+yarn run v1.22.4
+$ wdio config/wdio.ios.app.conf.ts
+
+Execution of 1 workers started at 2022-08-15T06:18:13.903Z
+
+2022-08-15T06:18:13.914Z INFO @wdio/cli:launcher: Run onPrepare hook
+2022-08-15T06:18:15.339Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2022-08-15T06:18:15.342Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.ios.app.conf.ts
+[0-0] [90m2022-08-15T06:18:15.985Z[39m [96mINFO[39m [97m@wdio/local-runner[39m: Run worker command: run
+[0-0] [90m2022-08-15T06:18:17.732Z[39m [96mINFO[39m [97mwdio-multiple-cucumber-html-reporter[39m: The 'reportFilePerRetry' was not set, it has been set to the default 'true'
+[0-0] RUNNING in iOS - /tests/features/SearchStockPrice.feature
+[0-0] [90m2022-08-15T06:18:18.717Z[39m [96mINFO[39m [97mwebdriver[39m: Initiate new session using the WebDriver protocol
+[0-0] [90m2022-08-15T06:18:18.805Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session
+[0-0] [90m2022-08-15T06:18:18.805Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m {
+[0-0]   capabilities: {
+[0-0]     alwaysMatch: {
+[0-0]       browserName: '',
+[0-0]       platformName: 'iOS',
+[0-0]       'appium:deviceName': 'iPhone 13',
+[0-0]       'appium:platformVersion': '15.4',
+[0-0]       'appium:orientation': 'PORTRAIT',
+[0-0]       'appium:automationName': 'XCUITest',
+[0-0]       'appium:app': '/Users/laymui/dev/taiger/react-native-stock-price-app/tests/apps/stockprice.app.zip',
+[0-0]       'appium:noReset': false,
+[0-0]       'appium:newCommandTimeout': 240
+[0-0]     },
+[0-0]     firstMatch: [ {} ]
+[0-0]   },
+[0-0]   desiredCapabilities: {
+[0-0]     browserName: '',
+[0-0]     platformName: 'iOS',
+[0-0]     'appium:deviceName': 'iPhone 13',
+[0-0]     'appium:platformVersion': '15.4',
+[0-0]     'appium:orientation': 'PORTRAIT',
+[0-0]     'appium:automationName': 'XCUITest',
+[0-0]     'appium:app': '/Users/laymui/dev/taiger/react-native-stock-price-app/tests/apps/stockprice.app.zip',
+[0-0]     'appium:noReset': false,
+[0-0]     'appium:newCommandTimeout': 240
+[0-0]   }
+[0-0] }
+[0-0] Error: connect ECONNREFUSED 127.0.0.1:80
+[0-0]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+[0-0]   errno: -61,
+[0-0]   code: 'ECONNREFUSED',
+[0-0]   syscall: 'connect',
+[0-0]   address: '127.0.0.1',
+[0-0]   port: 80,
+[0-0]   config: {
+[0-0]     url: 'undefined/api/GetUID',
+[0-0]     method: 'post',
+[0-0]     data: '{"TestName":"Webdriverio Integration"}',
+[0-0]     headers: {
+[0-0]       Accept: 'application/json, text/plain, */*',
+[0-0]       'Content-Type': 'application/json',
+[0-0]       'User-Agent': 'axios/0.21.4',
+[0-0]       'Content-Length': 38
+[0-0]     },
+[0-0]     transformRequest: [ [Function: transformRequest] ],
+[0-0]     transformResponse: [ [Function: transformResponse] ],
+[0-0]     timeout: 0,
+[0-0]     adapter: [Function: httpAdapter],
+[0-0]     xsrfCookieName: 'XSRF-TOKEN',
+[0-0]     xsrfHeaderName: 'X-XSRF-TOKEN',
+[0-0]     maxContentLength: -1,
+[0-0]     maxBodyLength: -1,
+[0-0]     validateStatus: [Function: validateStatus],
+[0-0]     transitional: {
+[0-0]       silentJSONParsing: true,
+[0-0]       forcedJSONParsing: true,
+[0-0]       clarifyTimeoutError: false
+[0-0]     }
+[0-0]   },
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
+[0-0]     _events: [Object: null prototype] {
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
+[0-0]     },
+[0-0]     _eventsCount: 2,
+[0-0]     _maxListeners: undefined,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
+[0-0]       protocol: 'http:',
+[0-0]       path: 'undefined/api/GetUID',
+[0-0]       method: 'POST',
+[0-0]       headers: [Object],
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: null,
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: 'undefined/api/GetUID'
+[0-0]     },
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 38,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
+[0-0]       _events: [Object: null prototype],
+[0-0]       _eventsCount: 7,
+[0-0]       _maxListeners: undefined,
+[0-0]       outputData: [],
+[0-0]       outputSize: 0,
+[0-0]       writable: true,
+[0-0]       destroyed: false,
+[0-0]       _last: true,
+[0-0]       chunkedEncoding: false,
+[0-0]       shouldKeepAlive: false,
+[0-0]       maxRequestsOnConnectionReached: false,
+[0-0]       _defaultKeepAlive: true,
+[0-0]       useChunkedEncodingByDefault: true,
+[0-0]       sendDate: false,
+[0-0]       _removedConnection: false,
+[0-0]       _removedContLen: false,
+[0-0]       _removedTE: false,
+[0-0]       _contentLength: null,
+[0-0]       _hasBody: true,
+[0-0]       _trailer: '',
+[0-0]       finished: false,
+[0-0]       _headerSent: true,
+[0-0]       _closed: false,
+[0-0]       socket: [Socket],
+[0-0]       _header: 'POST undefined/api/GetUID HTTP/1.1\r\n' +
+[0-0]         'Accept: application/json, text/plain, */*\r\n' +
+[0-0]         'Content-Type: application/json\r\n' +
+[0-0]         'User-Agent: axios/0.21.4\r\n' +
+[0-0]         'Content-Length: 38\r\n' +
+[0-0]         'Host: localhost\r\n' +
+[0-0]         'Connection: close\r\n' +
+[0-0]         '\r\n',
+[0-0]       _keepAliveTimeout: 0,
+[0-0]       _onPendingData: [Function: nop],
+[0-0]       agent: [Agent],
+[0-0]       socketPath: undefined,
+[0-0]       method: 'POST',
+[0-0]       maxHeaderSize: undefined,
+[0-0]       insecureHTTPParser: undefined,
+[0-0]       path: 'undefined/api/GetUID',
+[0-0]       _ended: false,
+[0-0]       res: null,
+[0-0]       aborted: false,
+[0-0]       timeoutCb: null,
+[0-0]       upgradeOrConnect: false,
+[0-0]       parser: null,
+[0-0]       maxHeadersCount: null,
+[0-0]       reusedSocket: false,
+[0-0]       host: 'localhost',
+[0-0]       protocol: 'http:',
+[0-0]       _redirectable: [Circular *1],
+[0-0]       [Symbol(kCapture)]: false,
+[0-0]       [Symbol(kNeedDrain)]: false,
+[0-0]       [Symbol(corked)]: 0,
+[0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
+[0-0]     },
+[0-0]     _currentUrl: 'http:undefined/api/GetUID',
+[0-0]     [Symbol(kCapture)]: false
+[0-0]   },
+[0-0]   response: undefined,
+[0-0]   isAxiosError: true,
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
+[0-0] }
+[0-0] getUID: undefined
+[0-0] [90m2022-08-15T06:18:28.851Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m takeScreenshot()
+[0-0] [90m2022-08-15T06:18:28.852Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/screenshot
+[0-0] [90m2022-08-15T06:18:28.864Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
+[0-0] [90m2022-08-15T06:18:28.865Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element
+[0-0] [90m2022-08-15T06:18:28.865Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
+[0-0] Error: connect ECONNREFUSED 127.0.0.1:80
+[0-0]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+[0-0]   errno: -61,
+[0-0]   code: 'ECONNREFUSED',
+[0-0]   syscall: 'connect',
+[0-0]   address: '127.0.0.1',
+[0-0]   port: 80,
+[0-0]   config: {
+[0-0]     url: 'undefined/api/Validate',
+[0-0]     method: 'post',
+[0-0]     data: '{"StepName":"Step 1","ImageBase64":"[object Promise]"}',
+[0-0]     headers: {
+[0-0]       Accept: 'application/json, text/plain, */*',
+[0-0]       'Content-Type': 'application/json',
+[0-0]       'User-Agent': 'axios/0.21.4',
+[0-0]       'Content-Length': 54
+[0-0]     },
+[0-0]     transformRequest: [ [Function: transformRequest] ],
+[0-0]     transformResponse: [ [Function: transformResponse] ],
+[0-0]     timeout: 0,
+[0-0]     adapter: [Function: httpAdapter],
+[0-0]     xsrfCookieName: 'XSRF-TOKEN',
+[0-0]     xsrfHeaderName: 'X-XSRF-TOKEN',
+[0-0]     maxContentLength: -1,
+[0-0]     maxBodyLength: -1,
+[0-0]     validateStatus: [Function: validateStatus],
+[0-0]     transitional: {
+[0-0]       silentJSONParsing: true,
+[0-0]       forcedJSONParsing: true,
+[0-0]       clarifyTimeoutError: false
+[0-0]     }
+[0-0]   },
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
+[0-0]     _events: [Object: null prototype] {
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
+[0-0]     },
+[0-0]     _eventsCount: 2,
+[0-0]     _maxListeners: undefined,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
+[0-0]       protocol: 'http:',
+[0-0]       path: 'undefined/api/Validate',
+[0-0]       method: 'POST',
+[0-0]       headers: [Object],
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: null,
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: 'undefined/api/Validate'
+[0-0]     },
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 54,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
+[0-0]       _events: [Object: null prototype],
+[0-0]       _eventsCount: 7,
+[0-0]       _maxListeners: undefined,
+[0-0]       outputData: [],
+[0-0]       outputSize: 0,
+[0-0]       writable: true,
+[0-0]       destroyed: false,
+[0-0]       _last: true,
+[0-0]       chunkedEncoding: false,
+[0-0]       shouldKeepAlive: false,
+[0-0]       maxRequestsOnConnectionReached: false,
+[0-0]       _defaultKeepAlive: true,
+[0-0]       useChunkedEncodingByDefault: true,
+[0-0]       sendDate: false,
+[0-0]       _removedConnection: false,
+[0-0]       _removedContLen: false,
+[0-0]       _removedTE: false,
+[0-0]       _contentLength: null,
+[0-0]       _hasBody: true,
+[0-0]       _trailer: '',
+[0-0]       finished: false,
+[0-0]       _headerSent: true,
+[0-0]       _closed: false,
+[0-0]       socket: [Socket],
+[0-0]       _header: 'POST undefined/api/Validate HTTP/1.1\r\n' +
+[0-0]         'Accept: application/json, text/plain, */*\r\n' +
+[0-0]         'Content-Type: application/json\r\n' +
+[0-0]         'User-Agent: axios/0.21.4\r\n' +
+[0-0]         'Content-Length: 54\r\n' +
+[0-0]         'Host: localhost\r\n' +
+[0-0]         'Connection: close\r\n' +
+[0-0]         '\r\n',
+[0-0]       _keepAliveTimeout: 0,
+[0-0]       _onPendingData: [Function: nop],
+[0-0]       agent: [Agent],
+[0-0]       socketPath: undefined,
+[0-0]       method: 'POST',
+[0-0]       maxHeaderSize: undefined,
+[0-0]       insecureHTTPParser: undefined,
+[0-0]       path: 'undefined/api/Validate',
+[0-0]       _ended: false,
+[0-0]       res: null,
+[0-0]       aborted: false,
+[0-0]       timeoutCb: null,
+[0-0]       upgradeOrConnect: false,
+[0-0]       parser: null,
+[0-0]       maxHeadersCount: null,
+[0-0]       reusedSocket: false,
+[0-0]       host: 'localhost',
+[0-0]       protocol: 'http:',
+[0-0]       _redirectable: [Circular *1],
+[0-0]       [Symbol(kCapture)]: false,
+[0-0]       [Symbol(kNeedDrain)]: false,
+[0-0]       [Symbol(corked)]: 0,
+[0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
+[0-0]     },
+[0-0]     _currentUrl: 'http:undefined/api/Validate',
+[0-0]     [Symbol(kCapture)]: false
+[0-0]   },
+[0-0]   response: undefined,
+[0-0]   isAxiosError: true,
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
+[0-0] }
+[0-0] [90m2022-08-15T06:18:29.348Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m iVBORw0KGgoAAAANSUhEUgAABJIAAAnkCAYAAABWQUsDAAAAAXNSR0IArs4c6...
+[0-0] [90m2022-08-15T06:18:29.489Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   error: 'no such element',
+[0-0]   message: 'An element could not be located on the page using the given search parameters.',
+[0-0]   stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+[0-0]     '    at XCUITestDriver.doNativeFind (/usr/local/Cellar/appium/1.22.3/libexec/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:130:11)\n' +
+[0-0]     '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+[0-0]     '    at XCUITestDriver.findNativeElementOrElements (/usr/local/Cellar/appium/1.22.3/libexec/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:90:10)\n' +
+[0-0]     '    at XCUITestDriver.findElOrEls (/usr/local/Cellar/appium/1.22.3/libexec/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:23:12)\n' +
+[0-0]     '    at XCUITestDriver.findElOrElsWithProcessing (/usr/local/Cellar/appium/1.22.3/libexec/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:33:12)\n' +
+[0-0]     '    at XCUITestDriver.findElement (/usr/local/Cellar/appium/1.22.3/libexec/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:53:10)'
+[0-0] }
+[0-0] [90m2022-08-15T06:18:29.505Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
+[0-0] [90m2022-08-15T06:18:29.506Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element
+[0-0] [90m2022-08-15T06:18:29.506Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
+[0-0] [90m2022-08-15T06:18:29.688Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-7967-010000000000',
+[0-0]   ELEMENT: '1C000000-0000-0000-7967-010000000000'
+[0-0] }
+[0-0] [90m2022-08-15T06:18:29.695Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1C000000-0000-0000-7967-010000000000")
+[0-0] [90m2022-08-15T06:18:29.695Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element/1C000000-0000-0000-7967-010000000000/displayed
+[0-0] [90m2022-08-15T06:18:29.850Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
+[0-0] [90m2022-08-15T06:18:29.851Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
+[0-0] [90m2022-08-15T06:18:29.851Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element
+[0-0] [90m2022-08-15T06:18:29.852Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
+[0-0] [90m2022-08-15T06:18:30.023Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-7967-010000000000',
+[0-0]   ELEMENT: '1C000000-0000-0000-7967-010000000000'
+[0-0] }
+[0-0] [90m2022-08-15T06:18:30.029Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementClear("1C000000-0000-0000-7967-010000000000")
+[0-0] [90m2022-08-15T06:18:30.029Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element/1C000000-0000-0000-7967-010000000000/clear
+[0-0] [90m2022-08-15T06:18:30.117Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementSendKeys("1C000000-0000-0000-7967-010000000000", "<Screenshot[base64]>")
+[0-0] [90m2022-08-15T06:18:30.117Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element/1C000000-0000-0000-7967-010000000000/value
+[0-0] [90m2022-08-15T06:18:30.117Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { text: 'Aapl' }
+[0-0] [90m2022-08-15T06:18:31.547Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isKeyboardShown()
+[0-0] [90m2022-08-15T06:18:31.547Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/appium/device/is_keyboard_shown
+[0-0] [90m2022-08-15T06:18:31.758Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
+[0-0] [90m2022-08-15T06:18:31.759Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("-ios predicate string", "label == "stockNameText"")
+[0-0] [90m2022-08-15T06:18:31.759Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element
+[0-0] [90m2022-08-15T06:18:31.760Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: '-ios predicate string', value: 'label == "stockNameText"' }
+[0-0] [90m2022-08-15T06:18:32.079Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '17000000-0000-0000-7967-010000000000',
+[0-0]   ELEMENT: '17000000-0000-0000-7967-010000000000'
+[0-0] }
+[0-0] [90m2022-08-15T06:18:32.084Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
+[0-0] [90m2022-08-15T06:18:32.085Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/touch/perform
+[0-0] [90m2022-08-15T06:18:32.085Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
+[0-0] [90m2022-08-15T06:18:32.498Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
+[0-0] [90m2022-08-15T06:18:32.499Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element
+[0-0] [90m2022-08-15T06:18:32.499Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
+[0-0] [90m2022-08-15T06:18:32.777Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-7967-010000000000',
+[0-0]   ELEMENT: '1D000000-0000-0000-7967-010000000000'
+[0-0] }
+[0-0] [90m2022-08-15T06:18:32.781Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1D000000-0000-0000-7967-010000000000")
+[0-0] [90m2022-08-15T06:18:32.781Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element/1D000000-0000-0000-7967-010000000000/displayed
+[0-0] [90m2022-08-15T06:18:32.933Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
+[0-0] [90m2022-08-15T06:18:32.933Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
+[0-0] [90m2022-08-15T06:18:32.934Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/element
+[0-0] [90m2022-08-15T06:18:32.934Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
+[0-0] [90m2022-08-15T06:18:33.230Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-7967-010000000000',
+[0-0]   ELEMENT: '1D000000-0000-0000-7967-010000000000'
+[0-0] }
+[0-0] [90m2022-08-15T06:18:33.236Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
+[0-0] [90m2022-08-15T06:18:33.237Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/touch/perform
+[0-0] [90m2022-08-15T06:18:33.237Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
+[0-0] use the same ID: undefined
+[0-0] [90m2022-08-15T06:18:34.119Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m takeScreenshot()
+[0-0] [90m2022-08-15T06:18:34.119Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/screenshot
+[0-0] [90m2022-08-15T06:18:34.126Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m deleteSession()
+[0-0] [90m2022-08-15T06:18:34.127Z[39m [96mINFO[39m [97mwebdriver[39m: [DELETE] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499
+[0-0] Error: connect ECONNREFUSED 127.0.0.1:80
+[0-0]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+[0-0]   errno: -61,
+[0-0]   code: 'ECONNREFUSED',
+[0-0]   syscall: 'connect',
+[0-0]   address: '127.0.0.1',
+[0-0]   port: 80,
+[0-0]   config: {
+[0-0]     url: 'undefined/api/Validate',
+[0-0]     method: 'post',
+[0-0]     data: '{"StepName":"Step 1","ImageBase64":"[object Promise]"}',
+[0-0]     headers: {
+[0-0]       Accept: 'application/json, text/plain, */*',
+[0-0]       'Content-Type': 'application/json',
+[0-0]       'User-Agent': 'axios/0.21.4',
+[0-0]       'Content-Length': 54
+[0-0]     },
+[0-0]     transformRequest: [ [Function: transformRequest] ],
+[0-0]     transformResponse: [ [Function: transformResponse] ],
+[0-0]     timeout: 0,
+[0-0]     adapter: [Function: httpAdapter],
+[0-0]     xsrfCookieName: 'XSRF-TOKEN',
+[0-0]     xsrfHeaderName: 'X-XSRF-TOKEN',
+[0-0]     maxContentLength: -1,
+[0-0]     maxBodyLength: -1,
+[0-0]     validateStatus: [Function: validateStatus],
+[0-0]     transitional: {
+[0-0]       silentJSONParsing: true,
+[0-0]       forcedJSONParsing: true,
+[0-0]       clarifyTimeoutError: false
+[0-0]     }
+[0-0]   },
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
+[0-0]     _events: [Object: null prototype] {
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
+[0-0]     },
+[0-0]     _eventsCount: 2,
+[0-0]     _maxListeners: undefined,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
+[0-0]       protocol: 'http:',
+[0-0]       path: 'undefined/api/Validate',
+[0-0]       method: 'POST',
+[0-0]       headers: [Object],
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: null,
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: 'undefined/api/Validate'
+[0-0]     },
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 54,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
+[0-0]       _events: [Object: null prototype],
+[0-0]       _eventsCount: 7,
+[0-0]       _maxListeners: undefined,
+[0-0]       outputData: [],
+[0-0]       outputSize: 0,
+[0-0]       writable: true,
+[0-0]       destroyed: false,
+[0-0]       _last: true,
+[0-0]       chunkedEncoding: false,
+[0-0]       shouldKeepAlive: false,
+[0-0]       maxRequestsOnConnectionReached: false,
+[0-0]       _defaultKeepAlive: true,
+[0-0]       useChunkedEncodingByDefault: true,
+[0-0]       sendDate: false,
+[0-0]       _removedConnection: false,
+[0-0]       _removedContLen: false,
+[0-0]       _removedTE: false,
+[0-0]       _contentLength: null,
+[0-0]       _hasBody: true,
+[0-0]       _trailer: '',
+[0-0]       finished: false,
+[0-0]       _headerSent: true,
+[0-0]       _closed: false,
+[0-0]       socket: [Socket],
+[0-0]       _header: 'POST undefined/api/Validate HTTP/1.1\r\n' +
+[0-0]         'Accept: application/json, text/plain, */*\r\n' +
+[0-0]         'Content-Type: application/json\r\n' +
+[0-0]         'User-Agent: axios/0.21.4\r\n' +
+[0-0]         'Content-Length: 54\r\n' +
+[0-0]         'Host: localhost\r\n' +
+[0-0]         'Connection: close\r\n' +
+[0-0]         '\r\n',
+[0-0]       _keepAliveTimeout: 0,
+[0-0]       _onPendingData: [Function: nop],
+[0-0]       agent: [Agent],
+[0-0]       socketPath: undefined,
+[0-0]       method: 'POST',
+[0-0]       maxHeaderSize: undefined,
+[0-0]       insecureHTTPParser: undefined,
+[0-0]       path: 'undefined/api/Validate',
+[0-0]       _ended: false,
+[0-0]       res: null,
+[0-0]       aborted: false,
+[0-0]       timeoutCb: null,
+[0-0]       upgradeOrConnect: false,
+[0-0]       parser: null,
+[0-0]       maxHeadersCount: null,
+[0-0]       reusedSocket: false,
+[0-0]       host: 'localhost',
+[0-0]       protocol: 'http:',
+[0-0]       _redirectable: [Circular *1],
+[0-0]       [Symbol(kCapture)]: false,
+[0-0]       [Symbol(kNeedDrain)]: false,
+[0-0]       [Symbol(corked)]: 0,
+[0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
+[0-0]     },
+[0-0]     _currentUrl: 'http:undefined/api/Validate',
+[0-0]     [Symbol(kCapture)]: false
+[0-0]   },
+[0-0]   response: undefined,
+[0-0]   isAxiosError: true,
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
+[0-0] }
+[0-0] [90m2022-08-15T06:18:34.150Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
+[0-0] [90m2022-08-15T06:18:34.150Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 1/3
+[0-0] [90m2022-08-15T06:18:34.150Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/screenshot
+[0-0] [90m2022-08-15T06:18:34.158Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
+[0-0] [90m2022-08-15T06:18:34.159Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 2/3
+[0-0] [90m2022-08-15T06:18:34.159Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/screenshot
+[0-0] [90m2022-08-15T06:18:34.180Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
+[0-0] [90m2022-08-15T06:18:34.181Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 3/3
+[0-0] [90m2022-08-15T06:18:34.181Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/bdad1071-f715-45c5-9a85-7239aeb15499/screenshot
+[0-0] [90m2022-08-15T06:18:34.196Z[39m [31mERROR[39m [97mwebdriver[39m: Request failed with status 404 due to invalid session id: A session is either terminated or not started
+[0-0] /Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/utils.js:197
+[0-0]     return new CustomRequestError(body);
+[0-0]            ^
+[0-0] invalid session id: A session is either terminated or not started
+[0-0]     at getErrorFromResponseBody (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/utils.js:197:12)
+[0-0]     at NodeJSRequest._request (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/request/index.js:166:60)
+[0-0]     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[0-0]     at async Browser.wrapCommandFn (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/utils/build/shim.js:137:29)
+[0-0]     at async Browser.saveScreenshot (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriverio/build/commands/browser/saveScreenshot.js:36:26)
+[0-0]     at async Browser.wrapCommandFn (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/utils/build/shim.js:137:29) {
+[0-0]   [Symbol(originalCallSite)]: [
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {}
+[0-0]   ],
+[0-0]   [Symbol(mutatedCallSite)]: [
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {}
+[0-0]   ]
+[0-0] }
+[0-0] FAILED in iOS - /tests/features/SearchStockPrice.feature
+2022-08-15T06:18:34.302Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2022-08-15T06:18:34.303Z INFO @wdio/cli:launcher: Run onComplete hook
+
+Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:20 
+
+2022-08-15T06:18:34.305Z INFO @wdio/local-runner: Shutting down spawned worker
+2022-08-15T06:18:34.557Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2022-08-15T06:18:34.558Z INFO @wdio/local-runner: shutting down
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
