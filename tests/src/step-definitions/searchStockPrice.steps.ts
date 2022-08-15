@@ -14,7 +14,7 @@ Given('{actor} is at the stock price app', async function (actor: Actor)  {
   var ID = await imagium.getUID()
    console.log('getUID: ' + ID)
  let screenshot = driver.saveScreenshot('./home.png');
- imagium.validateScreenshot(ID,  screenshot)
+ imagium.validateScreenshot(ID,  screenshot, "home");
  this.ID = ID;
 })
 
@@ -26,9 +26,9 @@ When(
    
    await SearchPageWDIO.searchForCompany(company)
    
-  let screenshot = driver.saveScreenshot('./company.png');
- console.log('use the same ID: ' + this.ID)
- imagium.validateScreenshot(this.ID,  screenshot)
+//   let screenshot = driver.saveScreenshot('./company.png');
+//  console.log('use the same ID: ' + this.ID)
+//  imagium.validateScreenshot(this.ID,  screenshot, "companyfound")
   }
 )
 
