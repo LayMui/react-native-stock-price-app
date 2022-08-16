@@ -26,9 +26,9 @@ When(
    
    await SearchPageWDIO.searchForCompany(company)
    
-//   let screenshot = driver.saveScreenshot('./company.png');
-//  console.log('use the same ID: ' + this.ID)
-//  imagium.validateScreenshot(this.ID,  screenshot, "companyfound")
+  let screenshot = driver.saveScreenshot('./company.png');
+ console.log('use the same ID: ' + this.ID)
+ imagium.validateScreenshot(this.ID,  screenshot, "companyfound")
   }
 )
 

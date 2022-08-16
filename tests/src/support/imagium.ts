@@ -1,8 +1,11 @@
 
 const axios = require('axios');
-require('dotenv')
+if (!process.env.CIRCLECI)
+{
+    require('dotenv').config({path: `.env`})
+}
 
-var testNameImagium = "Webdriverio Integration"
+var testNameImagium = "WebdriverioIntegration"
 var projectKeyImagium = process.env.IMAGIUM_KEY
 var uidEndPointImagium = process.env.IP + "/api/GetUID"
 var validateEndPointImagium = process.env.IP + "/api/Validate"

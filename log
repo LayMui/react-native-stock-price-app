@@ -1,17 +1,17 @@
 yarn run v1.22.4
 $ wdio config/wdio.ios.app.conf.ts
 
-Execution of 1 workers started at 2022-08-15T06:26:01.239Z
+Execution of 1 workers started at 2022-08-16T04:14:18.450Z
 
-2022-08-15T06:26:01.256Z INFO @wdio/cli:launcher: Run onPrepare hook
-2022-08-15T06:26:02.585Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2022-08-15T06:26:02.587Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.ios.app.conf.ts
-[0-0] [90m2022-08-15T06:26:03.037Z[39m [96mINFO[39m [97m@wdio/local-runner[39m: Run worker command: run
-[0-0] [90m2022-08-15T06:26:04.021Z[39m [96mINFO[39m [97mwdio-multiple-cucumber-html-reporter[39m: The 'reportFilePerRetry' was not set, it has been set to the default 'true'
+2022-08-16T04:14:18.468Z INFO @wdio/cli:launcher: Run onPrepare hook
+2022-08-16T04:14:19.653Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2022-08-16T04:14:19.655Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.ios.app.conf.ts
+[0-0] [90m2022-08-16T04:14:20.278Z[39m [96mINFO[39m [97m@wdio/local-runner[39m: Run worker command: run
+[0-0] [90m2022-08-16T04:14:21.577Z[39m [96mINFO[39m [97mwdio-multiple-cucumber-html-reporter[39m: The 'reportFilePerRetry' was not set, it has been set to the default 'true'
 [0-0] RUNNING in iOS - /tests/features/SearchStockPrice.feature
-[0-0] [90m2022-08-15T06:26:04.663Z[39m [96mINFO[39m [97mwebdriver[39m: Initiate new session using the WebDriver protocol
-[0-0] [90m2022-08-15T06:26:04.732Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session
-[0-0] [90m2022-08-15T06:26:04.732Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m {
+[0-0] [90m2022-08-16T04:14:22.312Z[39m [96mINFO[39m [97mwebdriver[39m: Initiate new session using the WebDriver protocol
+[0-0] [90m2022-08-16T04:14:22.387Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session
+[0-0] [90m2022-08-16T04:14:22.388Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m {
 [0-0]   capabilities: {
 [0-0]     alwaysMatch: {
 [0-0]       browserName: '',
@@ -46,14 +46,14 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]   address: '127.0.0.1',
 [0-0]   port: 80,
 [0-0]   config: {
-[0-0]     url: 'undefined/api/GetUID',
+[0-0]     url: '192.168.1.170/api/GetUID',
 [0-0]     method: 'post',
-[0-0]     data: '{"TestName":"Webdriverio Integration"}',
+[0-0]     data: '{"TestName":"WebdriverioIntegration","ProjectKey":"442bc5b8-c48f-4b3a-9c43-8cdef5e07abf265"}',
 [0-0]     headers: {
 [0-0]       Accept: 'application/json, text/plain, */*',
 [0-0]       'Content-Type': 'application/json',
 [0-0]       'User-Agent': 'axios/0.21.4',
-[0-0]       'Content-Length': 38
+[0-0]       'Content-Length': 92
 [0-0]     },
 [0-0]     transformRequest: [ [Function: transformRequest] ],
 [0-0]     transformResponse: [ [Function: transformResponse] ],
@@ -116,7 +116,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       maxRedirects: 21,
 [0-0]       maxBodyLength: 10485760,
 [0-0]       protocol: 'http:',
-[0-0]       path: 'undefined/api/GetUID',
+[0-0]       path: '192.168.1.170/api/GetUID',
 [0-0]       method: 'POST',
 [0-0]       headers: [Object],
 [0-0]       agent: undefined,
@@ -125,13 +125,13 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       hostname: null,
 [0-0]       port: null,
 [0-0]       nativeProtocols: [Object],
-[0-0]       pathname: 'undefined/api/GetUID'
+[0-0]       pathname: '192.168.1.170/api/GetUID'
 [0-0]     },
 [0-0]     _ended: false,
 [0-0]     _ending: true,
 [0-0]     _redirectCount: 0,
 [0-0]     _redirects: [],
-[0-0]     _requestBodyLength: 38,
+[0-0]     _requestBodyLength: 92,
 [0-0]     _requestBodyBuffers: [ [Object] ],
 [0-0]     _onNativeResponse: [Function (anonymous)],
 [0-0]     _currentRequest: ClientRequest {
@@ -159,11 +159,11 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       _headerSent: true,
 [0-0]       _closed: false,
 [0-0]       socket: [Socket],
-[0-0]       _header: 'POST undefined/api/GetUID HTTP/1.1\r\n' +
+[0-0]       _header: 'POST 192.168.1.170/api/GetUID HTTP/1.1\r\n' +
 [0-0]         'Accept: application/json, text/plain, */*\r\n' +
 [0-0]         'Content-Type: application/json\r\n' +
 [0-0]         'User-Agent: axios/0.21.4\r\n' +
-[0-0]         'Content-Length: 38\r\n' +
+[0-0]         'Content-Length: 92\r\n' +
 [0-0]         'Host: localhost\r\n' +
 [0-0]         'Connection: close\r\n' +
 [0-0]         '\r\n',
@@ -174,7 +174,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       method: 'POST',
 [0-0]       maxHeaderSize: undefined,
 [0-0]       insecureHTTPParser: undefined,
-[0-0]       path: 'undefined/api/GetUID',
+[0-0]       path: '192.168.1.170/api/GetUID',
 [0-0]       _ended: false,
 [0-0]       res: null,
 [0-0]       aborted: false,
@@ -191,7 +191,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       [Symbol(corked)]: 0,
 [0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
 [0-0]     },
-[0-0]     _currentUrl: 'http:undefined/api/GetUID',
+[0-0]     _currentUrl: 'http:192.168.1.170/api/GetUID',
 [0-0]     [Symbol(kCapture)]: false
 [0-0]   },
 [0-0]   response: undefined,
@@ -201,11 +201,11 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
 [0-0] }
 [0-0] getUID: undefined
-[0-0] [90m2022-08-15T06:26:13.381Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m takeScreenshot()
-[0-0] [90m2022-08-15T06:26:13.385Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/screenshot
-[0-0] [90m2022-08-15T06:26:13.404Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
-[0-0] [90m2022-08-15T06:26:13.405Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element
-[0-0] [90m2022-08-15T06:26:13.406Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
+[0-0] [90m2022-08-16T04:14:30.804Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m takeScreenshot()
+[0-0] [90m2022-08-16T04:14:30.804Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/screenshot
+[0-0] [90m2022-08-16T04:14:30.815Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
+[0-0] [90m2022-08-16T04:14:30.815Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element
+[0-0] [90m2022-08-16T04:14:30.816Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
 [0-0] Error: connect ECONNREFUSED 127.0.0.1:80
 [0-0]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
 [0-0]   errno: -61,
@@ -214,7 +214,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]   address: '127.0.0.1',
 [0-0]   port: 80,
 [0-0]   config: {
-[0-0]     url: 'undefined/api/Validate',
+[0-0]     url: '192.168.1.170/api/Validate',
 [0-0]     method: 'post',
 [0-0]     data: '{"StepName":"home","ImageBase64":"[object Promise]"}',
 [0-0]     headers: {
@@ -284,7 +284,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       maxRedirects: 21,
 [0-0]       maxBodyLength: 10485760,
 [0-0]       protocol: 'http:',
-[0-0]       path: 'undefined/api/Validate',
+[0-0]       path: '192.168.1.170/api/Validate',
 [0-0]       method: 'POST',
 [0-0]       headers: [Object],
 [0-0]       agent: undefined,
@@ -293,7 +293,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       hostname: null,
 [0-0]       port: null,
 [0-0]       nativeProtocols: [Object],
-[0-0]       pathname: 'undefined/api/Validate'
+[0-0]       pathname: '192.168.1.170/api/Validate'
 [0-0]     },
 [0-0]     _ended: false,
 [0-0]     _ending: true,
@@ -327,7 +327,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       _headerSent: true,
 [0-0]       _closed: false,
 [0-0]       socket: [Socket],
-[0-0]       _header: 'POST undefined/api/Validate HTTP/1.1\r\n' +
+[0-0]       _header: 'POST 192.168.1.170/api/Validate HTTP/1.1\r\n' +
 [0-0]         'Accept: application/json, text/plain, */*\r\n' +
 [0-0]         'Content-Type: application/json\r\n' +
 [0-0]         'User-Agent: axios/0.21.4\r\n' +
@@ -342,7 +342,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       method: 'POST',
 [0-0]       maxHeaderSize: undefined,
 [0-0]       insecureHTTPParser: undefined,
-[0-0]       path: 'undefined/api/Validate',
+[0-0]       path: '192.168.1.170/api/Validate',
 [0-0]       _ended: false,
 [0-0]       res: null,
 [0-0]       aborted: false,
@@ -359,7 +359,7 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]       [Symbol(corked)]: 0,
 [0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
 [0-0]     },
-[0-0]     _currentUrl: 'http:undefined/api/Validate',
+[0-0]     _currentUrl: 'http:192.168.1.170/api/Validate',
 [0-0]     [Symbol(kCapture)]: false
 [0-0]   },
 [0-0]   response: undefined,
@@ -368,87 +368,271 @@ Execution of 1 workers started at 2022-08-15T06:26:01.239Z
 [0-0]   [Symbol(originalCallSite)]: [ CallSite {} ],
 [0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
 [0-0] }
-[0-0] [90m2022-08-15T06:26:13.862Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m iVBORw0KGgoAAAANSUhEUgAABJIAAAnkCAYAAABWQUsDAAAAAXNSR0IArs4c6...
-[0-0] [90m2022-08-15T06:26:13.972Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-D96B-010000000000',
-[0-0]   ELEMENT: '1C000000-0000-0000-D96B-010000000000'
+[0-0] [90m2022-08-16T04:14:31.199Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m iVBORw0KGgoAAAANSUhEUgAABJIAAAnkCAYAAABWQUsDAAAAAXNSR0IArs4c6...
+[0-0] [90m2022-08-16T04:14:31.307Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-B385-000000000000',
+[0-0]   ELEMENT: '1C000000-0000-0000-B385-000000000000'
 [0-0] }
-[0-0] [90m2022-08-15T06:26:13.983Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1C000000-0000-0000-D96B-010000000000")
-[0-0] [90m2022-08-15T06:26:13.984Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element/1C000000-0000-0000-D96B-010000000000/displayed
-[0-0] [90m2022-08-15T06:26:14.069Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
-[0-0] [90m2022-08-15T06:26:14.070Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
-[0-0] [90m2022-08-15T06:26:14.070Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element
-[0-0] [90m2022-08-15T06:26:14.070Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
-[0-0] [90m2022-08-15T06:26:14.206Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-D96B-010000000000',
-[0-0]   ELEMENT: '1C000000-0000-0000-D96B-010000000000'
+[0-0] [90m2022-08-16T04:14:31.318Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1C000000-0000-0000-B385-000000000000")
+[0-0] [90m2022-08-16T04:14:31.318Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element/1C000000-0000-0000-B385-000000000000/displayed
+[0-0] [90m2022-08-16T04:14:31.443Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
+[0-0] [90m2022-08-16T04:14:31.444Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
+[0-0] [90m2022-08-16T04:14:31.445Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element
+[0-0] [90m2022-08-16T04:14:31.445Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
+[0-0] [90m2022-08-16T04:14:31.559Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-B385-000000000000',
+[0-0]   ELEMENT: '1C000000-0000-0000-B385-000000000000'
 [0-0] }
-[0-0] [90m2022-08-15T06:26:14.211Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementClear("1C000000-0000-0000-D96B-010000000000")
-[0-0] [90m2022-08-15T06:26:14.212Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element/1C000000-0000-0000-D96B-010000000000/clear
-[0-0] [90m2022-08-15T06:26:14.279Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementSendKeys("1C000000-0000-0000-D96B-010000000000", "<Screenshot[base64]>")
-[0-0] [90m2022-08-15T06:26:14.279Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element/1C000000-0000-0000-D96B-010000000000/value
-[0-0] [90m2022-08-15T06:26:14.279Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { text: 'Aapl' }
-[0-0] [90m2022-08-15T06:26:15.367Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isKeyboardShown()
-[0-0] [90m2022-08-15T06:26:15.367Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/appium/device/is_keyboard_shown
-[0-0] [90m2022-08-15T06:26:15.554Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
-[0-0] [90m2022-08-15T06:26:15.555Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("-ios predicate string", "label == "stockNameText"")
-[0-0] [90m2022-08-15T06:26:15.555Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element
-[0-0] [90m2022-08-15T06:26:15.555Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: '-ios predicate string', value: 'label == "stockNameText"' }
-[0-0] [90m2022-08-15T06:26:15.851Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '17000000-0000-0000-D96B-010000000000',
-[0-0]   ELEMENT: '17000000-0000-0000-D96B-010000000000'
+[0-0] [90m2022-08-16T04:14:31.565Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementClear("1C000000-0000-0000-B385-000000000000")
+[0-0] [90m2022-08-16T04:14:31.565Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element/1C000000-0000-0000-B385-000000000000/clear
+[0-0] [90m2022-08-16T04:14:31.634Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementSendKeys("1C000000-0000-0000-B385-000000000000", "<Screenshot[base64]>")
+[0-0] [90m2022-08-16T04:14:31.634Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element/1C000000-0000-0000-B385-000000000000/value
+[0-0] [90m2022-08-16T04:14:31.634Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { text: 'Aapl' }
+[0-0] [90m2022-08-16T04:14:32.720Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isKeyboardShown()
+[0-0] [90m2022-08-16T04:14:32.721Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/appium/device/is_keyboard_shown
+[0-0] [90m2022-08-16T04:14:32.937Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
+[0-0] [90m2022-08-16T04:14:32.938Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("-ios predicate string", "label == "stockNameText"")
+[0-0] [90m2022-08-16T04:14:32.938Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element
+[0-0] [90m2022-08-16T04:14:32.938Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: '-ios predicate string', value: 'label == "stockNameText"' }
+[0-0] [90m2022-08-16T04:14:33.197Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '17000000-0000-0000-B385-000000000000',
+[0-0]   ELEMENT: '17000000-0000-0000-B385-000000000000'
 [0-0] }
-[0-0] [90m2022-08-15T06:26:15.857Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
-[0-0] [90m2022-08-15T06:26:15.858Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/touch/perform
-[0-0] [90m2022-08-15T06:26:15.858Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
-[0-0] [90m2022-08-15T06:26:16.360Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
-[0-0] [90m2022-08-15T06:26:16.361Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element
-[0-0] [90m2022-08-15T06:26:16.361Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
-[0-0] [90m2022-08-15T06:26:16.710Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-D96B-010000000000',
-[0-0]   ELEMENT: '1D000000-0000-0000-D96B-010000000000'
+[0-0] [90m2022-08-16T04:14:33.203Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
+[0-0] [90m2022-08-16T04:14:33.204Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/touch/perform
+[0-0] [90m2022-08-16T04:14:33.204Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
+[0-0] [90m2022-08-16T04:14:33.615Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
+[0-0] [90m2022-08-16T04:14:33.616Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element
+[0-0] [90m2022-08-16T04:14:33.616Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
+[0-0] [90m2022-08-16T04:14:33.931Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-B385-000000000000',
+[0-0]   ELEMENT: '1D000000-0000-0000-B385-000000000000'
 [0-0] }
-[0-0] [90m2022-08-15T06:26:16.718Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1D000000-0000-0000-D96B-010000000000")
-[0-0] [90m2022-08-15T06:26:16.718Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element/1D000000-0000-0000-D96B-010000000000/displayed
-[0-0] [90m2022-08-15T06:26:16.954Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
-[0-0] [90m2022-08-15T06:26:16.955Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
-[0-0] [90m2022-08-15T06:26:16.955Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/element
-[0-0] [90m2022-08-15T06:26:16.956Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
-[0-0] [90m2022-08-15T06:26:17.382Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-D96B-010000000000',
-[0-0]   ELEMENT: '1D000000-0000-0000-D96B-010000000000'
+[0-0] [90m2022-08-16T04:14:33.939Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1D000000-0000-0000-B385-000000000000")
+[0-0] [90m2022-08-16T04:14:33.940Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element/1D000000-0000-0000-B385-000000000000/displayed
+[0-0] [90m2022-08-16T04:14:34.147Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
+[0-0] [90m2022-08-16T04:14:34.148Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
+[0-0] [90m2022-08-16T04:14:34.148Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/element
+[0-0] [90m2022-08-16T04:14:34.148Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
+[0-0] [90m2022-08-16T04:14:34.488Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-B385-000000000000',
+[0-0]   ELEMENT: '1D000000-0000-0000-B385-000000000000'
 [0-0] }
-[0-0] [90m2022-08-15T06:26:17.386Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
-[0-0] [90m2022-08-15T06:26:17.386Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950/touch/perform
-[0-0] [90m2022-08-15T06:26:17.386Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
-[0-0] [90m2022-08-15T06:26:18.305Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m deleteSession()
-[0-0] [90m2022-08-15T06:26:18.306Z[39m [96mINFO[39m [97mwebdriver[39m: [DELETE] http://localhost:4723/session/f1e2f36b-c3c6-4ed0-b444-bcab560fe950
-[0-0] PASSED in iOS - /tests/features/SearchStockPrice.feature
-2022-08-15T06:26:19.560Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2022-08-15T06:26:19.561Z INFO @wdio/cli:launcher: Run onComplete hook
+[0-0] [90m2022-08-16T04:14:34.492Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
+[0-0] [90m2022-08-16T04:14:34.493Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/touch/perform
+[0-0] [90m2022-08-16T04:14:34.493Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
+[0-0] use the same ID: undefined
+[0-0] [90m2022-08-16T04:14:35.351Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m takeScreenshot()
+[0-0] [90m2022-08-16T04:14:35.351Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/screenshot
+[0-0] [90m2022-08-16T04:14:35.357Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m deleteSession()
+[0-0] [90m2022-08-16T04:14:35.357Z[39m [96mINFO[39m [97mwebdriver[39m: [DELETE] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2
+[0-0] Error: connect ECONNREFUSED 127.0.0.1:80
+[0-0]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+[0-0]   errno: -61,
+[0-0]   code: 'ECONNREFUSED',
+[0-0]   syscall: 'connect',
+[0-0]   address: '127.0.0.1',
+[0-0]   port: 80,
+[0-0]   config: {
+[0-0]     url: '192.168.1.170/api/Validate',
+[0-0]     method: 'post',
+[0-0]     data: '{"StepName":"companyfound","ImageBase64":"[object Promise]"}',
+[0-0]     headers: {
+[0-0]       Accept: 'application/json, text/plain, */*',
+[0-0]       'Content-Type': 'application/json',
+[0-0]       'User-Agent': 'axios/0.21.4',
+[0-0]       'Content-Length': 60
+[0-0]     },
+[0-0]     transformRequest: [ [Function: transformRequest] ],
+[0-0]     transformResponse: [ [Function: transformResponse] ],
+[0-0]     timeout: 0,
+[0-0]     adapter: [Function: httpAdapter],
+[0-0]     xsrfCookieName: 'XSRF-TOKEN',
+[0-0]     xsrfHeaderName: 'X-XSRF-TOKEN',
+[0-0]     maxContentLength: -1,
+[0-0]     maxBodyLength: -1,
+[0-0]     validateStatus: [Function: validateStatus],
+[0-0]     transitional: {
+[0-0]       silentJSONParsing: true,
+[0-0]       forcedJSONParsing: true,
+[0-0]       clarifyTimeoutError: false
+[0-0]     }
+[0-0]   },
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
+[0-0]     _events: [Object: null prototype] {
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
+[0-0]     },
+[0-0]     _eventsCount: 2,
+[0-0]     _maxListeners: undefined,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
+[0-0]       protocol: 'http:',
+[0-0]       path: '192.168.1.170/api/Validate',
+[0-0]       method: 'POST',
+[0-0]       headers: [Object],
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: null,
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: '192.168.1.170/api/Validate'
+[0-0]     },
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 60,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
+[0-0]       _events: [Object: null prototype],
+[0-0]       _eventsCount: 7,
+[0-0]       _maxListeners: undefined,
+[0-0]       outputData: [],
+[0-0]       outputSize: 0,
+[0-0]       writable: true,
+[0-0]       destroyed: false,
+[0-0]       _last: true,
+[0-0]       chunkedEncoding: false,
+[0-0]       shouldKeepAlive: false,
+[0-0]       maxRequestsOnConnectionReached: false,
+[0-0]       _defaultKeepAlive: true,
+[0-0]       useChunkedEncodingByDefault: true,
+[0-0]       sendDate: false,
+[0-0]       _removedConnection: false,
+[0-0]       _removedContLen: false,
+[0-0]       _removedTE: false,
+[0-0]       _contentLength: null,
+[0-0]       _hasBody: true,
+[0-0]       _trailer: '',
+[0-0]       finished: false,
+[0-0]       _headerSent: true,
+[0-0]       _closed: false,
+[0-0]       socket: [Socket],
+[0-0]       _header: 'POST 192.168.1.170/api/Validate HTTP/1.1\r\n' +
+[0-0]         'Accept: application/json, text/plain, */*\r\n' +
+[0-0]         'Content-Type: application/json\r\n' +
+[0-0]         'User-Agent: axios/0.21.4\r\n' +
+[0-0]         'Content-Length: 60\r\n' +
+[0-0]         'Host: localhost\r\n' +
+[0-0]         'Connection: close\r\n' +
+[0-0]         '\r\n',
+[0-0]       _keepAliveTimeout: 0,
+[0-0]       _onPendingData: [Function: nop],
+[0-0]       agent: [Agent],
+[0-0]       socketPath: undefined,
+[0-0]       method: 'POST',
+[0-0]       maxHeaderSize: undefined,
+[0-0]       insecureHTTPParser: undefined,
+[0-0]       path: '192.168.1.170/api/Validate',
+[0-0]       _ended: false,
+[0-0]       res: null,
+[0-0]       aborted: false,
+[0-0]       timeoutCb: null,
+[0-0]       upgradeOrConnect: false,
+[0-0]       parser: null,
+[0-0]       maxHeadersCount: null,
+[0-0]       reusedSocket: false,
+[0-0]       host: 'localhost',
+[0-0]       protocol: 'http:',
+[0-0]       _redirectable: [Circular *1],
+[0-0]       [Symbol(kCapture)]: false,
+[0-0]       [Symbol(kNeedDrain)]: false,
+[0-0]       [Symbol(corked)]: 0,
+[0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
+[0-0]     },
+[0-0]     _currentUrl: 'http:192.168.1.170/api/Validate',
+[0-0]     [Symbol(kCapture)]: false
+[0-0]   },
+[0-0]   response: undefined,
+[0-0]   isAxiosError: true,
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {} ]
+[0-0] }
+[0-0] [90m2022-08-16T04:14:35.414Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
+[0-0] [90m2022-08-16T04:14:35.414Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 1/3
+[0-0] [90m2022-08-16T04:14:35.414Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/screenshot
+[0-0] [90m2022-08-16T04:14:35.421Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
+[0-0] [90m2022-08-16T04:14:35.421Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 2/3
+[0-0] [90m2022-08-16T04:14:35.421Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/screenshot
+[0-0] [90m2022-08-16T04:14:35.435Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
+[0-0] [90m2022-08-16T04:14:35.435Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 3/3
+[0-0] [90m2022-08-16T04:14:35.435Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/184070c0-85c6-4a0c-b480-f1803c690bd2/screenshot
+[0-0] [90m2022-08-16T04:14:35.448Z[39m [31mERROR[39m [97mwebdriver[39m: Request failed with status 404 due to invalid session id: A session is either terminated or not started
+[0-0] /Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/utils.js:197
+[0-0]     return new CustomRequestError(body);
+[0-0]            ^
+[0-0] invalid session id: A session is either terminated or not started
+[0-0]     at getErrorFromResponseBody (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/utils.js:197:12)
+[0-0]     at NodeJSRequest._request (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/request/index.js:166:60)
+[0-0]     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[0-0]     at async Browser.wrapCommandFn (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/utils/build/shim.js:137:29)
+[0-0]     at async Browser.saveScreenshot (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriverio/build/commands/browser/saveScreenshot.js:36:26)
+[0-0]     at async Browser.wrapCommandFn (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/@wdio/utils/build/shim.js:137:29) {
+[0-0]   [Symbol(originalCallSite)]: [
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {}
+[0-0]   ],
+[0-0]   [Symbol(mutatedCallSite)]: [
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {},
+[0-0]     CallSite {}
+[0-0]   ]
+[0-0] }
+[0-0] FAILED in iOS - /tests/features/SearchStockPrice.feature
+2022-08-16T04:14:35.513Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2022-08-16T04:14:35.514Z INFO @wdio/cli:launcher: Run onComplete hook
 
- "spec" Reporter:
-------------------------------------------------------------------
-[iPhone 13 iOS 15.4 #0-0] Running: iPhone 13 on iOS 15.4 executing /Users/laymui/dev/taiger/react-native-stock-price-app/tests/apps/stockprice.app.zip
-[iPhone 13 iOS 15.4 #0-0] Session ID: f1e2f36b-c3c6-4ed0-b444-bcab560fe950
-[iPhone 13 iOS 15.4 #0-0]
-[iPhone 13 iOS 15.4 #0-0] » /tests/features/SearchStockPrice.feature
-[iPhone 13 iOS 15.4 #0-0] Search Company StockPrice
-[iPhone 13 iOS 15.4 #0-0] [90mIn order to know the stock price[39m
-[iPhone 13 iOS 15.4 #0-0] [90mAs a trader Jan[39m
-[iPhone 13 iOS 15.4 #0-0] [90mJan wants to see the stock price in real time[39m
-[iPhone 13 iOS 15.4 #0-0]
-[iPhone 13 iOS 15.4 #0-0] Able to view stock price with a valid company
-[iPhone 13 iOS 15.4 #0-0]    [32m✓[39m Given Jan is at the stock price app
-[iPhone 13 iOS 15.4 #0-0]    [32m✓[39m When he want to search for company "Aapl"
-[iPhone 13 iOS 15.4 #0-0]    [32m✓[39m Then he is able to see the stock price displayed
-[iPhone 13 iOS 15.4 #0-0]
-[iPhone 13 iOS 15.4 #0-0] [32m3 passing (6.4s)[39m
+Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:17 
 
-
-Spec Files:	 1 passed, 1 total (100% completed) in 00:00:18 
-
-2022-08-15T06:26:19.563Z INFO @wdio/local-runner: Shutting down spawned worker
-2022-08-15T06:26:19.816Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
-2022-08-15T06:26:19.816Z INFO @wdio/local-runner: shutting down
-Done in 21.04s.
+2022-08-16T04:14:35.515Z INFO @wdio/local-runner: Shutting down spawned worker
+2022-08-16T04:14:35.768Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2022-08-16T04:14:35.769Z INFO @wdio/local-runner: shutting down
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
