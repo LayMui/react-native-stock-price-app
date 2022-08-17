@@ -6,7 +6,7 @@ if (!process.env.CIRCLECI)
 }
 
 var testNameImagium = "WebdriverioIntegration"
-var projectKeyImagium = process.env.IMAGIUM_KEY
+var projectKeyImagium = "process.env.IMAGIUM_KEY"
 var uidEndPointImagium = process.env.IP + "/api/GetUID"
 var validateEndPointImagium = process.env.IP + "/api/Validate"
 
