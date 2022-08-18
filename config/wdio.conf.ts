@@ -209,7 +209,7 @@ export const config: WebdriverIOConfig = {
     // <string> (expression) only execute the features or scenarios with tags matching the expression
     tagExpression: '@test',
     // <number> timeout for step definitions
-    timeout: 60000,
+    timeout: 100000,
     // <boolean> Enable this config to treat undefined definitions as warnings.
     ignoreUndefinedDefinitions: false,
   },

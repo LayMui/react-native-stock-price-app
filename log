@@ -1,17 +1,17 @@
 yarn run v1.22.4
 $ wdio config/wdio.ios.app.conf.ts
 
-Execution of 1 workers started at 2022-08-17T01:05:22.516Z
+Execution of 1 workers started at 2022-08-18T02:06:39.764Z
 
-2022-08-17T01:05:22.524Z INFO @wdio/cli:launcher: Run onPrepare hook
-2022-08-17T01:05:23.693Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2022-08-17T01:05:23.695Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.ios.app.conf.ts
-[0-0] [90m2022-08-17T01:05:24.289Z[39m [96mINFO[39m [97m@wdio/local-runner[39m: Run worker command: run
-[0-0] [90m2022-08-17T01:05:25.416Z[39m [96mINFO[39m [97mwdio-multiple-cucumber-html-reporter[39m: The 'reportFilePerRetry' was not set, it has been set to the default 'true'
+2022-08-18T02:06:39.783Z INFO @wdio/cli:launcher: Run onPrepare hook
+2022-08-18T02:06:40.904Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2022-08-18T02:06:40.906Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.ios.app.conf.ts
+[0-0] 2022-08-18T02:06:41.421Z INFO @wdio/local-runner: Run worker command: run
+[0-0] 2022-08-18T02:06:42.529Z INFO wdio-multiple-cucumber-html-reporter: The 'reportFilePerRetry' was not set, it has been set to the default 'true'
 [0-0] RUNNING in iOS - /tests/features/SearchStockPrice.feature
-[0-0] [90m2022-08-17T01:05:26.123Z[39m [96mINFO[39m [97mwebdriver[39m: Initiate new session using the WebDriver protocol
-[0-0] [90m2022-08-17T01:05:26.191Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session
-[0-0] [90m2022-08-17T01:05:26.191Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m {
+[0-0] 2022-08-18T02:06:43.195Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-0] 2022-08-18T02:06:43.263Z INFO webdriver: [POST] http://localhost:4723/session
+[0-0] 2022-08-18T02:06:43.263Z INFO webdriver: DATA {
 [0-0]   capabilities: {
 [0-0]     alwaysMatch: {
 [0-0]       browserName: '',
@@ -38,23 +38,25 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]     'appium:newCommandTimeout': 240
 [0-0]   }
 [0-0] }
-[0-0] Error: Request failed with status code 404
-[0-0]     at createError (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/core/createError.js:16:15)
-[0-0]     at settle (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/core/settle.js:17:12)
-[0-0]     at IncomingMessage.handleStreamEnd (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/adapters/http.js:269:11)
-[0-0]     at IncomingMessage.emit (node:events:538:35)
-[0-0]     at IncomingMessage.emit (node:domain:475:12)
-[0-0]     at endReadableNT (node:internal/streams/readable:1345:12)
-[0-0]     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+[0-0] Error: connect EHOSTUNREACH 192.168.1.170:80 - Local (192.168.1.198:56286)
+[0-0]     at internalConnect (node:net:931:16)
+[0-0]     at defaultTriggerAsyncIdScope (node:internal/async_hooks:465:18)
+[0-0]     at node:net:1022:9
+[0-0]     at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+[0-0]   errno: -65,
+[0-0]   code: 'EHOSTUNREACH',
+[0-0]   syscall: 'connect',
+[0-0]   address: '192.168.1.170',
+[0-0]   port: 80,
 [0-0]   config: {
 [0-0]     url: 'http://192.168.1.170/api/GetUID',
 [0-0]     method: 'post',
-[0-0]     data: '{"TestName":"WebdriverioIntegration","ProjectKey":"process.env.IMAGIUM_KEY"}',
+[0-0]     data: '{"TestName":"WebdriverioIntegration","ProjectKey":"442bc5b8-c48f-4b3a-9c43-8cdef5e07abf265"}',
 [0-0]     headers: {
 [0-0]       Accept: 'application/json, text/plain, */*',
 [0-0]       'Content-Type': 'application/json',
 [0-0]       'User-Agent': 'axios/0.21.4',
-[0-0]       'Content-Length': 76
+[0-0]       'Content-Length': 92
 [0-0]     },
 [0-0]     transformRequest: [ [Function: transformRequest] ],
 [0-0]     transformResponse: [ [Function: transformResponse] ],
@@ -71,204 +73,76 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       clarifyTimeoutError: false
 [0-0]     }
 [0-0]   },
-[0-0]   request: <ref *1> ClientRequest {
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
 [0-0]     _events: [Object: null prototype] {
-[0-0]       abort: [Function (anonymous)],
-[0-0]       aborted: [Function (anonymous)],
-[0-0]       connect: [Function (anonymous)],
-[0-0]       error: [Function (anonymous)],
-[0-0]       socket: [Function (anonymous)],
-[0-0]       timeout: [Function (anonymous)],
-[0-0]       prefinish: [Function: requestOnPrefinish]
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
 [0-0]     },
-[0-0]     _eventsCount: 7,
+[0-0]     _eventsCount: 2,
 [0-0]     _maxListeners: undefined,
-[0-0]     outputData: [],
-[0-0]     outputSize: 0,
-[0-0]     writable: true,
-[0-0]     destroyed: false,
-[0-0]     _last: true,
-[0-0]     chunkedEncoding: false,
-[0-0]     shouldKeepAlive: false,
-[0-0]     maxRequestsOnConnectionReached: false,
-[0-0]     _defaultKeepAlive: true,
-[0-0]     useChunkedEncodingByDefault: true,
-[0-0]     sendDate: false,
-[0-0]     _removedConnection: false,
-[0-0]     _removedContLen: false,
-[0-0]     _removedTE: false,
-[0-0]     _contentLength: null,
-[0-0]     _hasBody: true,
-[0-0]     _trailer: '',
-[0-0]     finished: true,
-[0-0]     _headerSent: true,
-[0-0]     _closed: false,
-[0-0]     socket: Socket {
-[0-0]       connecting: false,
-[0-0]       _hadError: false,
-[0-0]       _parent: null,
-[0-0]       _host: null,
-[0-0]       _readableState: [ReadableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 7,
-[0-0]       _maxListeners: undefined,
-[0-0]       _writableState: [WritableState],
-[0-0]       allowHalfOpen: false,
-[0-0]       _sockname: null,
-[0-0]       _pendingData: null,
-[0-0]       _pendingEncoding: '',
-[0-0]       server: null,
-[0-0]       _server: null,
-[0-0]       parser: null,
-[0-0]       _httpMessage: [Circular *1],
-[0-0]       [Symbol(async_id_symbol)]: 95,
-[0-0]       [Symbol(kHandle)]: [TCP],
-[0-0]       [Symbol(kSetNoDelay)]: false,
-[0-0]       [Symbol(lastWriteQueueSize)]: 0,
-[0-0]       [Symbol(timeout)]: null,
-[0-0]       [Symbol(kBuffer)]: null,
-[0-0]       [Symbol(kBufferCb)]: null,
-[0-0]       [Symbol(kBufferGen)]: null,
-[0-0]       [Symbol(kCapture)]: false,
-[0-0]       [Symbol(kBytesRead)]: 0,
-[0-0]       [Symbol(kBytesWritten)]: 0,
-[0-0]       [Symbol(RequestTimeout)]: undefined
-[0-0]     },
-[0-0]     _header: 'POST /api/GetUID HTTP/1.1\r\n' +
-[0-0]       'Accept: application/json, text/plain, */*\r\n' +
-[0-0]       'Content-Type: application/json\r\n' +
-[0-0]       'User-Agent: axios/0.21.4\r\n' +
-[0-0]       'Content-Length: 76\r\n' +
-[0-0]       'Host: 192.168.1.170\r\n' +
-[0-0]       'Connection: close\r\n' +
-[0-0]       '\r\n',
-[0-0]     _keepAliveTimeout: 0,
-[0-0]     _onPendingData: [Function: nop],
-[0-0]     agent: Agent {
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 2,
-[0-0]       _maxListeners: undefined,
-[0-0]       defaultPort: 80,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
 [0-0]       protocol: 'http:',
-[0-0]       options: [Object: null prototype],
-[0-0]       requests: [Object: null prototype] {},
-[0-0]       sockets: [Object: null prototype],
-[0-0]       freeSockets: [Object: null prototype] {},
-[0-0]       keepAliveMsecs: 1000,
-[0-0]       keepAlive: false,
-[0-0]       maxSockets: Infinity,
-[0-0]       maxFreeSockets: 256,
-[0-0]       scheduling: 'lifo',
-[0-0]       maxTotalSockets: Infinity,
-[0-0]       totalSocketCount: 1,
-[0-0]       [Symbol(kCapture)]: false
-[0-0]     },
-[0-0]     socketPath: undefined,
-[0-0]     method: 'POST',
-[0-0]     maxHeaderSize: undefined,
-[0-0]     insecureHTTPParser: undefined,
-[0-0]     path: '/api/GetUID',
-[0-0]     _ended: true,
-[0-0]     res: IncomingMessage {
-[0-0]       _readableState: [ReadableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 3,
-[0-0]       _maxListeners: undefined,
-[0-0]       socket: [Socket],
-[0-0]       httpVersionMajor: 1,
-[0-0]       httpVersionMinor: 1,
-[0-0]       httpVersion: '1.1',
-[0-0]       complete: true,
-[0-0]       rawHeaders: [Array],
-[0-0]       rawTrailers: [],
-[0-0]       aborted: false,
-[0-0]       upgrade: false,
-[0-0]       url: '',
-[0-0]       method: null,
-[0-0]       statusCode: 404,
-[0-0]       statusMessage: 'Not Found',
-[0-0]       client: [Socket],
-[0-0]       _consuming: false,
-[0-0]       _dumped: false,
-[0-0]       req: [Circular *1],
-[0-0]       responseUrl: 'http://192.168.1.170/api/GetUID',
-[0-0]       redirects: [],
-[0-0]       [Symbol(kCapture)]: false,
-[0-0]       [Symbol(kHeaders)]: [Object],
-[0-0]       [Symbol(kHeadersCount)]: 12,
-[0-0]       [Symbol(kTrailers)]: null,
-[0-0]       [Symbol(kTrailersCount)]: 0,
-[0-0]       [Symbol(RequestTimeout)]: undefined
-[0-0]     },
-[0-0]     aborted: false,
-[0-0]     timeoutCb: null,
-[0-0]     upgradeOrConnect: false,
-[0-0]     parser: null,
-[0-0]     maxHeadersCount: null,
-[0-0]     reusedSocket: false,
-[0-0]     host: '192.168.1.170',
-[0-0]     protocol: 'http:',
-[0-0]     _redirectable: Writable {
-[0-0]       _writableState: [WritableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 2,
-[0-0]       _maxListeners: undefined,
-[0-0]       _options: [Object],
-[0-0]       _ended: true,
-[0-0]       _ending: true,
-[0-0]       _redirectCount: 0,
-[0-0]       _redirects: [],
-[0-0]       _requestBodyLength: 76,
-[0-0]       _requestBodyBuffers: [],
-[0-0]       _onNativeResponse: [Function (anonymous)],
-[0-0]       _currentRequest: [Circular *1],
-[0-0]       _currentUrl: 'http://192.168.1.170/api/GetUID',
-[0-0]       [Symbol(kCapture)]: false
-[0-0]     },
-[0-0]     [Symbol(kCapture)]: false,
-[0-0]     [Symbol(kNeedDrain)]: false,
-[0-0]     [Symbol(corked)]: 0,
-[0-0]     [Symbol(kOutHeaders)]: [Object: null prototype] {
-[0-0]       accept: [Array],
-[0-0]       'content-type': [Array],
-[0-0]       'user-agent': [Array],
-[0-0]       'content-length': [Array],
-[0-0]       host: [Array]
-[0-0]     }
-[0-0]   },
-[0-0]   response: {
-[0-0]     status: 404,
-[0-0]     statusText: 'Not Found',
-[0-0]     headers: {
-[0-0]       'content-type': 'text/html',
-[0-0]       server: 'Microsoft-IIS/10.0',
-[0-0]       'x-powered-by': 'ASP.NET',
-[0-0]       date: 'Wed, 17 Aug 2022 01:05:31 GMT',
-[0-0]       connection: 'close',
-[0-0]       'content-length': '1245'
-[0-0]     },
-[0-0]     config: {
-[0-0]       url: 'http://192.168.1.170/api/GetUID',
-[0-0]       method: 'post',
-[0-0]       data: '{"TestName":"WebdriverioIntegration","ProjectKey":"process.env.IMAGIUM_KEY"}',
+[0-0]       path: '/api/GetUID',
+[0-0]       method: 'POST',
 [0-0]       headers: [Object],
-[0-0]       transformRequest: [Array],
-[0-0]       transformResponse: [Array],
-[0-0]       timeout: 0,
-[0-0]       adapter: [Function: httpAdapter],
-[0-0]       xsrfCookieName: 'XSRF-TOKEN',
-[0-0]       xsrfHeaderName: 'X-XSRF-TOKEN',
-[0-0]       maxContentLength: -1,
-[0-0]       maxBodyLength: -1,
-[0-0]       validateStatus: [Function: validateStatus],
-[0-0]       transitional: [Object]
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: '192.168.1.170',
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: '/api/GetUID'
 [0-0]     },
-[0-0]     request: <ref *1> ClientRequest {
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 92,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
 [0-0]       _events: [Object: null prototype],
 [0-0]       _eventsCount: 7,
 [0-0]       _maxListeners: undefined,
-[0-0]       outputData: [],
-[0-0]       outputSize: 0,
+[0-0]       outputData: [Array],
+[0-0]       outputSize: 282,
 [0-0]       writable: true,
 [0-0]       destroyed: false,
 [0-0]       _last: true,
@@ -284,7 +158,7 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       _contentLength: null,
 [0-0]       _hasBody: true,
 [0-0]       _trailer: '',
-[0-0]       finished: true,
+[0-0]       finished: false,
 [0-0]       _headerSent: true,
 [0-0]       _closed: false,
 [0-0]       socket: [Socket],
@@ -292,7 +166,7 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]         'Accept: application/json, text/plain, */*\r\n' +
 [0-0]         'Content-Type: application/json\r\n' +
 [0-0]         'User-Agent: axios/0.21.4\r\n' +
-[0-0]         'Content-Length: 76\r\n' +
+[0-0]         'Content-Length: 92\r\n' +
 [0-0]         'Host: 192.168.1.170\r\n' +
 [0-0]         'Connection: close\r\n' +
 [0-0]         '\r\n',
@@ -304,8 +178,8 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       maxHeaderSize: undefined,
 [0-0]       insecureHTTPParser: undefined,
 [0-0]       path: '/api/GetUID',
-[0-0]       _ended: true,
-[0-0]       res: [IncomingMessage],
+[0-0]       _ended: false,
+[0-0]       res: null,
 [0-0]       aborted: false,
 [0-0]       timeoutCb: null,
 [0-0]       upgradeOrConnect: false,
@@ -314,59 +188,37 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       reusedSocket: false,
 [0-0]       host: '192.168.1.170',
 [0-0]       protocol: 'http:',
-[0-0]       _redirectable: [Writable],
+[0-0]       _redirectable: [Circular *1],
 [0-0]       [Symbol(kCapture)]: false,
 [0-0]       [Symbol(kNeedDrain)]: false,
 [0-0]       [Symbol(corked)]: 0,
 [0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
 [0-0]     },
-[0-0]     data: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\r\n' +
-[0-0]       '<html xmlns="http://www.w3.org/1999/xhtml">\r\n' +
-[0-0]       '<head>\r\n' +
-[0-0]       '<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>\r\n' +
-[0-0]       '<title>404 - File or directory not found.</title>\r\n' +
-[0-0]       '<style type="text/css">\r\n' +
-[0-0]       '<!--\r\n' +
-[0-0]       'body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}\r\n' +
-[0-0]       'fieldset{padding:0 15px 10px 15px;} \r\n' +
-[0-0]       'h1{font-size:2.4em;margin:0;color:#FFF;}\r\n' +
-[0-0]       'h2{font-size:1.7em;margin:0;color:#CC0000;} \r\n' +
-[0-0]       'h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} \r\n' +
-[0-0]       '#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;\r\n' +
-[0-0]       'background-color:#555555;}\r\n' +
-[0-0]       '#content{margin:0 0 0 2%;position:relative;}\r\n' +
-[0-0]       '.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}\r\n' +
-[0-0]       '-->\r\n' +
-[0-0]       '</style>\r\n' +
-[0-0]       '</head>\r\n' +
-[0-0]       '<body>\r\n' +
-[0-0]       '<div id="header"><h1>Server Error</h1></div>\r\n' +
-[0-0]       '<div id="content">\r\n' +
-[0-0]       ' <div class="content-container"><fieldset>\r\n' +
-[0-0]       '  <h2>404 - File or directory not found.</h2>\r\n' +
-[0-0]       '  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>\r\n' +
-[0-0]       ' </fieldset></div>\r\n' +
-[0-0]       '</div>\r\n' +
-[0-0]       '</body>\r\n' +
-[0-0]       '</html>\r\n'
+[0-0]     _currentUrl: 'http://192.168.1.170/api/GetUID',
+[0-0]     [Symbol(kCapture)]: false
 [0-0]   },
+[0-0]   response: undefined,
 [0-0]   isAxiosError: true,
-[0-0]   toJSON: [Function: toJSON]
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {}, CallSite {}, CallSite {}, CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {}, CallSite {}, CallSite {}, CallSite {} ]
 [0-0] }
 [0-0] getUID: undefined
-[0-0] [90m2022-08-17T01:05:35.751Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m takeScreenshot()
-[0-0] [90m2022-08-17T01:05:35.753Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/screenshot
-[0-0] [90m2022-08-17T01:05:35.776Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
-[0-0] [90m2022-08-17T01:05:35.777Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element
-[0-0] [90m2022-08-17T01:05:35.777Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
-[0-0] Error: Request failed with status code 404
-[0-0]     at createError (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/core/createError.js:16:15)
-[0-0]     at settle (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/core/settle.js:17:12)
-[0-0]     at IncomingMessage.handleStreamEnd (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/adapters/http.js:269:11)
-[0-0]     at IncomingMessage.emit (node:events:538:35)
-[0-0]     at IncomingMessage.emit (node:domain:475:12)
-[0-0]     at endReadableNT (node:internal/streams/readable:1345:12)
-[0-0]     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+[0-0] 2022-08-18T02:06:51.372Z INFO webdriver: COMMAND takeScreenshot()
+[0-0] 2022-08-18T02:06:51.373Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/screenshot
+[0-0] 2022-08-18T02:06:51.382Z INFO webdriver: COMMAND findElement("accessibility id", "stockTickerSymbolSearchInput")
+[0-0] 2022-08-18T02:06:51.383Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element
+[0-0] 2022-08-18T02:06:51.383Z INFO webdriver: DATA { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
+[0-0] Error: connect EHOSTDOWN 192.168.1.170:80 - Local (192.168.1.198:56287)
+[0-0]     at internalConnect (node:net:931:16)
+[0-0]     at defaultTriggerAsyncIdScope (node:internal/async_hooks:465:18)
+[0-0]     at node:net:1022:9
+[0-0]     at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+[0-0]   errno: -64,
+[0-0]   code: 'EHOSTDOWN',
+[0-0]   syscall: 'connect',
+[0-0]   address: '192.168.1.170',
+[0-0]   port: 80,
 [0-0]   config: {
 [0-0]     url: 'http://192.168.1.170/api/Validate',
 [0-0]     method: 'post',
@@ -392,204 +244,76 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       clarifyTimeoutError: false
 [0-0]     }
 [0-0]   },
-[0-0]   request: <ref *1> ClientRequest {
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
 [0-0]     _events: [Object: null prototype] {
-[0-0]       abort: [Function (anonymous)],
-[0-0]       aborted: [Function (anonymous)],
-[0-0]       connect: [Function (anonymous)],
-[0-0]       error: [Function (anonymous)],
-[0-0]       socket: [Function (anonymous)],
-[0-0]       timeout: [Function (anonymous)],
-[0-0]       prefinish: [Function: requestOnPrefinish]
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
 [0-0]     },
-[0-0]     _eventsCount: 7,
+[0-0]     _eventsCount: 2,
 [0-0]     _maxListeners: undefined,
-[0-0]     outputData: [],
-[0-0]     outputSize: 0,
-[0-0]     writable: true,
-[0-0]     destroyed: false,
-[0-0]     _last: true,
-[0-0]     chunkedEncoding: false,
-[0-0]     shouldKeepAlive: false,
-[0-0]     maxRequestsOnConnectionReached: false,
-[0-0]     _defaultKeepAlive: true,
-[0-0]     useChunkedEncodingByDefault: true,
-[0-0]     sendDate: false,
-[0-0]     _removedConnection: false,
-[0-0]     _removedContLen: false,
-[0-0]     _removedTE: false,
-[0-0]     _contentLength: null,
-[0-0]     _hasBody: true,
-[0-0]     _trailer: '',
-[0-0]     finished: true,
-[0-0]     _headerSent: true,
-[0-0]     _closed: false,
-[0-0]     socket: Socket {
-[0-0]       connecting: false,
-[0-0]       _hadError: false,
-[0-0]       _parent: null,
-[0-0]       _host: null,
-[0-0]       _readableState: [ReadableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 7,
-[0-0]       _maxListeners: undefined,
-[0-0]       _writableState: [WritableState],
-[0-0]       allowHalfOpen: false,
-[0-0]       _sockname: null,
-[0-0]       _pendingData: null,
-[0-0]       _pendingEncoding: '',
-[0-0]       server: null,
-[0-0]       _server: null,
-[0-0]       parser: null,
-[0-0]       _httpMessage: [Circular *1],
-[0-0]       [Symbol(async_id_symbol)]: 113,
-[0-0]       [Symbol(kHandle)]: [TCP],
-[0-0]       [Symbol(kSetNoDelay)]: false,
-[0-0]       [Symbol(lastWriteQueueSize)]: 0,
-[0-0]       [Symbol(timeout)]: null,
-[0-0]       [Symbol(kBuffer)]: null,
-[0-0]       [Symbol(kBufferCb)]: null,
-[0-0]       [Symbol(kBufferGen)]: null,
-[0-0]       [Symbol(kCapture)]: false,
-[0-0]       [Symbol(kBytesRead)]: 0,
-[0-0]       [Symbol(kBytesWritten)]: 0,
-[0-0]       [Symbol(RequestTimeout)]: undefined
-[0-0]     },
-[0-0]     _header: 'POST /api/Validate HTTP/1.1\r\n' +
-[0-0]       'Accept: application/json, text/plain, */*\r\n' +
-[0-0]       'Content-Type: application/json\r\n' +
-[0-0]       'User-Agent: axios/0.21.4\r\n' +
-[0-0]       'Content-Length: 52\r\n' +
-[0-0]       'Host: 192.168.1.170\r\n' +
-[0-0]       'Connection: close\r\n' +
-[0-0]       '\r\n',
-[0-0]     _keepAliveTimeout: 0,
-[0-0]     _onPendingData: [Function: nop],
-[0-0]     agent: Agent {
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 2,
-[0-0]       _maxListeners: undefined,
-[0-0]       defaultPort: 80,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
 [0-0]       protocol: 'http:',
-[0-0]       options: [Object: null prototype],
-[0-0]       requests: [Object: null prototype] {},
-[0-0]       sockets: [Object: null prototype],
-[0-0]       freeSockets: [Object: null prototype] {},
-[0-0]       keepAliveMsecs: 1000,
-[0-0]       keepAlive: false,
-[0-0]       maxSockets: Infinity,
-[0-0]       maxFreeSockets: 256,
-[0-0]       scheduling: 'lifo',
-[0-0]       maxTotalSockets: Infinity,
-[0-0]       totalSocketCount: 1,
-[0-0]       [Symbol(kCapture)]: false
-[0-0]     },
-[0-0]     socketPath: undefined,
-[0-0]     method: 'POST',
-[0-0]     maxHeaderSize: undefined,
-[0-0]     insecureHTTPParser: undefined,
-[0-0]     path: '/api/Validate',
-[0-0]     _ended: true,
-[0-0]     res: IncomingMessage {
-[0-0]       _readableState: [ReadableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 3,
-[0-0]       _maxListeners: undefined,
-[0-0]       socket: [Socket],
-[0-0]       httpVersionMajor: 1,
-[0-0]       httpVersionMinor: 1,
-[0-0]       httpVersion: '1.1',
-[0-0]       complete: true,
-[0-0]       rawHeaders: [Array],
-[0-0]       rawTrailers: [],
-[0-0]       aborted: false,
-[0-0]       upgrade: false,
-[0-0]       url: '',
-[0-0]       method: null,
-[0-0]       statusCode: 404,
-[0-0]       statusMessage: 'Not Found',
-[0-0]       client: [Socket],
-[0-0]       _consuming: false,
-[0-0]       _dumped: false,
-[0-0]       req: [Circular *1],
-[0-0]       responseUrl: 'http://192.168.1.170/api/Validate',
-[0-0]       redirects: [],
-[0-0]       [Symbol(kCapture)]: false,
-[0-0]       [Symbol(kHeaders)]: [Object],
-[0-0]       [Symbol(kHeadersCount)]: 12,
-[0-0]       [Symbol(kTrailers)]: null,
-[0-0]       [Symbol(kTrailersCount)]: 0,
-[0-0]       [Symbol(RequestTimeout)]: undefined
-[0-0]     },
-[0-0]     aborted: false,
-[0-0]     timeoutCb: null,
-[0-0]     upgradeOrConnect: false,
-[0-0]     parser: null,
-[0-0]     maxHeadersCount: null,
-[0-0]     reusedSocket: false,
-[0-0]     host: '192.168.1.170',
-[0-0]     protocol: 'http:',
-[0-0]     _redirectable: Writable {
-[0-0]       _writableState: [WritableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 2,
-[0-0]       _maxListeners: undefined,
-[0-0]       _options: [Object],
-[0-0]       _ended: true,
-[0-0]       _ending: true,
-[0-0]       _redirectCount: 0,
-[0-0]       _redirects: [],
-[0-0]       _requestBodyLength: 52,
-[0-0]       _requestBodyBuffers: [],
-[0-0]       _onNativeResponse: [Function (anonymous)],
-[0-0]       _currentRequest: [Circular *1],
-[0-0]       _currentUrl: 'http://192.168.1.170/api/Validate',
-[0-0]       [Symbol(kCapture)]: false
-[0-0]     },
-[0-0]     [Symbol(kCapture)]: false,
-[0-0]     [Symbol(kNeedDrain)]: false,
-[0-0]     [Symbol(corked)]: 0,
-[0-0]     [Symbol(kOutHeaders)]: [Object: null prototype] {
-[0-0]       accept: [Array],
-[0-0]       'content-type': [Array],
-[0-0]       'user-agent': [Array],
-[0-0]       'content-length': [Array],
-[0-0]       host: [Array]
-[0-0]     }
-[0-0]   },
-[0-0]   response: {
-[0-0]     status: 404,
-[0-0]     statusText: 'Not Found',
-[0-0]     headers: {
-[0-0]       'content-type': 'text/html',
-[0-0]       server: 'Microsoft-IIS/10.0',
-[0-0]       'x-powered-by': 'ASP.NET',
-[0-0]       date: 'Wed, 17 Aug 2022 01:05:31 GMT',
-[0-0]       connection: 'close',
-[0-0]       'content-length': '1245'
-[0-0]     },
-[0-0]     config: {
-[0-0]       url: 'http://192.168.1.170/api/Validate',
-[0-0]       method: 'post',
-[0-0]       data: '{"StepName":"home","ImageBase64":"[object Promise]"}',
+[0-0]       path: '/api/Validate',
+[0-0]       method: 'POST',
 [0-0]       headers: [Object],
-[0-0]       transformRequest: [Array],
-[0-0]       transformResponse: [Array],
-[0-0]       timeout: 0,
-[0-0]       adapter: [Function: httpAdapter],
-[0-0]       xsrfCookieName: 'XSRF-TOKEN',
-[0-0]       xsrfHeaderName: 'X-XSRF-TOKEN',
-[0-0]       maxContentLength: -1,
-[0-0]       maxBodyLength: -1,
-[0-0]       validateStatus: [Function: validateStatus],
-[0-0]       transitional: [Object]
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: '192.168.1.170',
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: '/api/Validate'
 [0-0]     },
-[0-0]     request: <ref *1> ClientRequest {
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 52,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
 [0-0]       _events: [Object: null prototype],
 [0-0]       _eventsCount: 7,
 [0-0]       _maxListeners: undefined,
-[0-0]       outputData: [],
-[0-0]       outputSize: 0,
+[0-0]       outputData: [Array],
+[0-0]       outputSize: 244,
 [0-0]       writable: true,
 [0-0]       destroyed: false,
 [0-0]       _last: true,
@@ -605,7 +329,7 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       _contentLength: null,
 [0-0]       _hasBody: true,
 [0-0]       _trailer: '',
-[0-0]       finished: true,
+[0-0]       finished: false,
 [0-0]       _headerSent: true,
 [0-0]       _closed: false,
 [0-0]       socket: [Socket],
@@ -625,8 +349,8 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       maxHeaderSize: undefined,
 [0-0]       insecureHTTPParser: undefined,
 [0-0]       path: '/api/Validate',
-[0-0]       _ended: true,
-[0-0]       res: [IncomingMessage],
+[0-0]       _ended: false,
+[0-0]       res: null,
 [0-0]       aborted: false,
 [0-0]       timeoutCb: null,
 [0-0]       upgradeOrConnect: false,
@@ -635,111 +359,89 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       reusedSocket: false,
 [0-0]       host: '192.168.1.170',
 [0-0]       protocol: 'http:',
-[0-0]       _redirectable: [Writable],
+[0-0]       _redirectable: [Circular *1],
 [0-0]       [Symbol(kCapture)]: false,
 [0-0]       [Symbol(kNeedDrain)]: false,
 [0-0]       [Symbol(corked)]: 0,
 [0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
 [0-0]     },
-[0-0]     data: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\r\n' +
-[0-0]       '<html xmlns="http://www.w3.org/1999/xhtml">\r\n' +
-[0-0]       '<head>\r\n' +
-[0-0]       '<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>\r\n' +
-[0-0]       '<title>404 - File or directory not found.</title>\r\n' +
-[0-0]       '<style type="text/css">\r\n' +
-[0-0]       '<!--\r\n' +
-[0-0]       'body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}\r\n' +
-[0-0]       'fieldset{padding:0 15px 10px 15px;} \r\n' +
-[0-0]       'h1{font-size:2.4em;margin:0;color:#FFF;}\r\n' +
-[0-0]       'h2{font-size:1.7em;margin:0;color:#CC0000;} \r\n' +
-[0-0]       'h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} \r\n' +
-[0-0]       '#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;\r\n' +
-[0-0]       'background-color:#555555;}\r\n' +
-[0-0]       '#content{margin:0 0 0 2%;position:relative;}\r\n' +
-[0-0]       '.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}\r\n' +
-[0-0]       '-->\r\n' +
-[0-0]       '</style>\r\n' +
-[0-0]       '</head>\r\n' +
-[0-0]       '<body>\r\n' +
-[0-0]       '<div id="header"><h1>Server Error</h1></div>\r\n' +
-[0-0]       '<div id="content">\r\n' +
-[0-0]       ' <div class="content-container"><fieldset>\r\n' +
-[0-0]       '  <h2>404 - File or directory not found.</h2>\r\n' +
-[0-0]       '  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>\r\n' +
-[0-0]       ' </fieldset></div>\r\n' +
-[0-0]       '</div>\r\n' +
-[0-0]       '</body>\r\n' +
-[0-0]       '</html>\r\n'
+[0-0]     _currentUrl: 'http://192.168.1.170/api/Validate',
+[0-0]     [Symbol(kCapture)]: false
 [0-0]   },
+[0-0]   response: undefined,
 [0-0]   isAxiosError: true,
-[0-0]   toJSON: [Function: toJSON]
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {}, CallSite {}, CallSite {}, CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {}, CallSite {}, CallSite {}, CallSite {} ]
 [0-0] }
-[0-0] [90m2022-08-17T01:05:36.374Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m iVBORw0KGgoAAAANSUhEUgAABJIAAAnkCAYAAABWQUsDAAAAAXNSR0IArs4c6...
-[0-0] [90m2022-08-17T01:05:36.545Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-2EFE-000000000000',
-[0-0]   ELEMENT: '1C000000-0000-0000-2EFE-000000000000'
+[0-0] 2022-08-18T02:06:51.893Z INFO webdriver: RESULT iVBORw0KGgoAAAANSUhEUgAABJIAAAnkCAYAAABWQUsDAAAAAXNSR0IArs4c6...
+[0-0] 2022-08-18T02:06:51.992Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '18000000-0000-0000-5B1B-000000000000',
+[0-0]   ELEMENT: '18000000-0000-0000-5B1B-000000000000'
 [0-0] }
-[0-0] [90m2022-08-17T01:05:36.557Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1C000000-0000-0000-2EFE-000000000000")
-[0-0] [90m2022-08-17T01:05:36.558Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element/1C000000-0000-0000-2EFE-000000000000/displayed
-[0-0] [90m2022-08-17T01:05:36.758Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
-[0-0] [90m2022-08-17T01:05:36.760Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchInput")
-[0-0] [90m2022-08-17T01:05:36.760Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element
-[0-0] [90m2022-08-17T01:05:36.760Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
-[0-0] [90m2022-08-17T01:05:36.936Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-2EFE-000000000000',
-[0-0]   ELEMENT: '1C000000-0000-0000-2EFE-000000000000'
+[0-0] 2022-08-18T02:06:52.007Z INFO webdriver: COMMAND isElementDisplayed("18000000-0000-0000-5B1B-000000000000")
+[0-0] 2022-08-18T02:06:52.008Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element/18000000-0000-0000-5B1B-000000000000/displayed
+[0-0] 2022-08-18T02:06:52.090Z INFO webdriver: RESULT true
+[0-0] 2022-08-18T02:06:52.091Z INFO webdriver: COMMAND findElement("accessibility id", "stockTickerSymbolSearchInput")
+[0-0] 2022-08-18T02:06:52.092Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element
+[0-0] 2022-08-18T02:06:52.092Z INFO webdriver: DATA { using: 'accessibility id', value: 'stockTickerSymbolSearchInput' }
+[0-0] 2022-08-18T02:06:52.211Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '18000000-0000-0000-5B1B-000000000000',
+[0-0]   ELEMENT: '18000000-0000-0000-5B1B-000000000000'
 [0-0] }
-[0-0] [90m2022-08-17T01:05:36.943Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementClear("1C000000-0000-0000-2EFE-000000000000")
-[0-0] [90m2022-08-17T01:05:36.943Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element/1C000000-0000-0000-2EFE-000000000000/clear
-[0-0] [90m2022-08-17T01:05:37.033Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m elementSendKeys("1C000000-0000-0000-2EFE-000000000000", "<Screenshot[base64]>")
-[0-0] [90m2022-08-17T01:05:37.033Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element/1C000000-0000-0000-2EFE-000000000000/value
-[0-0] [90m2022-08-17T01:05:37.033Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { text: 'Aapl' }
-[0-0] [90m2022-08-17T01:05:38.444Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isKeyboardShown()
-[0-0] [90m2022-08-17T01:05:38.445Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/appium/device/is_keyboard_shown
-[0-0] [90m2022-08-17T01:05:38.764Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
-[0-0] [90m2022-08-17T01:05:38.764Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("-ios predicate string", "label == "stockNameText"")
-[0-0] [90m2022-08-17T01:05:38.765Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element
-[0-0] [90m2022-08-17T01:05:38.765Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: '-ios predicate string', value: 'label == "stockNameText"' }
-[0-0] [90m2022-08-17T01:05:39.129Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '17000000-0000-0000-2EFE-000000000000',
-[0-0]   ELEMENT: '17000000-0000-0000-2EFE-000000000000'
+[0-0] 2022-08-18T02:06:52.218Z INFO webdriver: COMMAND elementClear("18000000-0000-0000-5B1B-000000000000")
+[0-0] 2022-08-18T02:06:52.218Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element/18000000-0000-0000-5B1B-000000000000/clear
+[0-0] 2022-08-18T02:06:52.289Z INFO webdriver: COMMAND elementSendKeys("18000000-0000-0000-5B1B-000000000000", "<Screenshot[base64]>")
+[0-0] 2022-08-18T02:06:52.290Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element/18000000-0000-0000-5B1B-000000000000/value
+[0-0] 2022-08-18T02:06:52.290Z INFO webdriver: DATA { text: 'Aapl' }
+[0-0] 2022-08-18T02:06:53.707Z INFO webdriver: COMMAND isKeyboardShown()
+[0-0] 2022-08-18T02:06:53.708Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/appium/device/is_keyboard_shown
+[0-0] 2022-08-18T02:06:53.927Z INFO webdriver: RESULT true
+[0-0] 2022-08-18T02:06:53.927Z INFO webdriver: COMMAND findElement("-ios predicate string", "label == "stockNameText"")
+[0-0] 2022-08-18T02:06:53.928Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element
+[0-0] 2022-08-18T02:06:53.928Z INFO webdriver: DATA { using: '-ios predicate string', value: 'label == "stockNameText"' }
+[0-0] 2022-08-18T02:06:54.209Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '13000000-0000-0000-5B1B-000000000000',
+[0-0]   ELEMENT: '13000000-0000-0000-5B1B-000000000000'
 [0-0] }
-[0-0] [90m2022-08-17T01:05:39.135Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
-[0-0] [90m2022-08-17T01:05:39.135Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/touch/perform
-[0-0] [90m2022-08-17T01:05:39.136Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
-[0-0] [90m2022-08-17T01:05:39.650Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
-[0-0] [90m2022-08-17T01:05:39.650Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element
-[0-0] [90m2022-08-17T01:05:39.650Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
-[0-0] [90m2022-08-17T01:05:39.976Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-2EFE-000000000000',
-[0-0]   ELEMENT: '1D000000-0000-0000-2EFE-000000000000'
+[0-0] 2022-08-18T02:06:54.216Z INFO webdriver: COMMAND touchPerform(<object>)
+[0-0] 2022-08-18T02:06:54.216Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/touch/perform
+[0-0] 2022-08-18T02:06:54.216Z INFO webdriver: DATA { actions: [ { action: 'tap', options: [Object] } ] }
+[0-0] 2022-08-18T02:06:54.614Z INFO webdriver: COMMAND findElement("accessibility id", "stockTickerSymbolSearchBtn")
+[0-0] 2022-08-18T02:06:54.614Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element
+[0-0] 2022-08-18T02:06:54.614Z INFO webdriver: DATA { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
+[0-0] 2022-08-18T02:06:54.862Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '19000000-0000-0000-5B1B-000000000000',
+[0-0]   ELEMENT: '19000000-0000-0000-5B1B-000000000000'
 [0-0] }
-[0-0] [90m2022-08-17T01:05:39.983Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m isElementDisplayed("1D000000-0000-0000-2EFE-000000000000")
-[0-0] [90m2022-08-17T01:05:39.983Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element/1D000000-0000-0000-2EFE-000000000000/displayed
-[0-0] [90m2022-08-17T01:05:40.175Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m true
-[0-0] [90m2022-08-17T01:05:40.176Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m findElement("accessibility id", "stockTickerSymbolSearchBtn")
-[0-0] [90m2022-08-17T01:05:40.176Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/element
-[0-0] [90m2022-08-17T01:05:40.176Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
-[0-0] [90m2022-08-17T01:05:40.539Z[39m [96mINFO[39m [97mwebdriver[39m: [36mRESULT[39m {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-2EFE-000000000000',
-[0-0]   ELEMENT: '1D000000-0000-0000-2EFE-000000000000'
+[0-0] 2022-08-18T02:06:54.869Z INFO webdriver: COMMAND isElementDisplayed("19000000-0000-0000-5B1B-000000000000")
+[0-0] 2022-08-18T02:06:54.870Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element/19000000-0000-0000-5B1B-000000000000/displayed
+[0-0] 2022-08-18T02:06:55.032Z INFO webdriver: RESULT true
+[0-0] 2022-08-18T02:06:55.033Z INFO webdriver: COMMAND findElement("accessibility id", "stockTickerSymbolSearchBtn")
+[0-0] 2022-08-18T02:06:55.033Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/element
+[0-0] 2022-08-18T02:06:55.033Z INFO webdriver: DATA { using: 'accessibility id', value: 'stockTickerSymbolSearchBtn' }
+[0-0] 2022-08-18T02:06:55.291Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '19000000-0000-0000-5B1B-000000000000',
+[0-0]   ELEMENT: '19000000-0000-0000-5B1B-000000000000'
 [0-0] }
-[0-0] [90m2022-08-17T01:05:40.543Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m touchPerform(<object>)
-[0-0] [90m2022-08-17T01:05:40.544Z[39m [96mINFO[39m [97mwebdriver[39m: [POST] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/touch/perform
-[0-0] [90m2022-08-17T01:05:40.544Z[39m [96mINFO[39m [97mwebdriver[39m: [33mDATA[39m { actions: [ { action: 'tap', options: [Object] } ] }
+[0-0] 2022-08-18T02:06:55.297Z INFO webdriver: COMMAND touchPerform(<object>)
+[0-0] 2022-08-18T02:06:55.297Z INFO webdriver: [POST] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/touch/perform
+[0-0] 2022-08-18T02:06:55.297Z INFO webdriver: DATA { actions: [ { action: 'tap', options: [Object] } ] }
 [0-0] use the same ID: undefined
-[0-0] [90m2022-08-17T01:05:41.439Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m takeScreenshot()
-[0-0] [90m2022-08-17T01:05:41.439Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/screenshot
-[0-0] [90m2022-08-17T01:05:41.445Z[39m [96mINFO[39m [97mwebdriver[39m: [35mCOMMAND[39m deleteSession()
-[0-0] [90m2022-08-17T01:05:41.446Z[39m [96mINFO[39m [97mwebdriver[39m: [DELETE] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b
-[0-0] Error: Request failed with status code 404
-[0-0]     at createError (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/core/createError.js:16:15)
-[0-0]     at settle (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/core/settle.js:17:12)
-[0-0]     at IncomingMessage.handleStreamEnd (/Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/axios/lib/adapters/http.js:269:11)
-[0-0]     at IncomingMessage.emit (node:events:538:35)
-[0-0]     at IncomingMessage.emit (node:domain:475:12)
-[0-0]     at endReadableNT (node:internal/streams/readable:1345:12)
-[0-0]     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+[0-0] 2022-08-18T02:06:56.171Z INFO webdriver: COMMAND takeScreenshot()
+[0-0] 2022-08-18T02:06:56.171Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/screenshot
+[0-0] 2022-08-18T02:06:56.180Z INFO webdriver: COMMAND deleteSession()
+[0-0] 2022-08-18T02:06:56.180Z INFO webdriver: [DELETE] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4
+[0-0] Error: connect EHOSTDOWN 192.168.1.170:80 - Local (192.168.1.198:56289)
+[0-0]     at internalConnect (node:net:931:16)
+[0-0]     at defaultTriggerAsyncIdScope (node:internal/async_hooks:465:18)
+[0-0]     at node:net:1022:9
+[0-0]     at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+[0-0]   errno: -64,
+[0-0]   code: 'EHOSTDOWN',
+[0-0]   syscall: 'connect',
+[0-0]   address: '192.168.1.170',
+[0-0]   port: 80,
 [0-0]   config: {
 [0-0]     url: 'http://192.168.1.170/api/Validate',
 [0-0]     method: 'post',
@@ -765,204 +467,76 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       clarifyTimeoutError: false
 [0-0]     }
 [0-0]   },
-[0-0]   request: <ref *1> ClientRequest {
+[0-0]   request: <ref *1> Writable {
+[0-0]     _writableState: WritableState {
+[0-0]       objectMode: false,
+[0-0]       highWaterMark: 16384,
+[0-0]       finalCalled: false,
+[0-0]       needDrain: false,
+[0-0]       ending: false,
+[0-0]       ended: false,
+[0-0]       finished: false,
+[0-0]       destroyed: false,
+[0-0]       decodeStrings: true,
+[0-0]       defaultEncoding: 'utf8',
+[0-0]       length: 0,
+[0-0]       writing: false,
+[0-0]       corked: 0,
+[0-0]       sync: true,
+[0-0]       bufferProcessing: false,
+[0-0]       onwrite: [Function: bound onwrite],
+[0-0]       writecb: null,
+[0-0]       writelen: 0,
+[0-0]       afterWriteTickInfo: null,
+[0-0]       buffered: [],
+[0-0]       bufferedIndex: 0,
+[0-0]       allBuffers: true,
+[0-0]       allNoop: true,
+[0-0]       pendingcb: 0,
+[0-0]       constructed: true,
+[0-0]       prefinished: false,
+[0-0]       errorEmitted: false,
+[0-0]       emitClose: true,
+[0-0]       autoDestroy: true,
+[0-0]       errored: null,
+[0-0]       closed: false,
+[0-0]       closeEmitted: false,
+[0-0]       [Symbol(kOnFinished)]: []
+[0-0]     },
 [0-0]     _events: [Object: null prototype] {
-[0-0]       abort: [Function (anonymous)],
-[0-0]       aborted: [Function (anonymous)],
-[0-0]       connect: [Function (anonymous)],
-[0-0]       error: [Function (anonymous)],
-[0-0]       socket: [Function (anonymous)],
-[0-0]       timeout: [Function (anonymous)],
-[0-0]       prefinish: [Function: requestOnPrefinish]
+[0-0]       response: [Function: handleResponse],
+[0-0]       error: [Function: handleRequestError]
 [0-0]     },
-[0-0]     _eventsCount: 7,
+[0-0]     _eventsCount: 2,
 [0-0]     _maxListeners: undefined,
-[0-0]     outputData: [],
-[0-0]     outputSize: 0,
-[0-0]     writable: true,
-[0-0]     destroyed: false,
-[0-0]     _last: true,
-[0-0]     chunkedEncoding: false,
-[0-0]     shouldKeepAlive: false,
-[0-0]     maxRequestsOnConnectionReached: false,
-[0-0]     _defaultKeepAlive: true,
-[0-0]     useChunkedEncodingByDefault: true,
-[0-0]     sendDate: false,
-[0-0]     _removedConnection: false,
-[0-0]     _removedContLen: false,
-[0-0]     _removedTE: false,
-[0-0]     _contentLength: null,
-[0-0]     _hasBody: true,
-[0-0]     _trailer: '',
-[0-0]     finished: true,
-[0-0]     _headerSent: true,
-[0-0]     _closed: false,
-[0-0]     socket: Socket {
-[0-0]       connecting: false,
-[0-0]       _hadError: false,
-[0-0]       _parent: null,
-[0-0]       _host: null,
-[0-0]       _readableState: [ReadableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 7,
-[0-0]       _maxListeners: undefined,
-[0-0]       _writableState: [WritableState],
-[0-0]       allowHalfOpen: false,
-[0-0]       _sockname: null,
-[0-0]       _pendingData: null,
-[0-0]       _pendingEncoding: '',
-[0-0]       server: null,
-[0-0]       _server: null,
-[0-0]       parser: null,
-[0-0]       _httpMessage: [Circular *1],
-[0-0]       [Symbol(async_id_symbol)]: 621,
-[0-0]       [Symbol(kHandle)]: [TCP],
-[0-0]       [Symbol(kSetNoDelay)]: false,
-[0-0]       [Symbol(lastWriteQueueSize)]: 0,
-[0-0]       [Symbol(timeout)]: null,
-[0-0]       [Symbol(kBuffer)]: null,
-[0-0]       [Symbol(kBufferCb)]: null,
-[0-0]       [Symbol(kBufferGen)]: null,
-[0-0]       [Symbol(kCapture)]: false,
-[0-0]       [Symbol(kBytesRead)]: 0,
-[0-0]       [Symbol(kBytesWritten)]: 0,
-[0-0]       [Symbol(RequestTimeout)]: undefined
-[0-0]     },
-[0-0]     _header: 'POST /api/Validate HTTP/1.1\r\n' +
-[0-0]       'Accept: application/json, text/plain, */*\r\n' +
-[0-0]       'Content-Type: application/json\r\n' +
-[0-0]       'User-Agent: axios/0.21.4\r\n' +
-[0-0]       'Content-Length: 60\r\n' +
-[0-0]       'Host: 192.168.1.170\r\n' +
-[0-0]       'Connection: close\r\n' +
-[0-0]       '\r\n',
-[0-0]     _keepAliveTimeout: 0,
-[0-0]     _onPendingData: [Function: nop],
-[0-0]     agent: Agent {
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 2,
-[0-0]       _maxListeners: undefined,
-[0-0]       defaultPort: 80,
+[0-0]     _options: {
+[0-0]       maxRedirects: 21,
+[0-0]       maxBodyLength: 10485760,
 [0-0]       protocol: 'http:',
-[0-0]       options: [Object: null prototype],
-[0-0]       requests: [Object: null prototype] {},
-[0-0]       sockets: [Object: null prototype],
-[0-0]       freeSockets: [Object: null prototype] {},
-[0-0]       keepAliveMsecs: 1000,
-[0-0]       keepAlive: false,
-[0-0]       maxSockets: Infinity,
-[0-0]       maxFreeSockets: 256,
-[0-0]       scheduling: 'lifo',
-[0-0]       maxTotalSockets: Infinity,
-[0-0]       totalSocketCount: 1,
-[0-0]       [Symbol(kCapture)]: false
-[0-0]     },
-[0-0]     socketPath: undefined,
-[0-0]     method: 'POST',
-[0-0]     maxHeaderSize: undefined,
-[0-0]     insecureHTTPParser: undefined,
-[0-0]     path: '/api/Validate',
-[0-0]     _ended: true,
-[0-0]     res: IncomingMessage {
-[0-0]       _readableState: [ReadableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 3,
-[0-0]       _maxListeners: undefined,
-[0-0]       socket: [Socket],
-[0-0]       httpVersionMajor: 1,
-[0-0]       httpVersionMinor: 1,
-[0-0]       httpVersion: '1.1',
-[0-0]       complete: true,
-[0-0]       rawHeaders: [Array],
-[0-0]       rawTrailers: [],
-[0-0]       aborted: false,
-[0-0]       upgrade: false,
-[0-0]       url: '',
-[0-0]       method: null,
-[0-0]       statusCode: 404,
-[0-0]       statusMessage: 'Not Found',
-[0-0]       client: [Socket],
-[0-0]       _consuming: false,
-[0-0]       _dumped: false,
-[0-0]       req: [Circular *1],
-[0-0]       responseUrl: 'http://192.168.1.170/api/Validate',
-[0-0]       redirects: [],
-[0-0]       [Symbol(kCapture)]: false,
-[0-0]       [Symbol(kHeaders)]: [Object],
-[0-0]       [Symbol(kHeadersCount)]: 12,
-[0-0]       [Symbol(kTrailers)]: null,
-[0-0]       [Symbol(kTrailersCount)]: 0,
-[0-0]       [Symbol(RequestTimeout)]: undefined
-[0-0]     },
-[0-0]     aborted: false,
-[0-0]     timeoutCb: null,
-[0-0]     upgradeOrConnect: false,
-[0-0]     parser: null,
-[0-0]     maxHeadersCount: null,
-[0-0]     reusedSocket: false,
-[0-0]     host: '192.168.1.170',
-[0-0]     protocol: 'http:',
-[0-0]     _redirectable: Writable {
-[0-0]       _writableState: [WritableState],
-[0-0]       _events: [Object: null prototype],
-[0-0]       _eventsCount: 2,
-[0-0]       _maxListeners: undefined,
-[0-0]       _options: [Object],
-[0-0]       _ended: true,
-[0-0]       _ending: true,
-[0-0]       _redirectCount: 0,
-[0-0]       _redirects: [],
-[0-0]       _requestBodyLength: 60,
-[0-0]       _requestBodyBuffers: [],
-[0-0]       _onNativeResponse: [Function (anonymous)],
-[0-0]       _currentRequest: [Circular *1],
-[0-0]       _currentUrl: 'http://192.168.1.170/api/Validate',
-[0-0]       [Symbol(kCapture)]: false
-[0-0]     },
-[0-0]     [Symbol(kCapture)]: false,
-[0-0]     [Symbol(kNeedDrain)]: false,
-[0-0]     [Symbol(corked)]: 0,
-[0-0]     [Symbol(kOutHeaders)]: [Object: null prototype] {
-[0-0]       accept: [Array],
-[0-0]       'content-type': [Array],
-[0-0]       'user-agent': [Array],
-[0-0]       'content-length': [Array],
-[0-0]       host: [Array]
-[0-0]     }
-[0-0]   },
-[0-0]   response: {
-[0-0]     status: 404,
-[0-0]     statusText: 'Not Found',
-[0-0]     headers: {
-[0-0]       'content-type': 'text/html',
-[0-0]       server: 'Microsoft-IIS/10.0',
-[0-0]       'x-powered-by': 'ASP.NET',
-[0-0]       date: 'Wed, 17 Aug 2022 01:05:37 GMT',
-[0-0]       connection: 'close',
-[0-0]       'content-length': '1245'
-[0-0]     },
-[0-0]     config: {
-[0-0]       url: 'http://192.168.1.170/api/Validate',
-[0-0]       method: 'post',
-[0-0]       data: '{"StepName":"companyfound","ImageBase64":"[object Promise]"}',
+[0-0]       path: '/api/Validate',
+[0-0]       method: 'POST',
 [0-0]       headers: [Object],
-[0-0]       transformRequest: [Array],
-[0-0]       transformResponse: [Array],
-[0-0]       timeout: 0,
-[0-0]       adapter: [Function: httpAdapter],
-[0-0]       xsrfCookieName: 'XSRF-TOKEN',
-[0-0]       xsrfHeaderName: 'X-XSRF-TOKEN',
-[0-0]       maxContentLength: -1,
-[0-0]       maxBodyLength: -1,
-[0-0]       validateStatus: [Function: validateStatus],
-[0-0]       transitional: [Object]
+[0-0]       agent: undefined,
+[0-0]       agents: [Object],
+[0-0]       auth: undefined,
+[0-0]       hostname: '192.168.1.170',
+[0-0]       port: null,
+[0-0]       nativeProtocols: [Object],
+[0-0]       pathname: '/api/Validate'
 [0-0]     },
-[0-0]     request: <ref *1> ClientRequest {
+[0-0]     _ended: false,
+[0-0]     _ending: true,
+[0-0]     _redirectCount: 0,
+[0-0]     _redirects: [],
+[0-0]     _requestBodyLength: 60,
+[0-0]     _requestBodyBuffers: [ [Object] ],
+[0-0]     _onNativeResponse: [Function (anonymous)],
+[0-0]     _currentRequest: ClientRequest {
 [0-0]       _events: [Object: null prototype],
 [0-0]       _eventsCount: 7,
 [0-0]       _maxListeners: undefined,
-[0-0]       outputData: [],
-[0-0]       outputSize: 0,
+[0-0]       outputData: [Array],
+[0-0]       outputSize: 252,
 [0-0]       writable: true,
 [0-0]       destroyed: false,
 [0-0]       _last: true,
@@ -978,7 +552,7 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       _contentLength: null,
 [0-0]       _hasBody: true,
 [0-0]       _trailer: '',
-[0-0]       finished: true,
+[0-0]       finished: false,
 [0-0]       _headerSent: true,
 [0-0]       _closed: false,
 [0-0]       socket: [Socket],
@@ -998,8 +572,8 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       maxHeaderSize: undefined,
 [0-0]       insecureHTTPParser: undefined,
 [0-0]       path: '/api/Validate',
-[0-0]       _ended: true,
-[0-0]       res: [IncomingMessage],
+[0-0]       _ended: false,
+[0-0]       res: null,
 [0-0]       aborted: false,
 [0-0]       timeoutCb: null,
 [0-0]       upgradeOrConnect: false,
@@ -1008,55 +582,31 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]       reusedSocket: false,
 [0-0]       host: '192.168.1.170',
 [0-0]       protocol: 'http:',
-[0-0]       _redirectable: [Writable],
+[0-0]       _redirectable: [Circular *1],
 [0-0]       [Symbol(kCapture)]: false,
 [0-0]       [Symbol(kNeedDrain)]: false,
 [0-0]       [Symbol(corked)]: 0,
 [0-0]       [Symbol(kOutHeaders)]: [Object: null prototype]
 [0-0]     },
-[0-0]     data: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\r\n' +
-[0-0]       '<html xmlns="http://www.w3.org/1999/xhtml">\r\n' +
-[0-0]       '<head>\r\n' +
-[0-0]       '<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>\r\n' +
-[0-0]       '<title>404 - File or directory not found.</title>\r\n' +
-[0-0]       '<style type="text/css">\r\n' +
-[0-0]       '<!--\r\n' +
-[0-0]       'body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}\r\n' +
-[0-0]       'fieldset{padding:0 15px 10px 15px;} \r\n' +
-[0-0]       'h1{font-size:2.4em;margin:0;color:#FFF;}\r\n' +
-[0-0]       'h2{font-size:1.7em;margin:0;color:#CC0000;} \r\n' +
-[0-0]       'h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} \r\n' +
-[0-0]       '#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;\r\n' +
-[0-0]       'background-color:#555555;}\r\n' +
-[0-0]       '#content{margin:0 0 0 2%;position:relative;}\r\n' +
-[0-0]       '.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}\r\n' +
-[0-0]       '-->\r\n' +
-[0-0]       '</style>\r\n' +
-[0-0]       '</head>\r\n' +
-[0-0]       '<body>\r\n' +
-[0-0]       '<div id="header"><h1>Server Error</h1></div>\r\n' +
-[0-0]       '<div id="content">\r\n' +
-[0-0]       ' <div class="content-container"><fieldset>\r\n' +
-[0-0]       '  <h2>404 - File or directory not found.</h2>\r\n' +
-[0-0]       '  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>\r\n' +
-[0-0]       ' </fieldset></div>\r\n' +
-[0-0]       '</div>\r\n' +
-[0-0]       '</body>\r\n' +
-[0-0]       '</html>\r\n'
+[0-0]     _currentUrl: 'http://192.168.1.170/api/Validate',
+[0-0]     [Symbol(kCapture)]: false
 [0-0]   },
+[0-0]   response: undefined,
 [0-0]   isAxiosError: true,
-[0-0]   toJSON: [Function: toJSON]
+[0-0]   toJSON: [Function: toJSON],
+[0-0]   [Symbol(originalCallSite)]: [ CallSite {}, CallSite {}, CallSite {}, CallSite {} ],
+[0-0]   [Symbol(mutatedCallSite)]: [ CallSite {}, CallSite {}, CallSite {}, CallSite {} ]
 [0-0] }
-[0-0] [90m2022-08-17T01:05:41.545Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
-[0-0] [90m2022-08-17T01:05:41.545Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 1/3
-[0-0] [90m2022-08-17T01:05:41.545Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/screenshot
-[0-0] [90m2022-08-17T01:05:41.560Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
-[0-0] [90m2022-08-17T01:05:41.560Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 2/3
-[0-0] [90m2022-08-17T01:05:41.560Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/screenshot
-[0-0] [90m2022-08-17T01:05:41.576Z[39m [33mWARN[39m [97mwebdriver[39m: Request failed with status 404 due to A session is either terminated or not started
-[0-0] [90m2022-08-17T01:05:41.576Z[39m [96mINFO[39m [97mwebdriver[39m: Retrying 3/3
-[0-0] [90m2022-08-17T01:05:41.576Z[39m [96mINFO[39m [97mwebdriver[39m: [GET] http://localhost:4723/session/12f7837a-8cce-44b6-82da-11966f7f511b/screenshot
-[0-0] [90m2022-08-17T01:05:41.613Z[39m [31mERROR[39m [97mwebdriver[39m: Request failed with status 404 due to invalid session id: A session is either terminated or not started
+[0-0] 2022-08-18T02:06:56.301Z WARN webdriver: Request failed with status 404 due to A session is either terminated or not started
+[0-0] 2022-08-18T02:06:56.302Z INFO webdriver: Retrying 1/3
+[0-0] 2022-08-18T02:06:56.303Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/screenshot
+[0-0] 2022-08-18T02:06:56.318Z WARN webdriver: Request failed with status 404 due to A session is either terminated or not started
+[0-0] 2022-08-18T02:06:56.319Z INFO webdriver: Retrying 2/3
+[0-0] 2022-08-18T02:06:56.319Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/screenshot
+[0-0] 2022-08-18T02:06:56.330Z WARN webdriver: Request failed with status 404 due to A session is either terminated or not started
+[0-0] 2022-08-18T02:06:56.330Z INFO webdriver: Retrying 3/3
+[0-0] 2022-08-18T02:06:56.330Z INFO webdriver: [GET] http://localhost:4723/session/b0d6e5b1-713a-4921-b9a8-1c090564a9b4/screenshot
+[0-0] 2022-08-18T02:06:56.342Z ERROR webdriver: Request failed with status 404 due to invalid session id: A session is either terminated or not started
 [0-0] /Users/laymui/dev/taiger/react-native-stock-price-app/node_modules/webdriver/build/utils.js:197
 [0-0]     return new CustomRequestError(body);
 [0-0]            ^
@@ -1085,13 +635,13 @@ Execution of 1 workers started at 2022-08-17T01:05:22.516Z
 [0-0]   ]
 [0-0] }
 [0-0] FAILED in iOS - /tests/features/SearchStockPrice.feature
-2022-08-17T01:05:41.671Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2022-08-17T01:05:41.672Z INFO @wdio/cli:launcher: Run onComplete hook
+2022-08-18T02:06:56.402Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2022-08-18T02:06:56.405Z INFO @wdio/cli:launcher: Run onComplete hook
 
-Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:19 
+Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:16 
 
-2022-08-17T01:05:41.674Z INFO @wdio/local-runner: Shutting down spawned worker
-2022-08-17T01:05:41.927Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
-2022-08-17T01:05:41.927Z INFO @wdio/local-runner: shutting down
+2022-08-18T02:06:56.409Z INFO @wdio/local-runner: Shutting down spawned worker
+2022-08-18T02:06:56.661Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2022-08-18T02:06:56.662Z INFO @wdio/local-runner: shutting down
 error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
