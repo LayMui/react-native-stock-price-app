@@ -6,16 +6,26 @@ import { Actor } from '@serenity-js/core'
 import { Search } from '../tasks/Search'
 
 import SearchPageWDIO  from '../page-objects/search.page'
-import { imagium } from '../support/imagium'
+import  imagium  from '../support/imagium'
 
 
 Given('{actor} is at the stock price app', async function (actor: Actor)  {
-  
-  var ID = await imagium.getUID()
-   console.log('getUID: ' + ID)
- let screenshot = driver.saveScreenshot('./home.png');
- imagium.validateScreenshot(ID,  screenshot, "home");
- this.ID = ID;
+   //Generate the runtime UID - required for a new visual test
+   var uid = await imagium.getUID('TestName');
+   var screenshot64 = (await browser.takeScreenshot());
+
+ //Call the validate method to make the comparison
+ await imagium.validate('home',  screenshot64, uid );
+
+ this.uid = uid;
+
+
+//  var ID = await imagium.getUID()
+//    console.log('getUID: ' + ID)
+//  let screenshot = driver.saveScreenshot('./home.png');
+//  imagium.validateScreenshot(ID,  screenshot, "home");
+//  this.ID = ID;
+
 })
 
 When(
@@ -26,9 +36,14 @@ When(
    
    await SearchPageWDIO.searchForCompany(company)
    
-  let screenshot = driver.saveScreenshot('./company.png');
- console.log('use the same ID: ' + this.ID)
- imagium.validateScreenshot(this.ID,  screenshot, "companyfound")
+   var screenshot64 = (await browser.takeScreenshot());
+
+   //Call the validate method to make the comparison
+   await imagium.validate('companyfound',  screenshot64, this.uid );
+
+  // let screenshot = driver.saveScreenshot('./company.png');
+  // console.log('use the same ID: ' + this.ID)
+  // imagium.validateScreenshot(this.ID,  screenshot, "companyfound")
   }
 )
 
