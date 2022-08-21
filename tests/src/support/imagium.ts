@@ -2,6 +2,16 @@ import { ChainablePromiseElement } from 'webdriverio';
 const https = require('https');
 const axios = require('axios');
 
+if (!process.env.CIRCLECI)
+{
+    require('dotenv').config({path: `.env`})
+}
+declare var process: {    
+     env: {         
+       [key: string]: string;    
+    }
+ };
+
 /**
  * sub page containing specific selectors and methods for a specific page
  */
@@ -11,11 +21,12 @@ class imagium  {
     public static uidCommon: string ='';
 
 	//Specify yor project secret key
-	public static endpoint: string = 'http://sandbox.imagium.io/';
+	public static endpoint: string = process.env["IP"]
+
 
 	//Specify yor project secret key
-    public static projectKey: string = '01ba0076-06ba-46ce-8af9-87f13eeec82d';
-    
+ 
+    public static projectKey: string = process.env["IMAGIUM_KEY"]
     /**
      * getUID method returns UID for the specified TestName
      */
