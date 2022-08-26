@@ -7,10 +7,11 @@ import { Search } from '../tasks/Search'
 
 import SearchPageWDIO  from '../page-objects/search.page'
 import  imagium  from '../support/imagium'
-
+import { setTimeout } from 'timers/promises'
 
 Given('{actor} is at the stock price app', async function (actor: Actor)  {
    //Generate the runtime UID - required for a new visual test
+   await setTimeout(1000, 'resolved')
    var uid = await imagium.getUID('TestName');
    var screenshot64 = (await browser.takeScreenshot());
 
@@ -18,13 +19,6 @@ Given('{actor} is at the stock price app', async function (actor: Actor)  {
  await imagium.validate('home',  screenshot64, uid );
 
  this.uid = uid;
-
-
-//  var ID = await imagium.getUID()
-//    console.log('getUID: ' + ID)
-//  let screenshot = driver.saveScreenshot('./home.png');
-//  imagium.validateScreenshot(ID,  screenshot, "home");
-//  this.ID = ID;
 
 })
 
@@ -35,15 +29,13 @@ When(
    // return await actor.attemptsTo(Search.forCompany(company))
    
    await SearchPageWDIO.searchForCompany(company)
-   
+   await setTimeout(1000, 'resolved')
    var screenshot64 = (await browser.takeScreenshot());
 
    //Call the validate method to make the comparison
    await imagium.validate('companyfound',  screenshot64, this.uid );
 
-  // let screenshot = driver.saveScreenshot('./company.png');
-  // console.log('use the same ID: ' + this.ID)
-  // imagium.validateScreenshot(this.ID,  screenshot, "companyfound")
+
   }
 )
 
