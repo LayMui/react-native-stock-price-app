@@ -12,4 +12,4 @@ Feature: Search Company StockPrice
 
     Examples:
     | company |
-    | Aapl   |
+    | cc  |

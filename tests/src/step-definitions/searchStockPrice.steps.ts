@@ -11,7 +11,7 @@ import { setTimeout } from 'timers/promises'
 
 Given('{actor} is at the stock price app', async function (actor: Actor)  {
    //Generate the runtime UID - required for a new visual test
-   await setTimeout(1000, 'resolved')
+ await SearchPageWDIO.pageLoaded()
    var uid = await imagium.getUID('TestName');
    var screenshot64 = (await browser.takeScreenshot());
 
@@ -29,7 +29,6 @@ When(
    // return await actor.attemptsTo(Search.forCompany(company))
    
    await SearchPageWDIO.searchForCompany(company)
-   await setTimeout(1000, 'resolved')
    var screenshot64 = (await browser.takeScreenshot());
 
    //Call the validate method to make the comparison
@@ -42,6 +41,6 @@ When(
 Then(
   '{pronoun} is able to see the stock price displayed',
   async (actor: Actor) => {
- //   await SearchPage.founded()
+    await SearchPageWDIO.founded()
   }
 )

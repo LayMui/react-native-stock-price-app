@@ -52,8 +52,15 @@ class SearchPageWDIO extends Page {
       (await this.stocktickersymbolsearchbtn.touchAction('tap'))
   }
 
+  async pageLoaded() {
+    await this.stocktickersymbolsearchbtn.waitForDisplayed()
+   
+     
+  }
+
   async founded() {
-    ;(await $('~stockTickerSymbolSearchInput').isDisplayed())
+    ;(await $('~stockTickerSymbolSearchInput').isDisplayed()) &&
+    (await this.stocktickersymbolsearchbtn).isDisplayed()
     
   }
   /**
